@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid black;
+    box-shadow: 0px 10px 10px rgb(0 0 0 / 10%);
+
+    .photo-block {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .info-block {
+        margin-top: 20px;
+
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .description {
+            font-size: 14px;
+        }
+    }
+
+    .buttons-block {
+        margin-top: 20px;
+    }
+}

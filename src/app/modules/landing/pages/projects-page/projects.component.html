@@ -1,5 +1,5 @@
 <div class="wrapper">
     <ng-container *ngFor="let project of projects">
-        <div class="project">{{project.name}}</div>
+        <app-project-block [project]="project"></app-project-block>
     </ng-container>
 </div>
