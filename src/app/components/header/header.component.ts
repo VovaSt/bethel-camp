@@ -3,17 +3,24 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
-    styleUrls: ['./header.component.scss']
+    styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+    languages = ['EN', 'UA', 'RU'];
+    currentLang: string = 'UA';
 
-    constructor() { }
+    constructor() {}
 
-    ngOnInit() {
-    }
+    ngOnInit() {}
 
     scrollTo(id: string) {
         const element = document.getElementById(id);
-        element?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+        element?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest',
+        });
     }
+
+    changeLanguage(event) {}
 }

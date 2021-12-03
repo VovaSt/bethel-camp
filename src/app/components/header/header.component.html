@@ -1,8 +1,25 @@
 <nav class="site-header">
+    <div class="logo-block"></div>
+
     <div class="pages">
-        <a class="page" (click)="scrollTo('main')">Main</a>
-        <a class="page" (click)="scrollTo('aboutUs')">AboutUs</a>
-        <a class="page" (click)="scrollTo('plans')">Plans</a>
-        <a class="page" (click)="scrollTo('donation')">Donation</a>
+        <a class="text" (click)="scrollTo('main')">Main</a>
+        <a class="text" (click)="scrollTo('aboutUs')">AboutUs</a>
+        <a class="text" (click)="scrollTo('plans')">Plans</a>
+        <a class="text" (click)="scrollTo('donation')">Donation</a>
+    </div>
+
+    <div class="languages-block">
+        <mat-button-toggle-group
+            [value]="currentLang"
+            (change)="changeLanguage($event)"
+        >
+            <mat-button-toggle
+                *ngFor="let lang of languages"
+                disableRipple
+                [value]="lang"
+            >
+                {{ lang }}
+            </mat-button-toggle>
+        </mat-button-toggle-group>
     </div>
 </nav>
