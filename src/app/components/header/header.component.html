@@ -1,23 +1,18 @@
 <nav class="site-header">
-    <div class="logo-block"></div>
+    <div class="logo-block">
+        <img class="logo" src="/assets/images/Logo.svg" alt="logo">
+    </div>
 
     <div class="pages">
-        <a class="text" (click)="scrollTo('main')">Main</a>
-        <a class="text" (click)="scrollTo('aboutUs')">AboutUs</a>
-        <a class="text" (click)="scrollTo('plans')">Plans</a>
-        <a class="text" (click)="scrollTo('donation')">Donation</a>
+        <a class="text" (click)="scrollTo('main')">Головна</a>
+        <a class="text" (click)="scrollTo('aboutUs')">Про нас</a>
+        <a class="text" (click)="scrollTo('history')">Територія</a>
+        <a class="text" (click)="scrollTo('projects')">Проекти</a>
     </div>
 
     <div class="languages-block">
-        <mat-button-toggle-group
-            [value]="currentLang"
-            (change)="changeLanguage($event)"
-        >
-            <mat-button-toggle
-                *ngFor="let lang of languages"
-                disableRipple
-                [value]="lang"
-            >
+        <mat-button-toggle-group [value]="currentLang" (change)="changeLanguage($event)">
+            <mat-button-toggle *ngFor="let lang of languages" disableRipple [value]="lang">
                 {{ lang }}
             </mat-button-toggle>
         </mat-button-toggle-group>

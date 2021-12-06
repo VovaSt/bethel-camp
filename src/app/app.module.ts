@@ -7,18 +7,22 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LandingModule } from './modules/landing/landing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { SharedModule } from './shared/shared/shared.module';
 
 @NgModule({
-    declarations: [AppComponent, HeaderComponent, FooterComponent],
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         LandingModule,
         BrowserAnimationsModule,
-        MatButtonToggleModule,
+        SharedModule
     ],
     providers: [],
     bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

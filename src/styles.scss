@@ -1,3 +1,6 @@
+@import "assets/styles/material-theme.scss";
+@import "assets/styles/common.scss";
+
 body {
     margin: 0;
     padding: 0;
@@ -8,5 +11,11 @@ body {
     box-sizing: border-box;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
