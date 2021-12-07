@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { LandingModule } from './modules/landing/landing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared/shared.module';
+import AOS from 'aos';
 
 @NgModule({
     declarations: [
@@ -25,4 +26,9 @@ import { SharedModule } from './shared/shared/shared.module';
     providers: [],
     bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+
+    constructor() {
+        AOS.init();
+    }
+}

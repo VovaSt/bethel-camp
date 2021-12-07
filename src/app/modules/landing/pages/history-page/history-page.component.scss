@@ -6,6 +6,10 @@
     flex-direction: column;
     align-items: center;
 
+    .introduction {
+        margin-bottom: 50px;
+    }
+
     carousel {
         width: 80%;
         z-index: 8;
