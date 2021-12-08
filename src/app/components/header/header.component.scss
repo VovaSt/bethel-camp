@@ -3,49 +3,54 @@
     top: 0;
     width: 100%;
     background-color: darkslategray;
-    display: flex;
     z-index: 10;
 
-    .logo-block,
-    .languages-block {
-        flex: 0 1;
+    .content {
+        max-width: 1100px;
+        margin: 0 auto;
         display: flex;
-        align-items: center;
-        padding: 0 15px;
-    }
 
-    .logo {
-        height: 50px;
-    }
+        .logo-block,
+        .languages-block {
+            flex: 0 1;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+        }
 
-    .pages {
-        flex: 1 1 100%;
-        display: flex;
-        justify-content: center;
-    }
+        .logo {
+            height: 50px;
+        }
 
-    .text {
-        padding: 20px 20px;
-        margin: 0 20px;
-        cursor: pointer;
-        color: white;
-        font-size: 18px;
-    }
+        .pages {
+            flex: 1 1 100%;
+            display: flex;
+            justify-content: center;
+        }
 
-    .mat-button-toggle-group-appearance-standard {
-        border: none;
-    }
+        .text {
+            padding: 20px 20px;
+            margin: 0 20px;
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+        }
 
-    .mat-button-toggle-appearance-standard {
-        color: #fff;
-        background: transparent;
-        border: none;
-        font-size: 14px;
-    }
+        .mat-button-toggle-group-appearance-standard {
+            border: none;
+        }
 
-    .mat-button-toggle-checked {
-        color: #fff;
-        background: transparent;
-        font-size: 18px;
+        .mat-button-toggle-appearance-standard {
+            color: #fff;
+            background: transparent;
+            border: none;
+            font-size: 14px;
+        }
+
+        .mat-button-toggle-checked {
+            color: #fff;
+            background: transparent;
+            font-size: 18px;
+        }
     }
 }
