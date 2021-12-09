@@ -25,6 +25,7 @@ export class HeaderComponent implements OnInit {
 
     ngOnInit() {
         this.pagesLinks = document.querySelectorAll(".page-link");
+        this.renderer.addClass(this.pagesLinks[0], 'current');
 
         fromEvent(window, 'scroll')
             .pipe(debounceTime(50))
@@ -51,12 +52,16 @@ export class HeaderComponent implements OnInit {
     private onScroll() {
         const fromTop = window.scrollY;
 
+        if (fromTop < 0) {
+            return;
+        } // fix for mobile
+
         this.pagesLinks.forEach(link => {
             const sectionId = link.id?.split('_')[0];
             const section = document.getElementById(sectionId);
 
             if (
-                section.offsetTop <= fromTop &&
+                section.offsetTop <= (fromTop + 62) && 
                 section.offsetTop + section.offsetHeight > fromTop
             ) {
                 this.renderer.addClass(link, 'current');
