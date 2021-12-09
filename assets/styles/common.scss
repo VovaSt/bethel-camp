@@ -1,0 +1,43 @@
+.mat-progress-bar {
+    height: 10px !important;
+    border-radius: 5px;
+
+    .mat-progress-bar-fill {
+        transition: transform 500ms ease-out !important;
+    }
+}
+
+.animated-button {
+    overflow: hidden !important;
+
+    .mat-button-wrapper {
+        &::after {
+            background: #fff;
+            content: "";
+            height: 155px;
+            left: -75px;
+            opacity: 0.2;
+            position: absolute;
+            top: -50px;
+            transform: rotate(35deg);
+            width: 40px;
+            z-index: 0;
+            animation: 10s cubic-bezier(0.19, 1, 0.22, 1) 0.2s infinite running buttonAnimate;
+        }
+    }
+}
+
+@keyframes buttonAnimate {
+    0% {
+        left: -50%;
+    }
+    25% {
+        left: -50%;
+    }
+    40% {
+        left: 120%;
+    }
+    100% {
+        left: 120%;
+    }
+}
