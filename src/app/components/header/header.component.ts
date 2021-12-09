@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { fromEvent } from 'rxjs';
-import { debounceTime } from 'rxjs/operators';
+import { throttleTime } from 'rxjs/operators';
 
 @Component({
     selector: 'app-header',
@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit {
         this.renderer.addClass(this.pagesLinks[0], 'current');
 
         fromEvent(window, 'scroll')
-            .pipe(debounceTime(50))
+            .pipe(throttleTime(50))
             .subscribe(() => this.onScroll());
     }
 
@@ -61,7 +61,7 @@ export class HeaderComponent implements OnInit {
             const section = document.getElementById(sectionId);
 
             if (
-                section.offsetTop <= (fromTop + 62) && 
+                section.offsetTop <= fromTop && 
                 section.offsetTop + section.offsetHeight > fromTop
             ) {
                 this.renderer.addClass(link, 'current');
