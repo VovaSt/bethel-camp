@@ -26,6 +26,19 @@
             flex: 1 1 100%;
             display: flex;
             justify-content: center;
+
+            .page-link {
+                text-decoration: none;
+                transition: color 0.5s;
+
+                &.current {
+                    color: #cce6f5;
+                }
+
+                &:not(.current):hover {
+                    color: #c1caca;
+                }
+            }
         }
 
         .text {
@@ -34,6 +47,7 @@
             cursor: pointer;
             color: white;
             font-size: 18px;
+            text-align: 24px;
         }
 
         .mat-button-toggle-group-appearance-standard {
@@ -45,10 +59,11 @@
             background: transparent;
             border: none;
             font-size: 14px;
+            transition: color 0.5s;
         }
 
         .mat-button-toggle-checked {
-            color: #fff;
+            color: #cce6f5;
             background: transparent;
             font-size: 18px;
         }
