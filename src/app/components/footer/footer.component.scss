@@ -49,3 +49,31 @@
         }
     }
 }
+
+@media screen and (max-width: 1250px) {
+    .wrapper .content {
+        max-width: 100%;
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper .content {
+        flex-direction: column;
+        padding: 30px;
+
+        .left-block,
+        .right-block {
+            padding: 0;
+        }
+
+        .right-block {
+            align-items: center;
+            .social {
+                a {
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}

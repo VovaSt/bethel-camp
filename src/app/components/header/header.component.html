@@ -5,10 +5,19 @@
         </div>
 
         <div class="pages">
-            <a class="text page-link" id="main_link" (click)="scrollTo('main')">Головна</a>
-            <a class="text page-link" id="aboutUs_link" (click)="scrollTo('aboutUs')">Про нас</a>
-            <a class="text page-link" id="history_link" (click)="scrollTo('history')">Територія</a>
-            <a class="text page-link" id="projects_link" (click)="scrollTo('projects')">Проекти</a>
+            <a class="text page-link" id="main_link" (click)="linkAction('main')">Головна</a>
+            <a class="text page-link" id="aboutUs_link" (click)="linkAction('aboutUs')">Про нас</a>
+            <a class="text page-link" id="history_link" (click)="linkAction('history')">Територія</a>
+            <a class="text page-link" id="projects_link" (click)="linkAction('projects')">Проекти</a>
+
+            <div class="trigger" #linksMenuTrigger="matMenuTrigger" [matMenuTriggerFor]="linksMenu"></div>
+
+            <mat-menu #linksMenu="matMenu">
+                <div class="text-dropdown" (click)="scrollTo('main')">Головна</div>
+                <div class="text-dropdown" (click)="scrollTo('aboutUs')">Про нас</div>
+                <div class="text-dropdown" (click)="scrollTo('history')">Територія</div>
+                <div class="text-dropdown" (click)="scrollTo('projects')">Проекти</div>
+            </mat-menu>
         </div>
 
         <div class="languages-block">
@@ -17,6 +26,14 @@
                     {{ lang }}
                 </mat-button-toggle>
             </mat-button-toggle-group>
+
+            <div class="trigger" #languageMenuTrigger="matMenuTrigger" [matMenuTriggerFor]="langsMenu"></div>
+
+            <mat-menu #langsMenu="matMenu">
+                <ng-container *ngFor="let lang of languages">
+                    <div class="text-dropdown" (click)="changeLanguageMobile(lang)">{{ lang }}</div>
+                </ng-container>
+            </mat-menu>
         </div>
     </div>
 </nav>

@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, OnInit, Renderer2 } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { MatMenuTrigger } from '@angular/material/menu';
 import { fromEvent } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 
@@ -15,6 +16,9 @@ export class HeaderComponent implements OnInit {
 
     private pagesLinks;
 
+    @ViewChild('linksMenuTrigger') linksMenuTrigger: MatMenuTrigger;
+    @ViewChild('langsMenuTrigger') langsMenuTrigger: MatMenuTrigger;
+
     constructor(
         private renderer: Renderer2
     ) { }
@@ -25,6 +29,14 @@ export class HeaderComponent implements OnInit {
         fromEvent(window, 'scroll')
             .pipe(debounceTime(50))
             .subscribe(() => this.onScroll());
+    }
+
+    public linkAction(id: string) {
+        if (window.innerWidth <= 800) {
+            this.linksMenuTrigger.openMenu();
+        } else {
+            this.scrollTo(id);
+        }
     }
 
     public scrollTo(id: string) {
@@ -54,5 +66,11 @@ export class HeaderComponent implements OnInit {
         });
     }
 
-    changeLanguage(event) { }
+    changeLanguage(event) {
+
+    }
+
+    changeLanguageMobile(event) {
+        this.currentLang = event;
+    }
 }

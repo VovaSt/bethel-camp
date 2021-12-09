@@ -6,8 +6,8 @@
         aspernatur fugiat adipisci quidem architecto nobis.
     </div>
 
-    <carousel [images]="images" [objectFit]="'cover'" [cellWidth]="'100%'" [arrowsOutside]="true" [dots]="true"
-        [loop]="true" height="500">
+    <carousel [images]="images" [objectFit]="'cover'" [cellWidth]="'100%'" [arrowsOutside]="hideArrows$ | async"
+        [dots]="true" [loop]="true" height="500">
     </carousel>
 </div>
 

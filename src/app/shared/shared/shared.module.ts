@@ -4,7 +4,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
-
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
     declarations: [],
@@ -15,7 +15,8 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
         MatButtonToggleModule,
         MatProgressBarModule,
         MatButtonModule,
-        IvyCarouselModule
+        IvyCarouselModule,
+        MatMenuModule
     ]
 })
 export class SharedModule { }

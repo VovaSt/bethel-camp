@@ -28,3 +28,32 @@
         padding: 50px;
     }
 }
+
+@media screen and (max-width: 1250px) {
+    .wrapper {
+        max-width: 100%;
+        padding: 80px 20px;
+    }
+
+    .description-block {
+        .description {
+            max-width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapper {
+        carousel {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        carousel {
+            height: 300px !important;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { ProjectData } from 'src/app/models/project-data.model';
 import { debounceTime } from 'rxjs/operators';
@@ -7,6 +7,7 @@ import { debounceTime } from 'rxjs/operators';
     selector: 'app-project-block',
     templateUrl: './project-block.component.html',
     styleUrls: ['./project-block.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectBlockComponent implements OnInit {
 
