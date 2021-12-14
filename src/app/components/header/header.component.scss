@@ -61,6 +61,11 @@
             border: none;
             font-size: 14px;
             transition: color 0.5s;
+            text-transform: uppercase;
+
+            ::ng-deep .mat-button-toggle-label-content {
+                text-transform: uppercase;
+            }
         }
 
         .mat-button-toggle-checked {

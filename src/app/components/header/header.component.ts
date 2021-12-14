@@ -2,6 +2,8 @@ import { ChangeDetectionStrategy, Component, OnInit, Renderer2, ViewChild } from
 import { MatMenuTrigger } from '@angular/material/menu';
 import { fromEvent } from 'rxjs';
 import { throttleTime } from 'rxjs/operators';
+import { Language } from 'src/app/enums/language.enum';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
     selector: 'app-header',
@@ -11,8 +13,8 @@ import { throttleTime } from 'rxjs/operators';
 })
 export class HeaderComponent implements OnInit {
 
-    public languages = ['EN', 'UA', 'RU'];
-    public currentLang: string = 'UA';
+    public languages = Object.values(Language);
+    public currentLang: Language;
 
     private pagesLinks;
 
@@ -20,7 +22,8 @@ export class HeaderComponent implements OnInit {
     @ViewChild('langsMenuTrigger') langsMenuTrigger: MatMenuTrigger;
 
     constructor(
-        private renderer: Renderer2
+        private renderer: Renderer2,
+        private langService: LanguageService
     ) { }
 
     ngOnInit() {
@@ -30,6 +33,9 @@ export class HeaderComponent implements OnInit {
         fromEvent(window, 'scroll')
             .pipe(throttleTime(50))
             .subscribe(() => this.onScroll());
+
+        this.langService.getLanguageObs()
+            .subscribe(lang => this.currentLang = lang);
     }
 
     public linkAction(id: string) {
@@ -61,7 +67,7 @@ export class HeaderComponent implements OnInit {
             const section = document.getElementById(sectionId);
 
             if (
-                section.offsetTop <= fromTop && 
+                section.offsetTop <= fromTop &&
                 section.offsetTop + section.offsetHeight > fromTop
             ) {
                 this.renderer.addClass(link, 'current');
@@ -71,11 +77,7 @@ export class HeaderComponent implements OnInit {
         });
     }
 
-    changeLanguage(event) {
-
-    }
-
-    changeLanguageMobile(event) {
-        this.currentLang = event;
+    changeLanguage(lang: Language) {
+        this.langService.setLanguage(lang);
     }
 }

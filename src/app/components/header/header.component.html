@@ -21,7 +21,7 @@
         </div>
 
         <div class="languages-block">
-            <mat-button-toggle-group [value]="currentLang" (change)="changeLanguage($event)">
+            <mat-button-toggle-group [value]="currentLang" (change)="changeLanguage($event.value)">
                 <mat-button-toggle *ngFor="let lang of languages" disableRipple [value]="lang">
                     {{ lang }}
                 </mat-button-toggle>
@@ -31,7 +31,7 @@
 
             <mat-menu #langsMenu="matMenu">
                 <ng-container *ngFor="let lang of languages">
-                    <div class="text-dropdown" (click)="changeLanguageMobile(lang)">{{ lang }}</div>
+                    <div class="text-dropdown" (click)="changeLanguage(lang)">{{ lang }}</div>
                 </ng-container>
             </mat-menu>
         </div>

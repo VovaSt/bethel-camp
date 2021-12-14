@@ -9,6 +9,14 @@ import { LandingModule } from './modules/landing/landing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared/shared.module';
 import AOS from 'aos';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { LanguageService } from './services/language.service';
+
+export function httpLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
     declarations: [
@@ -21,9 +29,17 @@ import AOS from 'aos';
         AppRoutingModule,
         LandingModule,
         BrowserAnimationsModule,
-        SharedModule
+        HttpClientModule,
+        SharedModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: httpLoaderFactory,
+                deps: [HttpClient]
+            }
+        })
     ],
-    providers: [],
+    providers: [LanguageService],
     bootstrap: [AppComponent],
 })
 export class AppModule {
