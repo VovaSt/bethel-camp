@@ -15,7 +15,7 @@ export class LanguageService {
         const available = Object.values(Language).find(i => browserLang as Language == i);
         const lang = available ? browserLang as Language : Language.ua;
 
-        this.translateService.use(browserLang);
+        this.translateService.use(lang);
         this._lang$.next(lang);
     }
 
