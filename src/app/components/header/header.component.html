@@ -2,18 +2,34 @@
     <div class="content">
 
         <div class="pages">
-            <a class="text page-link" id="main_link" (click)="linkAction('main')">Головна</a>
-            <a class="text page-link" id="aboutUs_link" (click)="linkAction('aboutUs')">Про нас</a>
-            <a class="text page-link" id="history_link" (click)="linkAction('history')">Територія</a>
-            <a class="text page-link" id="projects_link" (click)="linkAction('projects')">Проекти</a>
+            <a class="text page-link" id="main_link" (click)="linkAction('main')">
+                {{ "mainPage" | translate }}
+            </a>
+            <a class="text page-link" id="aboutUs_link" (click)="linkAction('aboutUs')">
+                {{ "aboutUs" | translate }}
+            </a>
+            <a class="text page-link" id="history_link" (click)="linkAction('history')">
+                {{ "campPlace" | translate }}
+            </a>
+            <a class="text page-link" id="projects_link" (click)="linkAction('projects')">
+                {{ "projects" | translate }}
+            </a>
 
             <div class="trigger" #linksMenuTrigger="matMenuTrigger" [matMenuTriggerFor]="linksMenu"></div>
 
             <mat-menu #linksMenu="matMenu">
-                <div class="text-dropdown" (click)="scrollTo('main')">Головна</div>
-                <div class="text-dropdown" (click)="scrollTo('aboutUs')">Про нас</div>
-                <div class="text-dropdown" (click)="scrollTo('history')">Територія</div>
-                <div class="text-dropdown" (click)="scrollTo('projects')">Проекти</div>
+                <div class="text-dropdown" (click)="scrollTo('main')">
+                    {{ "mainPage" | translate }}
+                </div>
+                <div class="text-dropdown" (click)="scrollTo('aboutUs')">
+                    {{ "aboutUs" | translate }}
+                </div>
+                <div class="text-dropdown" (click)="scrollTo('history')">
+                    {{ "campPlace" | translate }}
+                </div>
+                <div class="text-dropdown" (click)="scrollTo('projects')">
+                    {{ "projects" | translate }}
+                </div>
             </mat-menu>
         </div>
 

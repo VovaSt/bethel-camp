@@ -1,4 +1,9 @@
 {
     "campName": "Bethel",
-    "establishment": "Center for spiritual and physical development"
+    "establishment": "Center for spiritual and physical development",
+    "mainPage": "Main",
+    "aboutUs": "About us",
+    "campPlace": "Territory",
+    "projects": "Projects",
+    "aboutUsText": "Центр духовного та фізичного розвитку 'Вефіль' є дочірнім проектом церкви Різдва Христового (м. Бердичів, Україна). Протягом багатьох років наш центр є місцем Божої роботи над серцями дітей, підлітків та молоді, а також місцем відпочинку та активного дозвілля. Крім роботи з дітьми віруючих батьків, також ведеться активна робота серед дітей-сиріт та дітей з околишніх сільских сіл."
 }

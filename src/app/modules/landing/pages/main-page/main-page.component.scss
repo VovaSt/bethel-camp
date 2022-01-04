@@ -3,21 +3,16 @@
     height: 100%;
     position: relative;
     overflow: hidden;
+    display: flex;
 
     .bg-image {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
-            url("https://scontent.fiev15-1.fna.fbcdn.net/v/t31.18172-8/20748418_1473801089376225_4469326711703674412_o.jpg?_nc_cat=105&ccb=1-5&_nc_sid=a83260&_nc_ohc=Q3dzTV-9JMIAX9E4rGW&tn=oLr5L4AKYsk9nY6X&_nc_ht=scontent.fiev15-1.fna&oh=cbe698bf649a154b00c6968c3816ff2c&oe=61CCE387");
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+            url("https://camp-bethel.s3.amazonaws.com/backgrounds/main-background.jpg");
         background-position: top;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100vw;
         height: 100vh;
-        position: relative;
-        -webkit-animation: rotating 20s ease-in-out infinite;
-        -moz-animation: rotating 20s ease-in-out infinite;
-        -ms-animation: rotating 20s ease-in-out infinite;
-        -o-animation: rotating 20s ease-in-out infinite;
-        animation: rotating 20s ease-in-out infinite;
     }
 
     .content {
@@ -28,72 +23,36 @@
         width: 100%;
         padding: 100px 10% 50px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        align-items: center;
 
-        .title,
-        .subtitle {
+        .camp-logo {
+            height: 230px;
+            margin: 30px 50px 0;
+        }
+
+        .text-block {
             width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
+            max-width: 500px;
             color: white;
             text-align: start;
             text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-        }
 
-        .title {
-            font-size: 40px;
-
-            .name {
+            .title {
                 font-size: 70px;
                 color: #cce6f5;
+                margin: 0;
+            }
+
+            .subtitle {
+                font-size: 40px;
+                margin: 0;
             }
         }
-
-        .subtitle {
-            margin-top: 30px;
-        }
     }
 }
 
-@-webkit-keyframes rotating /* Safari and Chrome */ {
-    0% {
-        -webkit-transform: scale(1);
-        -o-transform: scale(1);
-        transform: scale(1);
-    }
-    50% {
-        -webkit-transform: scale(1.05);
-        -o-transform: scale(1.05);
-        transform: scale(1.05);
-    }
-    100% {
-        -webkit-transform: scale(1);
-        -o-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
-@keyframes rotating {
-    0% {
-        -ms-transform: scale(1);
-        -moz-transform: scale(1);
-        -webkit-transform: scale(1);
-        -o-transform: scale(1);
-        transform: scale(1);
-    }
-    50% {
-        -ms-transform: scale(1.05);
-        -moz-transform: scale(1.05);
-        -webkit-transform: scale(1.05);
-        -o-transform: scale(1.05);
-        transform: scale(1.05);
-    }
-    100% {
-        -ms-transform: scale(1);
-        -moz-transform: scale(1);
-        -webkit-transform: scale(1);
-        -o-transform: scale(1);
-        transform: scale(1);
+@media screen and (max-width: 850px) {
+    .wrapper .content .camp-logo {
+        display: none;
     }
 }
