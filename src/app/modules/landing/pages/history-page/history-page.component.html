@@ -1,9 +1,6 @@
 <div class="wrapper">
     <div class="introduction" data-aos="fade-in">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo incidunt aperiam magni illo. Aspernatur vero
-        quas laboriosam numquam labore aperiam est dolorem voluptate magni eligendi ab velit magnam perspiciatis vel
-        cumque ipsa adipisci, provident repellat consequatur fugit rem sed eum nesciunt! Veniam consequuntur nulla
-        aspernatur fugiat adipisci quidem architecto nobis.
+        {{ "history" | translate }}
     </div>
 
     <carousel [images]="images" [objectFit]="'cover'" [cellWidth]="'100%'" [arrowsOutside]="hideArrows$ | async"
@@ -13,8 +10,6 @@
 
 <div class="description-block">
     <div class="description" data-aos="fade-in">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad ipsam, maiores perferendis incidunt amet
-        perspiciatis facilis alias ullam temporibus dolore ut quia, autem adipisci expedita ab quos assumenda placeat
-        vero accusantium molestiae rem error vitae doloremque suscipit? Optio, exercitationem ab.
+        {{ "buildingHistory" | translate }}
     </div>
 </div>
