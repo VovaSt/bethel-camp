@@ -108,3 +108,9 @@
         }
     }
 }
+
+@media screen and (max-width: 400px) {
+    .wrapper .content {
+        padding: 44px 20px;
+    }
+}
