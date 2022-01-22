@@ -1,5 +1,13 @@
 @import "design-styles.scss";
 
+
+html, body {
+    position: relative;
+    min-height: 100vh;
+    height: auto;
+    min-width: 320px;
+}
+
 .mat-progress-bar {
     height: 10px !important;
     border-radius: 5px;
@@ -27,6 +35,13 @@
             animation: 10s cubic-bezier(0.19, 1, 0.22, 1) 0.2s infinite running buttonAnimate;
         }
     }
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+.ml-10 {
+    margin-left: 10px;
 }
 
 @keyframes buttonAnimate {

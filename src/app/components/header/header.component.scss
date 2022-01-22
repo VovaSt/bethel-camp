@@ -1,5 +1,7 @@
+@use '../../../assets/styles/design-styles';
+
 .site-header {
-    position: fixed;
+    // position: fixed;
     top: 0;
     width: 100%;
     background-color: transparent;
@@ -9,7 +11,11 @@
     align-content: center;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 23px 37px;
+    padding: 23px 37px 0px;
+
+    background: design-styles.$blue-medium;
+
+    // position: relative;
 
     .logo-container {
         display: inline-block;
@@ -96,6 +102,17 @@
     }
 }
 
+@media screen and (max-width: 1450px) {
+    .site-header {
+        .content {
+            .text {
+                padding: 20px 10px;
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .site-header {
         .content {
@@ -109,14 +126,23 @@
 
 @media screen and (max-width: 800px) {
     .site-header {
+        padding: 10px 30px;
+
         .content {
+            align-items: center;
+            .logo-container{
+                margin: 0px;
+            }
             .logo {
+                margin-top: 10px;
                 height: 40px;
             }
 
             .text {
                 padding: 20px 10px;
                 margin: 0 10px;
+                font-size: 12px;
+                line-height: 14px;
             }
 
             .pages {
@@ -129,7 +155,7 @@
             }
 
             .languages-block {
-                padding: 0 20px;
+                padding: 0px;
                 position: relative;
             }
 
@@ -145,6 +171,16 @@
                 z-index: 1;
             }
         }
+    }
+
+    :host ::ng-deep .mat-button-toggle-label-content {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .site-header {
+        padding: 10px 20px;
     }
 }
 
