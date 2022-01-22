@@ -12,7 +12,7 @@
         </div>
         <div class="progress" data-aos="fade">
             <div class="_text-small">
-                {{ "collected" | translate }}:
+                {{ "campPage.collected" | translate }}:
                 {{ project.haveMoney | currency }} / {{ project.needMoney | currency }}
             </div>
             <mat-progress-bar [value]="progress$ | async"></mat-progress-bar>
@@ -21,10 +21,10 @@
 
     <div class="buttons-block">
         <button mat-flat-button color="primary">
-            {{ "details" | translate }}
+            {{ "campPage.details" | translate }}
         </button>
         <button mat-flat-button color="accent" class="animated-button">
-            {{ "donate" | translate }}
+            {{ "campPage.donate" | translate }}
         </button>
     </div>
 </div>

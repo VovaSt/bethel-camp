@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { ProjectData } from 'src/app/models/project-data.model';
+import { ProjectData } from '../../models/project-data.model';
 import { debounceTime } from 'rxjs/operators';
 
 @Component({
