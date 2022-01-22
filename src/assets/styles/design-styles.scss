@@ -1,0 +1,86 @@
+$white: #ffffff;
+$blue-dark: #2F4659;
+$blue-medium: #6093BF;
+$blue-light: #89B3D9;
+$gray-medium: #95ACBF;
+$gray-light: #BFCDD9;
+$brown: #BF948A;
+
+
+._title {
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 58px;
+    margin: 0.2em 0;
+
+    @media screen and (max-width: 800px) {
+        font-size: 36px;
+        line-height: 48px;
+    }
+}
+
+._text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 32px;
+    margin: 0.3em 0;
+
+    @media screen and (max-width: 800px) {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+._title-small {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0.3em 0;
+    text-transform: uppercase;
+}
+
+._text-small {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0.3em 0;
+}
+
+._link {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+._page-title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 90px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin: 0;
+}
+
+._page-subtitle {
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    margin: 10px 0 0;
+}

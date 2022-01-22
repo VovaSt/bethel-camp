@@ -4,24 +4,27 @@
     </div>
 
     <div class="info-block">
-        <div class="title">
+        <div class="_title-small">
             {{project.name}}
         </div>
-        <div class="description">
+        <div class="_text-small">
             {{project.description}}
         </div>
         <div class="progress" data-aos="fade">
-            <div class="progress-value">
-                Зібрано: {{ project.haveMoney | currency }} / {{ project.needMoney | currency }}
+            <div class="_text-small">
+                {{ "campPage.collected" | translate }}:
+                {{ project.haveMoney | currency }} / {{ project.needMoney | currency }}
             </div>
             <mat-progress-bar [value]="progress$ | async"></mat-progress-bar>
         </div>
     </div>
 
     <div class="buttons-block">
-        <button mat-flat-button color="primary">Детальніше</button>
+        <button mat-flat-button color="primary">
+            {{ "campPage.details" | translate }}
+        </button>
         <button mat-flat-button color="accent" class="animated-button">
-            Пожертвувати
+            {{ "campPage.donate" | translate }}
         </button>
     </div>
 </div>

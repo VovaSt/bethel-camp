@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LanguageService } from './services/language.service';
+import { LanguageService } from './core/services/language.service';
 
 @Component({
     selector: 'app-root',
@@ -7,7 +7,7 @@ import { LanguageService } from './services/language.service';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    title = 'bethel-camp';
+    title = 'Церква Різдва Христового';
 
     constructor(private langService: LanguageService) {
         this.langService.setDefaultLang();

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { ProjectData } from 'src/app/models/project-data.model';
+import { ProjectData } from '../../models/project-data.model';
 
 @Component({
     selector: 'app-projects',
@@ -46,7 +46,6 @@ export class ProjectsComponent implements OnInit {
 
     constructor() { }
 
-    ngOnInit(): void {
-    }
+    ngOnInit(): void { }
 
 }

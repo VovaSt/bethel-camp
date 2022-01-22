@@ -2,8 +2,8 @@ import { ChangeDetectionStrategy, Component, OnInit, Renderer2, ViewChild } from
 import { MatMenuTrigger } from '@angular/material/menu';
 import { fromEvent } from 'rxjs';
 import { throttleTime } from 'rxjs/operators';
-import { Language } from 'src/app/enums/language.enum';
-import { LanguageService } from 'src/app/services/language.service';
+import { Language } from '../../core/enums/language.enum';
+import { LanguageService } from '../../core/services/language.service';
 
 @Component({
     selector: 'app-header',

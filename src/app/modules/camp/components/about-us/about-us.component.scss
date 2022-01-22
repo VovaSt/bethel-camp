@@ -1,11 +1,12 @@
+@import "design-styles.scss";
+
 .wrapper {
-    padding: 100px 0;
+    padding: 80px 0;
     display: flex;
-    max-width: 1100px;
     margin: 0 auto;
+    background-color: $gray-light;
 
     .video-container {
-        flex: 1;
         display: flex;
         align-items: center;
         max-width: 50%;
@@ -17,26 +18,25 @@
 
     .text-container {
         flex: 1;
-        padding-inline-start: 50px;
+        padding: 0 50px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         font-size: 18px;
         white-space: pre-line;
 
-        .title {
-            font-family: "Roboto Slab";
-            font-style: normal;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 32px;
-            line-height: 58px;
+        ._title {
+            color: $blue-dark;
+        }
+
+        ._text {
+            color: $blue-dark;
         }
     }
 }
 
 .statistics {
-    background-color: #c1caca;
+    background-color: $gray-medium;
 
     .blocks {
         max-width: 1100px;
@@ -50,13 +50,15 @@
             flex-direction: column;
             align-items: center;
 
-            .value {
-                font-size: 50px;
-                font-weight: bold;
+            ._title {
+                color: $white;
+                margin: 0;
+                zoom: 1.3;
             }
 
-            .text {
-                font-size: 25px;
+            ._text {
+                color: $white;
+                margin: 0;
             }
         }
     }
@@ -65,38 +67,26 @@
 @media screen and (max-width: 1250px) {
     .wrapper {
         max-width: 100%;
-        padding: 80px 20px;
+        padding: 60px 0px;
     }
 
-    .statistics {
-        .blocks {
+    .statistics .blocks {
             max-width: 100%;
-
-            .block {
-                .value {
-                    font-size: 35px;
-                }
-
-                .text {
-                    font-size: 20px;
-                }
-            }
-        }
     }
 }
 
 @media screen and (max-width: 800px) {
     .wrapper {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
+        padding: 0;
 
         .video-container {
             max-width: 100%;
         }
 
         .text-container {
-            padding: 0;
-            margin-top: 30px;
+            padding: 40px 30px;
         }
     }
 
