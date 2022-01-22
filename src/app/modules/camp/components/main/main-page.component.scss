@@ -10,12 +10,11 @@
     .bg-image {
         background: linear-gradient(0deg, rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)),
             url("https://camp-bethel.s3.amazonaws.com/backgrounds/main-background.jpg");
-        margin-top: 61px;
         background-position: top;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100vw;
-        height: calc(100vh - 61px);
+        height: 100vh;
     }
 
     .content {
