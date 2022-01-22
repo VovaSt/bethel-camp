@@ -2,24 +2,42 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: darkslategray;
+    background-color: transparent;
     z-index: 10;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 23px 37px;
+
+    .logo-container {
+        display: inline-block;
+        background: none;
+        margin-left: 37px;
+        margin-right: 40px;
+    }
 
     .content {
-        max-width: 1100px;
-        margin: 0 auto;
         display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
 
         .languages-block {
             flex: 0 1;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             padding: 0 15px;
         }
 
         .pages {
             flex: 1 1 100%;
             display: flex;
+            position: relative;
+            padding: 10px 0;
+            align-items: flex-start;
+            justify-content: space-around;
 
             .page-link {
                 text-decoration: none;
@@ -36,13 +54,17 @@
         }
 
         .text {
-            padding: 20px 20px;
-            margin: 0 20px;
+            margin: 0px 17px;
             cursor: pointer;
             color: white;
-            font-size: 18px;
-            text-align: 24px;
             white-space: nowrap;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+            height: max-content;
         }
 
         .mat-button-toggle-group-appearance-standard {

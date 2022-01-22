@@ -13,6 +13,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LanguageService } from './services/language.service';
+import { MainModule } from './main/main.module';
 
 export function httpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,7 +38,8 @@ export function httpLoaderFactory(http: HttpClient) {
                 useFactory: httpLoaderFactory,
                 deps: [HttpClient]
             }
-        })
+        }),
+        MainModule
     ],
     providers: [LanguageService],
     bootstrap: [AppComponent],
