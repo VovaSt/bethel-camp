@@ -1,15 +1,20 @@
-<div class="wrapper">
-    <div class="_text" data-aos="fade-in">
-        {{ "campPage.history" | translate }}
+<div class="wrapper ">
+    <div class="content-w">
+        <div class="_text" data-aos="fade-in">
+            {{ "campPage.history" | translate }}
+        </div>
+
+        <carousel [images]="images" [objectFit]="'cover'" [cellWidth]="'100%'" [arrowsOutside]="hideArrows$ | async"
+            [dots]="true" [loop]="true" height="500">
+        </carousel>
     </div>
 
-    <carousel [images]="images" [objectFit]="'cover'" [cellWidth]="'100%'" [arrowsOutside]="hideArrows$ | async"
-        [dots]="true" [loop]="true" height="500">
-    </carousel>
 </div>
 
 <div class="description-block">
-    <div class="_text" data-aos="fade-in">
-        {{ "campPage.buildingHistory" | translate }}
+    <div class="content-w">
+        <div class="_text" data-aos="fade-in">
+            {{ "campPage.buildingHistory" | translate }}
+        </div>
     </div>
 </div>

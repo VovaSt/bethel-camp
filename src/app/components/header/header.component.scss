@@ -2,6 +2,7 @@
 
 .site-header {
     // position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     background-color: transparent;
@@ -15,7 +16,7 @@
 
     background: design-styles.$blue-medium;
 
-    height: 56vw;
+    // height: 56vw;
     background: url('/assets/images/header-backgroud.jpg');
     background-repeat: no-repeat;
     background-position: top;

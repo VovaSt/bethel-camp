@@ -30,15 +30,32 @@
         .progress {
             margin: 10px 0;
         }
+
+        .text-overflow {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            text-align: justify;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        mat-progress-bar {
+            margin-bottom: 10px;
+        }
     }
 
     .buttons-block {
-        margin-top: 20px;
+        margin-top: 10px;
         display: flex;
         justify-content: end;
 
         button {
             margin: 0 10px;
+        }
+
+        .mat-flat-button.mat-accent {
+            color: $white;
         }
     }
 }

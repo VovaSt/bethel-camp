@@ -44,6 +44,11 @@ html, body {
     margin-left: 10px;
 }
 
+.content-w {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 @keyframes buttonAnimate {
     0% {
         left: -50%;

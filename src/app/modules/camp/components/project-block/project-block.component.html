@@ -1,21 +1,29 @@
 <div class="wrapper">
     <div class="photo-block">
-        <img [src]="project.photo" alt="project photo">
+        <img [src]="project.mainPhoto" alt="project photo">
     </div>
 
     <div class="info-block">
         <div class="_title-small">
-            {{project.name}}
+            {{ project.name | translate }}
         </div>
-        <div class="_text-small">
-            {{project.description}}
+        <div class="_text-small text-overflow">
+            {{ project.description | translate }}
         </div>
         <div class="progress" data-aos="fade">
-            <div class="_text-small">
+            <div class="_text-small" *ngIf="project.haveMoney; else needMoney">
                 {{ "campPage.collected" | translate }}:
                 {{ project.haveMoney | currency }} / {{ project.needMoney | currency }}
             </div>
-            <mat-progress-bar [value]="progress$ | async"></mat-progress-bar>
+
+            <ng-template #needMoney>
+                <div class="_text-small">
+                    {{ "campPage.need" | translate }}: {{ project.needMoney | currency }}
+                </div>
+            </ng-template>
+
+            <mat-progress-bar *ngIf="project.haveMoney" [value]="progress$ | async">
+            </mat-progress-bar>
         </div>
     </div>
 
