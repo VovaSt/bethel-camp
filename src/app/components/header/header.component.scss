@@ -15,6 +15,13 @@
 
     background: design-styles.$blue-medium;
 
+    height: 56vw;
+    background: url('/assets/images/header-backgroud.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-attachment: fixed;
+
     // position: relative;
 
     .logo-container {
@@ -22,6 +29,10 @@
         background: none;
         margin-left: 37px;
         margin-right: 40px;
+    }
+
+    .logo {
+        width: 17vw;
     }
 
     .content {
@@ -44,6 +55,7 @@
             padding: 10px 0;
             align-items: flex-start;
             justify-content: space-around;
+            overflow: hidden;
 
             .page-link {
                 text-decoration: none;
@@ -67,7 +79,7 @@
             font-family: Roboto;
             font-style: normal;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 1vw;
             line-height: 19px;
             text-transform: uppercase;
             height: max-content;
@@ -136,6 +148,7 @@
             .logo {
                 margin-top: 10px;
                 height: 40px;
+                width: 100%;
             }
 
             .text {
