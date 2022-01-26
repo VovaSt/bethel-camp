@@ -8,52 +8,50 @@
 .site-header {
     position: fixed;
     top: 0;
-    max-width: 1420px;
+    width: 100%;
     background-color: transparent;
     z-index: 10;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: flex-start;
+
     padding: 0px 37px 0px;
 
     // background: design-styles.$blue-medium;
 
     // position: relative;
 
-    .logo-container {
-        padding-top: 23px;
-        display: inline-block;
-        background: none;
-        margin-right: 40px;
-        display: flex;
-        align-items: flex-start;
-        .logo {
-            width: 100px;
-            margin-right: 26px;
-            cursor: pointer;
-        }
 
-        .logo-text {
-            margin-top: 12px;
-            height: 57px;
-            cursor: pointer;
-        }
-    }
 
 
     .content {
         display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        width: 100%;
+        max-width: 1365px;
+        margin: 0 auto;
+
+        .logo-container {
+            padding-top: 23px;
+            display: inline-block;
+            background: none;
+            margin-right: 40px;
+            display: flex;
+            align-items: flex-start;
+            .logo {
+                width: 100px;
+                margin-right: 26px;
+                cursor: pointer;
+            }
+
+            .logo-text {
+                margin-top: 12px;
+                height: 57px;
+                cursor: pointer;
+            }
+        }
 
         .languages-block {
             flex: 0 1;
             display: flex;
             align-items: flex-start;
             padding: 23px 15px 0;
+            height: 100%;
         }
 
         .pages {
@@ -63,6 +61,7 @@
             padding: 18px 0;
             align-items: flex-start;
             justify-content: center;
+            height: 100%;
 
             .page-link {
                 text-decoration: none;
@@ -127,13 +126,32 @@
 
 @media screen and (max-width: 1450px) {
     .site-header {
+        width: 100%;
         .content {
             .text {
                 font-size: 14px;
             }
-        }
-        .logo-text {
-            display: none;
+            .logo-text {
+                display: none;
+            }
+            .languages-block {
+                padding: 0px;
+                padding-top: 23px;
+                position: relative;
+            }
+
+            .mat-button-toggle-appearance-standard:not(.mat-button-toggle-checked) {
+                display: none;
+            }
+
+            .trigger {
+                display: block;
+                position: absolute;
+                width: 48px;
+                height: 48px;
+                z-index: 1;
+                cursor: pointer;
+            }
         }
     }
 }
@@ -168,24 +186,6 @@
                 .page-link:not(.current) {
                     display: none;
                 }
-            }
-
-            .languages-block {
-                padding: 0px;
-                padding-top: 23px;
-                position: relative;
-            }
-
-            .mat-button-toggle-appearance-standard:not(.mat-button-toggle-checked) {
-                display: none;
-            }
-
-            .trigger {
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                z-index: 1;
             }
         }
     }
