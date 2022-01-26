@@ -7,9 +7,8 @@
 }
 .site-header {
     position: fixed;
-    top: 0;
     width: 100%;
-    background-color: transparent;
+    top: 0;
     z-index: 10;
 
     padding: 0px 37px 0px;
@@ -17,7 +16,15 @@
     // background: design-styles.$blue-medium;
 
     // position: relative;
+    &.color {
+        transition: 1s linear;
+        background-color: #6093bfd9;
+    }
 
+    &.noColor {
+        transition: 1s linear;
+        background-color: transparent;
+    }
 
 
 
