@@ -8,13 +8,14 @@
     display: flex;
 
     .bg-image {
-        background: linear-gradient(0deg, rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)),
+        background: linear-gradient(0deg, rgba(30, 30, 30, 0.4), rgba(30, 30, 30, 0.4)),
             url("https://camp-bethel.s3.amazonaws.com/backgrounds/main-background.jpg");
-        background-position: top;
+        background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100vw;
-        height: 100vh;
+        height: 500px;
+        max-height: 100vh;
     }
 
     .content {

@@ -10,10 +10,8 @@
 .wrapper {
     max-width: 1300px;
 
-    .content {
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 44px 87px;
+    .content-w {
+        padding: 44px 0;
         display: flex;
         justify-content: space-between;
 
@@ -49,6 +47,7 @@
                 a {
                     text-decoration: none;
                     color: white;
+                    white-space: nowrap;
                 }
             }
         }
@@ -83,14 +82,14 @@
 }
 
 @media screen and (max-width: 1250px) {
-    .wrapper .content {
+    .wrapper .content-w {
         max-width: 100%;
         padding: 44px 30px;
     }
 }
 
 @media screen and (max-width: 800px) {
-    .wrapper .content {
+    .wrapper .content-w {
         flex-direction: column;
         padding: 44px 30px;
 
@@ -102,11 +101,13 @@
 
         .center-block {
             margin: 0 auto ;
+            max-width: unset;
             text-align: center;
         }
 
         .right-block {
             align-items: center;
+
             .social {
                 a {
                     padding: 5px;
@@ -117,7 +118,7 @@
 }
 
 @media screen and (max-width: 400px) {
-    .wrapper .content {
+    .wrapper .content-w {
         padding: 44px 20px;
     }
 }

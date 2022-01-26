@@ -12,35 +12,43 @@ export class ProjectsComponent implements OnInit {
     projects: ProjectData[] = [
         {
             id: 1,
-            name: 'Project 1',
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ipsum accusantium ab sapiente exercitationem pariatur dolorem eum, hic itaque quas fuga magni natus. Ratione perferendis ea, numquam vero sint, fuga magni ex veritatis expedita illo dignissimos! Rerum in dolore praesentium.",
-            photo: 'assets/images/IMG_8262.JPG',
-            needMoney: 10000,
-            haveMoney: 1600
+            name: 'campPage.projectsContent.tabernacle.title',
+            description: 'campPage.projectsContent.tabernacle.description',
+            requestIntro: 'campPage.projectsContent.tabernacle.requestIntro',
+            requests: [
+                {
+                    text: 'campPage.projectsContent.tabernacle.requests.tile',
+                    money: 3500
+                },
+                {
+                    text: 'campPage.projectsContent.tabernacle.requests.tents',
+                    money: 2500
+                }
+            ],
+            mainPhoto: 'assets/images/IMG_8262.JPG',
+            photos: [],
+            needMoney: 6000,
+            haveMoney: 0
         },
         {
-            id: 2,
-            name: 'Project 2',
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ipsum accusantium ab sapiente exercitationem pariatur dolorem eum, hic itaque quas fuga magni natus. Ratione perferendis ea, numquam vero sint, fuga magni ex veritatis expedita illo dignissimos! Rerum in dolore praesentium.",
-            photo: 'assets/images/IMG_1385.JPG',
-            needMoney: 2000,
-            haveMoney: 1300
-        },
-        {
-            id: 3,
-            name: 'Project 3',
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ipsum accusantium ab sapiente exercitationem pariatur dolorem eum, hic itaque quas fuga magni natus. Ratione perferendis ea, numquam vero sint, fuga magni ex veritatis expedita illo dignissimos! Rerum in dolore praesentium.",
-            photo: 'assets/images/IMG_8268.JPG',
-            needMoney: 500,
-            haveMoney: 216
-        },
-        {
-            id: 4,
-            name: 'Project 4',
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ipsum accusantium ab sapiente exercitationem pariatur dolorem eum, hic itaque quas fuga magni natus. Ratione perferendis ea, numquam vero sint, fuga magni ex veritatis expedita illo dignissimos! Rerum in dolore praesentium.",
-            photo: 'assets/images/IMG_8263.JPG',
-            needMoney: 300,
-            haveMoney: 258
+            id: 1,
+            name: 'campPage.projectsContent.diningBuilding.title',
+            description: 'campPage.projectsContent.diningBuilding.description',
+            requestIntro: 'campPage.projectsContent.diningBuilding.requestIntro',
+            requests: [
+                {
+                    text: 'campPage.projectsContent.diningBuilding.requests.roof',
+                    money: 5000
+                },
+                {
+                    text: 'campPage.projectsContent.diningBuilding.requests.facade',
+                    money: 3000
+                }
+            ],
+            mainPhoto: 'assets/images/IMG_8262.JPG',
+            photos: [],
+            needMoney: 8000,
+            haveMoney: 0
         }
     ]
 

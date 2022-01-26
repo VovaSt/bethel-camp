@@ -1,31 +1,38 @@
 @import "design-styles.scss";
 
-.wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 80px 0;
+:host {
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+.wrapper {
+    padding: 50px 0;
     background-color: $white;
 
-    ._text {
-        margin-bottom: 50px;
-        text-align: center;
-        color: $blue-dark;
-    }
+    .content-w {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
 
-    carousel {
-        width: 80%;
-        z-index: 8;
+        ._text {
+            margin-bottom: 50px;
+            text-align: center;
+            color: $blue-dark;
+        }
 
-        ::ng-deep .carousel-dots {
-            .carousel-dot {
-                border: 2px solid $blue-light;
-            }
+        carousel {
+            width: 80%;
+            z-index: 8;
 
-            .carousel-dot-active {
-                background-color: $blue-light;
+            ::ng-deep .carousel-dots {
+                .carousel-dot {
+                    border: 2px solid $blue-light;
+                }
+
+                .carousel-dot-active {
+                    background-color: $blue-light;
+                }
             }
         }
     }
@@ -34,10 +41,8 @@
 .description-block {
     background-color: $gray-light;
 
-    ._text {
+    .content-w ._text {
         text-align: center;
-        max-width: 1100px;
-        margin: 0 auto;
         padding: 50px;
         color: $blue-dark;
     }
@@ -46,16 +51,9 @@
 @media screen and (max-width: 1250px) {
     .wrapper {
         max-width: 100%;
-        padding: 60px 0px;
 
-        ._text {
+        .content-w ._text {
             padding: 0 30px;
-        }
-    }
-
-    .description-block {
-        .description {
-            max-width: 100%;
         }
     }
 }
@@ -64,8 +62,24 @@
     .wrapper {
         padding-bottom: 0px;
 
-        carousel {
+        .content-w carousel {
             width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        padding-top: 30px;
+
+        .content-w ._text {
+            margin-bottom: 30px;
+        }
+    }
+
+    .description-block {
+        .content-w ._text {
+            padding: 30px;
         }
     }
 }
