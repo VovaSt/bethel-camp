@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModulesManagerService } from 'src/app/core/services/mudule-mnager.service';
 
 @Component({
   selector: 'app-main-page',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private modulesManager: ModulesManagerService,
+  ) { }
 
   ngOnInit(): void {
+    this.modulesManager.setActiveModule('main');
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModulesManagerService } from '../../../../core/services/mudule-mnager.service';
 
 @Component({
   selector: 'app-landing',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+    constructor(
+        private modulesManager: ModulesManagerService,
+    ) { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+        this.modulesManager.setActiveModule('camp');
+    }
 
 }

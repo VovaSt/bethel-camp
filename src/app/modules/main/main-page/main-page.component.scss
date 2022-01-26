@@ -1,0 +1,40 @@
+@use '../../../../assets/styles/design-styles';
+
+.first-block {
+    height: 56vw;
+    background: url('/assets/images/header-backgroud.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-attachment: fixed;
+    position: relative;
+
+    .message {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 72%;
+        color: design-styles.$white;
+
+        ._page-title {
+            font-size: 4vw;
+            line-height: 5vw;
+        }
+        ._page-subtitle {
+            margin-top: 36px;
+            font-size: 3vh;
+        }
+
+        @media screen and (max-width: 600px) {
+            top: 60%;
+            ._page-title {
+                font-size: 14px;
+                line-height: 17px;
+            }
+            ._page-subtitle {
+                margin-top: 6px;
+            }
+        }
+    }
+}
