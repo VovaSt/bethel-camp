@@ -1,9 +1,14 @@
 @use '../../../assets/styles/design-styles';
 
 
-.wrapper {
+:host {
     background: design-styles.$blue-medium;
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.wrapper {
+    max-width: 1300px;
 
     .content-w {
         padding: 44px 0;
@@ -90,11 +95,13 @@
         .left-block,
         .right-block {
             padding: 0;
+            justify-content: center;
         }
 
         .center-block {
             margin: 0 auto ;
             max-width: unset;
+            text-align: center;
         }
 
         .right-block {

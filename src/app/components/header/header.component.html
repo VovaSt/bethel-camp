@@ -1,49 +1,23 @@
 <nav class="site-header">
     <div class="content">
-        <div class="logo-container">
-            <img class="logo" src="assets/images/main-logo.svg" alt="logo">
+        <div class="logo-container" routerLink="">
+            <img class="logo" src="assets/images/Logo.svg" alt="logo"  routerLink="">
+            <img class="logo-text" src="assets/images/LogoText.svg" alt="logo"  routerLink="">
         </div>
         <div class="pages">
-        <a class="text page-link" id="main_link" (click)="linkAction('aboutChurch')">
-            {{ "header.aboutChurch" | translate }}
-        </a>
-        <a class="text page-link" id="aboutUs_link" (click)="linkAction('eventsCalandar')">
-            {{ "header.eventsCalandar" | translate }}
-        </a>
-        <a class="text page-link" id="history_link" (click)="linkAction('broadcasts')">
-            {{ "header.broadcasts" | translate }}
-        </a>
-        <a class="text page-link" id="projects_link" (click)="linkAction('ministries')">
-            {{ "header.ministries" | translate }}
-        </a>
-        <a class="text page-link" id="projects_link" (click)="linkAction('donation')">
-            {{ "header.donation" | translate }}
-        </a>
-        <a class="text page-link" id="projects_link" (click)="linkAction('contacts')">
-            {{ "header.contacts" | translate }}
-        </a>
-        <div class="trigger" #linksMenuTrigger="matMenuTrigger" [matMenuTriggerFor]="linksMenu"></div>
-
-        <mat-menu #linksMenu="matMenu">
-            <div class="text-dropdown" (click)="scrollTo('aboutChurch')">
-                {{ "header.aboutChurch" | translate }}
-            </div>
-            <div class="text-dropdown" (click)="scrollTo('eventsCalandar')">
-                {{ "header.eventsCalandar" | translate }}
-            </div>
-            <div class="text-dropdown" (click)="scrollTo('broadcasts')">
-                {{ "header.broadcasts" | translate }}
-            </div>
-            <div class="text-dropdown" (click)="scrollTo('ministries')">
-                {{ "header.ministries" | translate }}
-            </div>
-            <div class="text-dropdown" (click)="scrollTo('donation')">
-                {{ "header.donation" | translate }}
-            </div>
-            <div class="text-dropdown" (click)="scrollTo('contacts')">
-                {{ "header.contacts" | translate }}
-            </div>
-        </mat-menu>
+            <ng-container *ngFor="let link of headerLinks" >
+                <a class="text page-link" [attr.id]="link.linkId" (click)="linkAction(link.linkAction)">
+                    {{ "header." + link.context | translate }}
+                </a>
+            </ng-container>
+            <div class="trigger" #linksMenuTrigger="matMenuTrigger" [matMenuTriggerFor]="linksMenu"></div>
+            <mat-menu #linksMenu="matMenu">
+                <ng-container *ngFor="let link of headerLinks" >
+                    <div class="text-dropdown" (click)="scrollTo(link.linkAction)">
+                        {{ "header." + link.context  | translate }}
+                    </div>
+                </ng-container>
+            </mat-menu>
         </div>
 
         <div class="languages-block">

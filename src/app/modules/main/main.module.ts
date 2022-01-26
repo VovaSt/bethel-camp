@@ -9,6 +9,7 @@ import { MinistriesComponent } from './pages/ministries/ministries.component';
 import { DonateComponent } from './pages/donate/donate.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { BroadcastComponent } from './pages/broadcast/broadcast.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { BroadcastComponent } from './pages/broadcast/broadcast.component';
   ],
   imports: [
     CommonModule,
-    MainRoutingModule
+    MainRoutingModule,
+    SharedModule,
   ]
 })
 export class MainModule { }
