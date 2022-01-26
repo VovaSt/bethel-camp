@@ -7,9 +7,8 @@
 }
 .site-header {
     position: fixed;
-    top: 0;
     width: 100%;
-    background-color: transparent;
+    top: 0;
     z-index: 10;
 
     padding: 0px 37px 0px;
@@ -33,17 +32,6 @@
             margin-right: 40px;
             display: flex;
             align-items: flex-start;
-            .logo {
-                width: 100px;
-                margin-right: 26px;
-                cursor: pointer;
-            }
-
-            .logo-text {
-                margin-top: 12px;
-                height: 57px;
-                cursor: pointer;
-            }
         }
 
         .languages-block {
@@ -122,6 +110,43 @@
         }
     }
 
+    &.color {
+        .logo {
+            width: 50px;
+            margin-right: 26px;
+            cursor: pointer;
+            transition: 0.2s linear;
+        }
+
+        .logo-text {
+            margin-top: 12px;
+            height: 30px;
+            cursor: pointer;
+            transition: 0.2s linear;
+        }
+        transition: 1s linear;
+        background-color: #6093bfd9;
+
+    }
+
+    &.noColor {
+        transition: 0.2s linear;
+        background-color: transparent;
+        .logo {
+            width: 100px;
+            margin-right: 26px;
+            cursor: pointer;
+            transition: 0.2s linear;
+        }
+
+        .logo-text {
+            margin-top: 12px;
+            height: 57px;
+            cursor: pointer;
+            transition: 0.2s linear;
+
+        }
+    }
 }
 
 @media screen and (max-width: 1450px) {

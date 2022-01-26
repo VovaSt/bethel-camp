@@ -1,5 +1,5 @@
 import { LandingHeader, landingHeaderType } from './../../core/constants/landing';
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, Renderer2, Self, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener, OnInit, Renderer2, Self, ViewChild } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { fromEvent } from 'rxjs';
 import { distinctUntilChanged, filter, throttleTime } from 'rxjs/operators';
@@ -22,9 +22,14 @@ export class HeaderComponent implements OnInit {
     public currentLang: Language;
     headerLinks: LandingHeader[];
     private pagesLinks;
+    navbarColor = false;
 
     @ViewChild('linksMenuTrigger') linksMenuTrigger: MatMenuTrigger;
     @ViewChild('langsMenuTrigger') langsMenuTrigger: MatMenuTrigger;
+
+    @HostListener('window:scroll', ['$event']) onscroll() {
+        this.navbarColor = window.scrollY > 200 ? true : false;
+    }
 
     constructor(
         @Self() private unsub: UnsubscribeService,

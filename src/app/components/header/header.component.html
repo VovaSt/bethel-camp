@@ -1,4 +1,4 @@
-<nav class="site-header">
+<nav class="site-header" (scroll)="onscroll()" [ngClass]="navbarColor ? 'color' : 'noColor'">
     <div class="content">
         <div class="logo-container" routerLink="">
             <img class="logo" src="assets/images/Logo.svg" alt="logo"  routerLink="">
