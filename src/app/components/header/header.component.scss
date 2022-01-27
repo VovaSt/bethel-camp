@@ -148,9 +148,6 @@
             .text {
                 font-size: 14px;
             }
-            .logo-text {
-                display: none;
-            }
             .languages-block {
                 padding: 0px;
                 padding-top: 23px;
@@ -172,9 +169,30 @@
         }
     }
 }
+@media screen and (max-width: 1220px) {
+    .site-header {
+        .content {
+            .logo {
+                width: 80px;
+            }
+            .logo-text {
+                height: 37px;
+            }
+        }
+    }
+}
 
+@media screen and (max-width: 1150px) {
+    .site-header {
+        .content {
+            .logo-text {
+                display: none;
+            }
+        }
+    }
+}
 
-@media screen and (max-width: 1086px) {
+@media screen and (max-width: 1024px) {
     .site-header {
         padding: 10px 30px;
         width: 100%;
@@ -189,7 +207,6 @@
                 height: 45px;
                 width: 100%;
             }
-
             .text {
                 padding: 20px 10px;
                 margin: 0 10px;

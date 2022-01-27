@@ -21,6 +21,36 @@
                 transform: scale(1.1)  translate(10px, 0px);
             }
         }
+
+        @media (max-width: 1250px) {
+            align-items: center;
+            .rectangle-image {
+                max-width: 478px;
+                height: 270px;
+                background-size: contain;
+            }
+        }
+
+        @media (max-width: 960px) {
+            .rectangle-image {
+                max-width: 358px;
+                height: 202px;
+            }
+        }
+
+
+        @media (max-width: 660px) {
+            flex-direction: column;
+            align-items: flex-end;
+            .rectangle-image {
+                 display: none;
+            }
+            .text-container {
+                margin-top: 0px;
+            }
+        }
+
+
     }
 
 

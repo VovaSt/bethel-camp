@@ -13,7 +13,7 @@
         .rectangle-image {
             width: 100%;
             max-width: 571px;
-            max-height: 560px;
+            height: 560px;
             background-image: linear-gradient(0deg, rgba(47, 70, 89, 0.35), rgba(47, 70, 89, 0.35)),
             url("https://camp-bethel.s3.amazonaws.com/backgrounds/church.jpg");
             background-repeat: no-repeat;
@@ -46,6 +46,43 @@
                     transform: scale(1.1)  translate(-10px, 0px);
                     transition: transform 0.2s linear;
                 }
+            }
+
+        }
+
+        @media (max-width: 1250px) {
+            .rectangle-image {
+                max-width: 438px;
+                height: 430px;
+            }
+        }
+
+        @media (max-width: 960px) {
+            .rectangle-image {
+                max-width: 337px;
+                height: 330px;
+            }
+            .text-container {
+                padding-left: 47px;
+                padding-right: 30px;
+            }
+        }
+
+        @media (max-width: 660px) {
+            flex-direction: column;
+            .text-container {
+                margin-top: 40px;
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .rectangle-image {
+                max-width: 255px;
+                height: 250px;
+            }
+            .text-container {
+                margin-top: 40px;
             }
         }
     }
