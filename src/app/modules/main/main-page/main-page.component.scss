@@ -1,4 +1,4 @@
-@use '../../../../assets/styles/design-styles';
+@import "design-styles.scss";
 
 .first-block {
     height: 56vw;
@@ -16,26 +16,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 72%;
-        color: design-styles.$white;
-
-        ._page-title {
-            font-size: 4vw;
-            line-height: 5vw;
-        }
-        ._page-subtitle {
-            margin-top: 36px;
-            font-size: 3vh;
-        }
-
-        @media screen and (max-width: 600px) {
-            top: 60%;
-            ._page-title {
-                font-size: 14px;
-                line-height: 17px;
-            }
-            ._page-subtitle {
-                margin-top: 6px;
-            }
-        }
+        color: $white;
+        max-width: 1200px;
     }
 }

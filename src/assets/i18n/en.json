@@ -31,5 +31,9 @@
         "need": "Need",
         "details": "More details",
         "donate": "Donate"
+    },
+    "mainPage": {
+        "message": "Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here!",
+        "placeWriting": "2 Corinthians 5:17"
     }
 }
