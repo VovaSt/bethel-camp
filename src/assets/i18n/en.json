@@ -57,6 +57,7 @@
         "ministries": {
             "title" : "Our Services",
             "text": "",
+            "linkText": "View",
             "link1": "home groups",
             "link2": "Youth",
             "link3": "Sunday school",

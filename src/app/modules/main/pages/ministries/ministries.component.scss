@@ -175,11 +175,11 @@ p.copy {
   letter-spacing: 0.025rem;
   text-transform: uppercase;
   color: white;
-  background-color: $gray-light;
+  background-color: #95ACBF4d;
   border: none;
 
   &:hover {
-    background-color: lighten($brown, 15%);
+    background-color: lighten(#95ACBF85, 15%);
   }
 
   &:focus {
