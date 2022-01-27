@@ -34,6 +34,40 @@
     },
     "mainPage": {
         "message": "Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here!",
-        "placeWriting": "2 Corinthians 5:17"
+        "placeWriting": "2 Corinthians 5:17",
+        "aboutUs": {
+            "title" : "About Our Church",
+            "text": "",
+            "link1": "confession of faith",
+            "link2": "Schedule of services",
+            "link3": "servants",
+            "link4": "Church History"
+        },
+        "events": {
+            "title" : "Church Events",
+            "text": "",
+            "link1": "go to the list of events"
+        },
+        "broadcasts": {
+            "title" : "Archive of Broadcast Services",
+            "text": "",
+            "link1": "last broadcast of the ministry",
+            "link2": "go to archive"
+        },
+        "ministries": {
+            "title" : "Our Services",
+            "text": "",
+            "link1": "home groups",
+            "link2": "Youth",
+            "link3": "Sunday school",
+            "link4": "YOUTH CHOIR",
+            "link5": "Camp",
+            "link6": "Social service"
+        },
+        "donation": {
+            "title" : "Donation",
+            "text": "",
+            "link1": "donate"
+        }
     }
 }

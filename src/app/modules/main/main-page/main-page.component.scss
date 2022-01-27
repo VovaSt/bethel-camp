@@ -1,8 +1,8 @@
 @import "design-styles.scss";
 
 .first-block {
-    height: 56vw;
-    background: url('/assets/images/header-backgroud.jpg');
+    background: linear-gradient(0deg, rgba(30, 30, 30, 0.2), rgba(30, 30, 30, 0.2)),
+    url("https://camp-bethel.s3.amazonaws.com/backgrounds/header-backgroud.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

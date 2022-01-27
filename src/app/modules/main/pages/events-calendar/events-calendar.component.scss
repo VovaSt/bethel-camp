@@ -1,0 +1,29 @@
+@import "design-styles.scss";
+
+:host {
+    background-color: $white;
+
+    .main-wrapper {
+        .rectangle-image {
+            height: 520px;
+            background-image: linear-gradient(0deg, rgba(47, 70, 89, 0.35), rgba(47, 70, 89, 0.35)),
+            url("https://camp-bethel.s3.amazonaws.com/backgrounds/camp-rectangle.jpg");
+        }
+        .text-container {
+            ._title, a{
+                color: $blue-medium;
+            }
+            p {
+                color: $blue-dark;
+            }
+            a {
+                &:hover {
+                    transform: scale(1.1)  translate(10px, 0px);
+                    transition: transform 0.2s linear;
+                }
+            }
+        }
+    }
+
+
+}
