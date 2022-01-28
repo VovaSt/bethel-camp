@@ -47,13 +47,9 @@ export class HeaderComponent implements OnInit {
         this.unsub.subs = this.modulesManager.getActiveModule$
             .pipe(filter(x => !!x), distinctUntilChanged())
             .subscribe(module => {
-                console.log(module)
                 this.headerLinks = landingHeaderType[module];
                 this.cd.markForCheck();
             });
-
-        this.pagesLinks = document.querySelectorAll(".page-link");
-        // this.renderer.addClass(this.pagesLinks[0], 'current');
 
         fromEvent(window, 'scroll')
             .pipe(throttleTime(50))
@@ -71,6 +67,13 @@ export class HeaderComponent implements OnInit {
         }
     }
 
+    setCurrentLink() {
+        this.pagesLinks = document.querySelectorAll(".page-link");
+        if (this.pagesLinks.length) {
+            this.renderer.addClass(this.pagesLinks[0], 'current');
+        }
+    }
+
     public scrollTo(id: string) {
         const element = document.getElementById(id);
         element?.scrollIntoView({
@@ -82,15 +85,17 @@ export class HeaderComponent implements OnInit {
 
     private onScroll() {
         const fromTop = window.scrollY;
+        if (!this.pagesLinks || !this.pagesLinks.length) {
+            this.setCurrentLink()
+        }
 
         if (fromTop < 0) {
             return;
         } // fix for mobile
 
         this.pagesLinks.forEach(link => {
-            const sectionId = link.id?.split('_')[0];
+            const sectionId = link.id?.split('.')[0];
             const section = document.getElementById(sectionId);
-
             if (
                 section.offsetTop <= fromTop &&
                 section.offsetTop + section.offsetHeight > fromTop

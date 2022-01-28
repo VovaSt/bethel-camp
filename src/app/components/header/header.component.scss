@@ -1,4 +1,4 @@
-@use '../../../assets/styles/design-styles';
+@import 'design-styles';
 
 :host {
     width: 100%;
@@ -97,7 +97,7 @@
             font-size: 18px;
         }
 
-        .trigger {
+        .trigger, .linkTrigger {
             display: none;
         }
     }
@@ -224,6 +224,20 @@
             }
             .languages-block {
                 padding: 0px 15px 0;
+            }
+
+            .linkTrigger {
+                display: block;
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                z-index: 1;
+                top: 0;
+                left: 16px;
+                cursor: pointer;
+                &__image {
+                    width: 40px;
+                }
             }
 
         }
