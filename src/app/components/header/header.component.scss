@@ -206,8 +206,15 @@
                 margin-top: 10px;
                 height: 45px;
                 width: 100%;
-                margin-right: 0px;
+                margin-right: 16px;
                 margin-left: 76px;
+            }
+            .logo-text {
+                display: inline;
+                margin-top: 12px;
+                height: 27px;
+                cursor: pointer;
+                transition: 0.2s linear;
             }
             .text {
                 padding: 20px 10px;
@@ -258,7 +265,14 @@
             .logo {
                 height: 35px;
                 margin-top: 5px;
+                margin-right: 8px;
                 margin-left: 56px;
+            }
+            .logo-text {
+                margin-top: 6px;
+                height: 24px;
+                cursor: pointer;
+                transition: 0.2s linear;
 
             }
             .linkTrigger, .trigger, .linkTrigger__image {
