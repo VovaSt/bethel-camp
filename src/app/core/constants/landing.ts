@@ -45,7 +45,7 @@ camp: [
     },
     {
         linkId: 'aboutUs_link',
-        linkAction: 'cap',
+        linkAction: 'aboutUs',
         context: 'aboutUs'
     },
     {

@@ -6,8 +6,9 @@
 }
 
 .wrapper {
-    padding: 50px 0;
+    padding-bottom: 50px;
     background-color: $white;
+    max-width: 100%;
 
     .content-w {
         display: flex;
@@ -16,7 +17,7 @@
         overflow: hidden;
 
         ._text {
-            margin-bottom: 50px;
+            padding: 50px;
             text-align: center;
             color: $blue-dark;
         }
@@ -48,19 +49,10 @@
     }
 }
 
-@media screen and (max-width: 1250px) {
-    .wrapper {
-        max-width: 100%;
-
-        .content-w ._text {
-            padding: 0 30px;
-        }
-    }
-}
 
 @media screen and (max-width: 1024px) {
     .wrapper {
-        padding-bottom: 0px;
+        padding: 0px;
 
         .content-w carousel {
             width: 100%;
@@ -70,10 +62,8 @@
 
 @media screen and (max-width: 800px) {
     .wrapper {
-        padding-top: 30px;
-
         .content-w ._text {
-            margin-bottom: 30px;
+            padding: 30px;
         }
     }
 

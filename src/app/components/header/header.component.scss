@@ -158,6 +158,10 @@
                 display: none;
             }
 
+            .mat-button-toggle-checked {
+                color: white;
+            }
+
             .trigger {
                 display: block;
                 position: absolute;
@@ -231,6 +235,7 @@
                     display: none;
                 }
             }
+
             .languages-block {
                 padding: 0px 15px 0;
             }
@@ -282,6 +287,10 @@
             .linkTrigger {
                 left: 32px;
                 top: 50%;
+            }
+
+            .languages-block {
+                padding: 0px;
             }
         }
 
