@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit {
     @ViewChild('langsMenuTrigger') langsMenuTrigger: MatMenuTrigger;
 
     @HostListener('window:scroll', ['$event']) onscroll() {
-        if (window.innerWidth <= 800) {
+        if (window.innerWidth <= 1400) {
             this.navbarColor = window.scrollY > 50 ? true : false;
         } else {
             this.navbarColor = window.scrollY > 200 ? true : false;
