@@ -206,6 +206,8 @@
                 margin-top: 10px;
                 height: 45px;
                 width: 100%;
+                margin-right: 0px;
+                margin-left: 76px;
             }
             .text {
                 padding: 20px 10px;
@@ -232,8 +234,9 @@
                 width: 40px;
                 height: 40px;
                 z-index: 1;
-                top: 0;
-                left: 16px;
+                top: 52%;
+                transform: translate(-50%, -50%);
+                left: 60px;
                 cursor: pointer;
                 &__image {
                     width: 40px;
@@ -248,10 +251,28 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
     .site-header {
         padding: 10px 20px;
+        .content {
+            .logo {
+                height: 35px;
+                margin-top: 5px;
+                margin-left: 56px;
+
+            }
+            .linkTrigger, .trigger, .linkTrigger__image {
+                width: 35px;
+                height: 35px;
+            }
+            .linkTrigger {
+                left: 32px;
+                top: 50%;
+            }
+        }
+
     }
+
 }
 
 .text-dropdown {

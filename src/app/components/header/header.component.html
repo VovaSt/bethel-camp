@@ -1,5 +1,15 @@
 <nav class="site-header" (scroll)="onscroll()" [ngClass]="navbarColor ? 'color' : 'noColor'">
     <div class="content">
+        <div class="linkTrigger" #linksMenuTrigger="matMenuTrigger" [matMenuTriggerFor]="linksMenu">
+            <img class="linkTrigger__image" src="assets/images/all-pages.svg" alt="logo">
+        </div>
+        <mat-menu #linksMenu="matMenu">
+            <ng-container *ngFor="let link of headerLinks" >
+                <div class="text-dropdown" (click)="scrollTo(link.linkAction)">
+                    {{ "header." + link.context  | translate }}
+                </div>
+            </ng-container>
+        </mat-menu>
         <div class="logo-container" routerLink="">
             <img class="logo" src="assets/images/Logo.svg" alt="logo"  routerLink="">
             <img class="logo-text" src="assets/images/LogoText.svg" alt="logo"  routerLink="">
@@ -10,16 +20,6 @@
                     {{ "header." + link.context | translate }}
                 </a>
             </ng-container>
-            <div class="linkTrigger" #linksMenuTrigger="matMenuTrigger" [matMenuTriggerFor]="linksMenu">
-                <img class="linkTrigger__image" src="assets/images/all-pages.svg" alt="logo">
-            </div>
-            <mat-menu #linksMenu="matMenu">
-                <ng-container *ngFor="let link of headerLinks" >
-                    <div class="text-dropdown" (click)="scrollTo(link.linkAction)">
-                        {{ "header." + link.context  | translate }}
-                    </div>
-                </ng-container>
-            </mat-menu>
         </div>
 
         <div class="languages-block">
