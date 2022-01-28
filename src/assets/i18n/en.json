@@ -33,7 +33,12 @@
         "donate": "Donate"
     },
     "mainPage": {
-        "message": "Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here!",
+        "message1": "Therefore, if anyone ",
+        "textStrong1": "is in Christ,",
+        "message2": "the new creation ",
+        "textStrong2": "has come:",
+        "message3": "The old has gone, ",
+        "textStrong3": "the new is here!",
         "placeWriting": "2 Corinthians 5:17",
         "aboutUs": {
             "title" : "About Our Church",
