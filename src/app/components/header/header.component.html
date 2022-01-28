@@ -33,7 +33,7 @@
 
             <mat-menu #langsMenu="matMenu">
                 <ng-container *ngFor="let lang of languages">
-                    <div class="text-dropdown" (click)="changeLanguage(lang)">{{ lang }}</div>
+                    <div class="text-dropdown lang" (click)="changeLanguage(lang)">{{ lang }}</div>
                 </ng-container>
             </mat-menu>
         </div>

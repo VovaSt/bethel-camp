@@ -15,12 +15,13 @@ export class LanguageService {
         const available = Object.values(Language).find(i => browserLang as Language == i);
         const lang = available ? browserLang as Language : Language.ua;
 
-        this.translateService.use(lang);
-        this._lang$.next(lang);
+        this.setLanguage(lang);
+
     }
 
     public setLanguage(language: Language) {
         this.translateService.use(language);
+        this._lang$.next(language);
     }
 
     public getLanguageObs() {

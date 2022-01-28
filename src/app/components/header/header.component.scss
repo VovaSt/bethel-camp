@@ -292,8 +292,12 @@
 .text-dropdown {
     padding: 10px 20px;
     cursor: pointer;
-    color: white;
     font-size: 18px;
     text-align: 24px;
     white-space: nowrap;
+
+    &.lang {
+        text-transform: uppercase;
+        text-align: center;
+    }
 }
