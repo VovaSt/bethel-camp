@@ -25,7 +25,7 @@ export class ProjectsComponent implements OnInit {
                     money: 2500
                 }
             ],
-            mainPhoto: 'assets/images/IMG_8262.JPG',
+            mainPhoto: 'https://camp-bethel.s3.amazonaws.com/projects/tabernacle/Tabernacle_0.jpg',
             photos: [],
             needMoney: 6000,
             haveMoney: 0
@@ -45,7 +45,7 @@ export class ProjectsComponent implements OnInit {
                     money: 3000
                 }
             ],
-            mainPhoto: 'assets/images/IMG_8262.JPG',
+            mainPhoto: 'https://camp-bethel.s3.amazonaws.com/projects/dinning-building/DinningBuilding_0.jpg',
             photos: [],
             needMoney: 8000,
             haveMoney: 0

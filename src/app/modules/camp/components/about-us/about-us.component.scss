@@ -97,3 +97,9 @@
         }
     }
 }
+
+@media screen and (max-width: 560px) {
+    .wrapper .content-w .video-container iframe {
+        height: 56vw;
+    }
+}
