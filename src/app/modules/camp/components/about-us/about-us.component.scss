@@ -33,6 +33,34 @@
             ._text {
                 color: $blue-dark;
             }
+
+            .social {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+
+                p {
+                    white-space: nowrap;
+                }
+
+                .links {
+                    padding: 10px 0;
+
+                    a {
+                        margin-inline-start: 15px;
+
+                        img {
+                            width: 34px;
+                            height: 34px;
+
+                            &:hover {
+                                transform: scale(1.1);
+                                transition: transform 0.2s linear;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -99,7 +127,16 @@
 }
 
 @media screen and (max-width: 560px) {
-    .wrapper .content-w .video-container iframe {
-        height: 56vw;
+    .wrapper .content-w {
+        .video-container iframe {
+            height: 56vw;
+        }
+
+        .text-container .social .links {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 0;
+        }
     }
 }

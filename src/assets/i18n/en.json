@@ -18,10 +18,11 @@
     },
     "campPage": {
         "campName": "Bethel",
-        "aboutUs":"About us",
+        "aboutUs": "About us",
         "establishment": "Center for spiritual and physical development",
-        "aboutUsText": "The Center for Spiritual and Physical Development «Bethel» is a subsidiary project of the Church of the Nativity of Christ (Berdychiv, Ukraine). For many years, our center has been a place of God's work on the hearts of children, adolescents and young people. In addition to working with children of religious parents, there is also active work among orphans and children from nearby rural schools.",
+        "aboutUsText": "For many years, our center has been a place of God's work on the hearts of children, adolescents and young people. In addition to working with children of religious parents, there is also active work among orphans and children from nearby rural schools.",
         "aboutUsText2": "Our goal is first of all to help children know God, to teach them to communicate with Him. And also to spend time in pleasant communication and interesting activities in nature.",
+        "moreInfo": "More information about us:",
         "yearsOfMinistry": "years of camp service",
         "numberOfCamps": "established camps",
         "numberOfChildren": "reached children",
@@ -41,7 +42,7 @@
         "textStrong3": "the new is here!",
         "placeWriting": "2 Corinthians 5:17",
         "aboutUs": {
-            "title" : "About Our Church",
+            "title": "About Our Church",
             "text": "",
             "link1": "confession of faith",
             "link2": "Schedule of services",
@@ -49,18 +50,18 @@
             "link4": "Church History"
         },
         "events": {
-            "title" : "Church Events",
+            "title": "Church Events",
             "text": "",
             "link1": "go to the list of events"
         },
         "broadcasts": {
-            "title" : "Archive of Broadcast Services",
+            "title": "Archive of Broadcast Services",
             "text": "",
             "link1": "last broadcast of the ministry",
             "link2": "go to archive"
         },
         "ministries": {
-            "title" : "Our Services",
+            "title": "Our Services",
             "text": "",
             "linkText": "View",
             "link1": "home groups",
@@ -71,7 +72,7 @@
             "link6": "Social service"
         },
         "donation": {
-            "title" : "Donation",
+            "title": "Donation",
             "text": "",
             "link1": "donate"
         }
