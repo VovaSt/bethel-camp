@@ -13,12 +13,14 @@
         <div class="progress" data-aos="fade">
             <div class="_text-small" *ngIf="project.haveMoney; else needMoney">
                 {{ "campPage.collected" | translate }}:
-                {{ project.haveMoney | currency }} / {{ project.needMoney | currency }}
+                {{ project.haveMoney | currency:'USD':'symbol':'1.0-0' }} /
+                {{ project.needMoney | currency:'USD':'symbol':'1.0-0' }}
             </div>
 
             <ng-template #needMoney>
                 <div class="_text-small">
-                    {{ "campPage.need" | translate }}: {{ project.needMoney | currency }}
+                    {{ "campPage.need" | translate }}:
+                    {{ project.needMoney | currency:'USD':'symbol':'1.0-0' }}
                 </div>
             </ng-template>
 
@@ -28,7 +30,7 @@
     </div>
 
     <div class="buttons-block">
-        <button mat-flat-button color="primary">
+        <button mat-flat-button color="primary" (click)="goToProject()">
             {{ "campPage.details" | translate }}
         </button>
         <button mat-flat-button color="accent" class="animated-button">

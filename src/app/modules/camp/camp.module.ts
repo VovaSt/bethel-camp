@@ -8,6 +8,8 @@ import { HistoryPageComponent } from './components/history/history-page.componen
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectBlockComponent } from './components/project-block/project-block.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { ProjectPageComponent } from './pages/project-page/project-page.component';
+import { ProjectsService } from './services/projects.service';
 
 
 @NgModule({
@@ -18,11 +20,15 @@ import { SharedModule } from 'src/app/shared/shared.module';
         ProjectsComponent,
         ProjectBlockComponent,
         HistoryPageComponent,
+        ProjectPageComponent,
     ],
     imports: [
         CommonModule,
         CampRoutingModule,
         SharedModule
+    ],
+    providers: [
+        ProjectsService
     ]
 })
 export class CampModule { }

@@ -1,0 +1,48 @@
+<div class="top-block">
+    <div class="content-w">
+        <div class="_page-subtitle">
+            {{ "campPage.establishment" | translate }}
+            <b>«{{ "campPage.campName" | translate }}»</b>
+        </div>
+
+        <div class="_page-title">
+            {{ project.name | translate }}
+        </div>
+    </div>
+</div>
+
+<div class="description-wrapper">
+    <div class="content-w">
+        <div class="_text">
+            {{ project.description | translate }}
+        </div>
+
+        <carousel [images]="project.photos" [objectFit]="'cover'" [cellWidth]="'100%'"
+            [arrowsOutside]="hideArrows$ | async" [dots]="true" [loop]="true" height="750">
+        </carousel>
+    </div>
+</div>
+
+<div class="request-wrapper">
+    <div class="content-w">
+        <div class="_text">
+            {{ project.requestIntro | translate }}
+        </div>
+
+        <div class="_text" *ngFor="let request of project.requests">
+            {{ request.money | currency:'USD':'symbol':'1.0-0' }} -
+            {{ request.text | translate }}
+        </div>
+
+        <div class="_text">
+            <b>
+                {{ "campPage.totalNeed" | translate }}:
+                {{ project.needMoney | currency:'USD':'symbol':'1.0-0' }}
+            </b>
+        </div>
+
+        <button mat-flat-button color="accent" class="animated-button">
+            {{ "campPage.donate" | translate }}
+        </button>
+    </div>
+</div>

@@ -1,0 +1,125 @@
+@import "design-styles.scss";
+
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-block {
+    background-color: $blue-medium;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    .content-w {
+        ._page-subtitle,
+        ._page-title {
+            text-align: center;
+            padding: 10px 0;
+            color: $white;
+        }
+    }
+}
+
+.description-wrapper {
+    padding-bottom: 50px;
+    background-color: $white;
+    max-width: 100%;
+
+    .content-w {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+
+        ._text {
+            padding: 50px;
+            text-align: center;
+            color: $blue-dark;
+        }
+
+        carousel {
+            width: 80%;
+            z-index: 8;
+
+            ::ng-deep .carousel-dots {
+                .carousel-dot {
+                    border: 2px solid $blue-light;
+                }
+
+                .carousel-dot-active {
+                    background-color: $blue-light;
+                }
+            }
+        }
+    }
+}
+
+.request-wrapper {
+    padding: 50px;
+    background-color: $gray-light;
+    max-width: 100%;
+
+    .content-w {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        ._text {
+            text-align: center;
+            color: $blue-dark;
+        }
+
+        button {
+            margin-top: 20px;
+            font-size: 20px;
+            padding: 8px 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .description-wrapper {
+        padding: 0px;
+
+        .content-w carousel {
+            height: 500px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .description-wrapper {
+        padding: 0px;
+
+        .content-w carousel {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .description-wrapper {
+        .content-w ._text {
+            padding: 30px;
+        }
+    }
+
+    .request-wrapper {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .description-wrapper {
+        carousel {
+            height: 300px !important;
+
+            ::ng-deep .carousel-arrow {
+                display: none;
+            }
+        }
+    }
+}
