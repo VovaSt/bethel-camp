@@ -4,10 +4,11 @@ import { MatMenuTrigger } from '@angular/material/menu';
 import { fromEvent } from 'rxjs';
 import { distinctUntilChanged, filter, throttleTime } from 'rxjs/operators';
 
-import { ModulesManagerService } from './../../core/services/mudule-mnager.service';
+import { ModulesManagerService } from '../../core/services/module-manager.service';
 import { UnsubscribeService } from 'src/app/core/services/unsubscribe.service';
 import { Language } from '../../core/enums/language.enum';
 import { LanguageService } from '../../core/services/language.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-header',
@@ -23,6 +24,7 @@ export class HeaderComponent implements OnInit {
     headerLinks: LandingHeader[];
     private pagesLinks;
     navbarColor = false;
+    showBackArrow = false;
 
     @ViewChild('linksMenuTrigger') linksMenuTrigger: MatMenuTrigger;
     @ViewChild('langsMenuTrigger') langsMenuTrigger: MatMenuTrigger;
@@ -40,14 +42,16 @@ export class HeaderComponent implements OnInit {
         private modulesManager: ModulesManagerService,
         private renderer: Renderer2,
         private cd: ChangeDetectorRef,
-        private langService: LanguageService
+        private langService: LanguageService,
+        private router: Router
     ) { }
 
     ngOnInit() {
         this.unsub.subs = this.modulesManager.getActiveModule$
-            .pipe(filter(x => !!x), distinctUntilChanged())
+            .pipe(distinctUntilChanged())
             .subscribe(module => {
-                this.headerLinks = landingHeaderType[module];
+                this.headerLinks = landingHeaderType[module] || [];
+                this.showBackArrow = !module;
                 this.cd.markForCheck();
             });
 
@@ -109,5 +113,11 @@ export class HeaderComponent implements OnInit {
 
     changeLanguage(lang: Language) {
         this.langService.setLanguage(lang);
+    }
+
+    goBack() {
+        if (this.router.url.includes('camp/projects')) {
+            this.router.navigate(['camp']);
+        }
     }
 }

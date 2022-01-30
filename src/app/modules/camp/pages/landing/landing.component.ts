@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModulesManagerService } from '../../../../core/services/mudule-mnager.service';
+import { ModulesManagerService } from '../../../../core/services/module-manager.service';
 
 @Component({
     selector: 'app-landing',

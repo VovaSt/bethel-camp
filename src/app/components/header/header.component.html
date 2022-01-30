@@ -1,21 +1,31 @@
 <nav class="site-header" (scroll)="onscroll()" [ngClass]="navbarColor ? 'color' : 'noColor'">
     <div class="content">
-        <div class="linkTrigger" #linksMenuTrigger="matMenuTrigger" [matMenuTriggerFor]="linksMenu">
-            <img class="linkTrigger__image" src="assets/images/all-pages.svg" alt="logo">
-        </div>
-        <mat-menu #linksMenu="matMenu">
-            <ng-container *ngFor="let link of headerLinks" >
-                <div class="text-dropdown" (click)="scrollTo(link.linkAction)">
-                    {{ "header." + link.context  | translate }}
-                </div>
-            </ng-container>
-        </mat-menu>
+        <ng-container *ngIf="!showBackArrow; else backArrow">
+            <div class="linkTrigger" #linksMenuTrigger="matMenuTrigger" [matMenuTriggerFor]="linksMenu">
+                <img class="linkTrigger__image" src="assets/images/all-pages.svg" alt="logo">
+            </div>
+            <mat-menu #linksMenu="matMenu">
+                <ng-container *ngFor="let link of headerLinks">
+                    <div class="text-dropdown" (click)="scrollTo(link.linkAction)">
+                        {{ "header." + link.context | translate }}
+                    </div>
+                </ng-container>
+            </mat-menu>
+        </ng-container>
+
+        <ng-template #backArrow>
+            <button class="back-btn linkTrigger" (click)="goBack()">
+                <img src="assets/images/back-arrow.svg" alt="back">
+            </button>
+        </ng-template>
+
         <div class="logo-container" routerLink="">
-            <img class="logo" src="assets/images/Logo.svg" alt="logo"  routerLink="">
-            <img class="logo-text" src="assets/images/LogoText.svg" alt="logo"  routerLink="">
+            <img class="logo" src="assets/images/Logo.svg" alt="logo" routerLink="">
+            <img class="logo-text" src="assets/images/LogoText.svg" alt="logo" routerLink="">
         </div>
+
         <div class="pages">
-            <ng-container *ngFor="let link of headerLinks" >
+            <ng-container *ngFor="let link of headerLinks">
                 <a class="text page-link" [attr.id]="link.linkId" (click)="linkAction(link.linkAction)">
                     {{ "header." + link.context | translate }}
                 </a>
