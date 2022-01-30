@@ -13,13 +13,12 @@
 
 <div class="description-wrapper">
     <div class="content-w">
+        <carousel [images]="project.photos" [objectFit]="'cover'" [cellWidth]="'100%'" [dots]="true" [loop]="true">
+        </carousel>
+
         <div class="_text">
             {{ project.description | translate }}
         </div>
-
-        <carousel [images]="project.photos" [objectFit]="'cover'" [cellWidth]="'100%'"
-            [arrowsOutside]="hideArrows$ | async" [dots]="true" [loop]="true" height="750">
-        </carousel>
     </div>
 </div>
 

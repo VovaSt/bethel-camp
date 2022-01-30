@@ -1,14 +1,14 @@
 $white: #ffffff;
-$blue-dark: #2F4659;
-$blue-medium: #6093BF;
-$blue-light: #89B3D9;
-$gray-medium: #95ACBF;
-$gray-light: #BFCDD9;
-$brown: #BF948A;
+$blue-dark: #2f4659;
+$blue-medium: #6093bf;
+$blue-light: #89b3d9;
+$gray-medium: #95acbf;
+$gray-light: #bfcdd9;
+$brown: #bf948a;
 
 @function strip-unit($number) {
-    @if type-of($number) == 'number' and not unitless($number) {
-      @return $number / ($number * 0 + 1);
+    @if type-of($number) == "number" and not unitless($number) {
+        @return $number / ($number * 0 + 1);
     }
 
     @return $number;
@@ -20,23 +20,22 @@ $brown: #BF948A;
     $w-min: strip-unit($w-min);
     $w-max: strip-unit($w-max);
 
-	$k: ($f-max - $f-min)/($w-max - $w-min);
-	$b: $f-min - $k * $w-min;
+    $k: ($f-max - $f-min)/ ($w-max - $w-min);
+    $b: $f-min - $k * $w-min;
 
-	$b: $b + $units;
+    $b: $b + $units;
 
-	@return calc( #{$k} * 100vw + #{$b} );
+    @return calc(#{$k} * 100vw + #{$b});
 }
 
 @mixin fontSize($f-min, $f-max, $w-min, $w-max) {
-
     font-size: $f-min;
 
     @media (min-width: $w-min) {
-      font-size: calcFontSize($f-min, $f-max, $w-min, $w-max, px);
+        font-size: calcFontSize($f-min, $f-max, $w-min, $w-max, px);
     }
     @media (min-width: $w-max) {
-      font-size: $f-max;
+        font-size: $f-max;
     }
 }
 
@@ -95,7 +94,7 @@ $brown: #BF948A;
     font-family: "Roboto";
     font-style: normal;
     font-weight: bold;
-    @include fontSize(10px, 16px, 480px, 1280px);
+    @include fontSize(13px, 16px, 480px, 1280px);
     line-height: 1.4;
     margin: 0.3em 0;
     text-transform: uppercase;
@@ -105,7 +104,7 @@ $brown: #BF948A;
     font-family: "Roboto";
     font-style: normal;
     font-weight: normal;
-    @include fontSize(10px, 16px, 480px, 1280px);
+    @include fontSize(13px, 16px, 480px, 1280px);
     line-height: 1.4;
     margin: 0.3em 0;
 }
@@ -140,5 +139,3 @@ $brown: #BF948A;
     text-align: center;
     margin: 10px 0 0;
 }
-
-

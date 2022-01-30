@@ -24,33 +24,31 @@
 }
 
 .description-wrapper {
-    padding-bottom: 50px;
+    padding: 50px 0;
     background-color: $white;
     max-width: 100%;
 
     .content-w {
         display: flex;
-        flex-direction: column;
         align-items: center;
         overflow: hidden;
 
         ._text {
-            padding: 50px;
+            padding: 0 50px;
             text-align: center;
             color: $blue-dark;
         }
 
         carousel {
-            width: 80%;
+            width: 800px;
+            height: 600px !important;
             z-index: 8;
 
-            ::ng-deep .carousel-dots {
-                .carousel-dot {
-                    border: 2px solid $blue-light;
-                }
+            ::ng-deep .carousel-arrow {
+                opacity: 0.75;
 
-                .carousel-dot-active {
-                    background-color: $blue-light;
+                &.carousel-arrow-disabled {
+                    opacity: 0.5;
                 }
             }
         }
@@ -81,29 +79,34 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .description-wrapper {
-        padding: 0px;
-
-        .content-w carousel {
-            height: 500px;
-        }
+    .description-wrapper .content-w carousel {
+        width: 600px;
+        height: 450px !important;
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .description-wrapper {
-        padding: 0px;
-
-        .content-w carousel {
-            width: 100%;
-        }
+@media screen and (max-width: 1000px) {
+    .description-wrapper .content-w carousel {
+        width: 500px;
+        height: 375px !important;
     }
 }
 
 @media screen and (max-width: 800px) {
     .description-wrapper {
-        .content-w ._text {
-            padding: 30px;
+        padding: 0;
+
+        .content-w {
+            flex-direction: column;
+
+            ._text {
+                padding: 30px;
+            }
+
+            carousel {
+                width: 100%;
+                height: 500px !important;
+            }
         }
     }
 
@@ -113,13 +116,17 @@
 }
 
 @media screen and (max-width: 600px) {
-    .description-wrapper {
-        carousel {
-            height: 300px !important;
+    .description-wrapper .content-w carousel {
+        height: 400px !important;
 
-            ::ng-deep .carousel-arrow {
-                display: none;
-            }
+        ::ng-deep .carousel-arrow {
+            display: none;
         }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .description-wrapper .content-w carousel {
+        height: 300px !important;
     }
 }

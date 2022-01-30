@@ -20,9 +20,18 @@ export class ProjectsService {
                     money: 2500
                 }
             ],
-            mainPhoto: 'https://camp-bethel.s3.amazonaws.com/projects/tabernacle/Tabernacle_0.jpg',
+            mainPhoto: 'https://camp-bethel.s3.amazonaws.com/projects/tabernacle/Tabernacle_0.jpeg',
             photos: [
-                { path: 'https://camp-bethel.s3.amazonaws.com/projects/tabernacle/Tabernacle_0.jpg' }
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/tabernacle/Tabernacle_0.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/tabernacle/Tabernacle_1.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/tabernacle/Tabernacle_2.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/tabernacle/Tabernacle_3.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/tabernacle/Tabernacle_4.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/tabernacle/Tabernacle_5.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/tabernacle/Tabernacle_6.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/tabernacle/Tabernacle_7.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/tabernacle/Tabernacle_8.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/tabernacle/Tabernacle_9.jpeg' }
             ],
             needMoney: 6000,
             haveMoney: 0
@@ -40,13 +49,26 @@ export class ProjectsService {
                 {
                     text: 'campPage.projectsContent.diningBuilding.requests.facade',
                     money: 3000
+                },
+                {
+                    text: 'campPage.projectsContent.diningBuilding.requests.kitchen',
+                    money: 4000
                 }
             ],
-            mainPhoto: 'https://camp-bethel.s3.amazonaws.com/projects/dinning-building/DinningBuilding_0.jpg',
+            mainPhoto: 'https://camp-bethel.s3.amazonaws.com/projects/dinning-building/DiningBuilding_0.jpeg',
             photos: [
-                { path: 'https://camp-bethel.s3.amazonaws.com/projects/dinning-building/DinningBuilding_0.jpg' }
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/dinning-building/DiningBuilding_0.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/dinning-building/DiningBuilding_1.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/dinning-building/DiningBuilding_2.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/dinning-building/DiningBuilding_3.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/dinning-building/DiningBuilding_4.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/dinning-building/DiningBuilding_5.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/dinning-building/DiningBuilding_6.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/dinning-building/DiningBuilding_7.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/dinning-building/DiningBuilding_8.jpeg' },
+                { path: 'https://camp-bethel.s3.amazonaws.com/projects/dinning-building/DiningBuilding_9.jpeg' }
             ],
-            needMoney: 8000,
+            needMoney: 12000,
             haveMoney: 0
         }
     ];

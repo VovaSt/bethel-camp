@@ -35,21 +35,22 @@
         "totalNeed": "Total",
         "projectsContent": {
             "tabernacle": {
-                "title": "Палатка для собраний «Скиния»",
-                "description": "Центральное место каждого христианского лагеря – это помещение, где проводятся служения. Поэтому построение палатки для собраний, которую мы назвали библейским названием «Скиния», было приоритетной целью в наших планах. В настоящее время «Скиния» уже частично построена, и мы имели возможность провести в ней различные мероприятия, в том числе молодежные конференции и областные братские собрания.",
-                "requestIntro": "Однако мы нуждаемся в дополнительных средствах, чтобы завершить строительство «Скинии»:",
+                "title": "Tabernacle Tent",
+                "description": "The centerpiece of every Christian camp is the room where services are held. Therefore, the construction of a meeting tent, which we called the biblical name «Tabernacle», was a priority in our plans. The Tabernacle is now partly built, and we have had the opportunity to hold various events there, including youth conferences and region meetings for ministers.",
+                "requestIntro": "However, we need additional funds to complete the construction of the Tabernacle:",
                 "requests": {
-                    "tile": "тротуарная плитка для пола палатки",
-                    "tents": "тенты на стены от непогоды"
+                    "tile": "paving slabs for tent floor",
+                    "tents": "awnings on walls from bad weather"
                 }
             },
             "diningBuilding": {
-                "title": "Помещение для столовой",
-                "description": "Помещение для столовой, которое осталось со времен бывшего советского лагеря, не использовалось более 20 лет, и требовало капитального ремонта. Поэтому были проделаны некоторые внутренние работы для того, чтобы это помещение можно было использовать по назначению. Однако нужно еще сделать много строительных работ, чтобы довести столовую до надлежащего состояния.",
-                "requestIntro": "На данный момент наиболее необходимо предпринять следующие шаги:",
+                "title": "Dining building",
+                "description": "The dining room, which was left from the time of the former Soviet camp, had not been used for more than 20 years and required major repairs. Therefore, some internal work was done so that this room could be used for its intended purpose. However, there is still a lot of construction work to be done to bring the dining room to its proper condition.",
+                "requestIntro": "For now, the most important steps to take are:",
                 "requests": {
-                    "roof": "перекрытие новой крышы",
-                    "facade": "отделка фасадов"
+                    "roof": "new roof covering",
+                    "facade": "facade decoration",
+                    "kitchen": "kitchen equipment"
                 }
             }
         }
