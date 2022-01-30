@@ -1,3 +1,13 @@
+@import "design-styles.scss";
+
+
+html, body {
+    position: relative;
+    min-height: 100vh;
+    height: auto;
+    min-width: 320px;
+}
+
 .mat-progress-bar {
     height: 10px !important;
     border-radius: 5px;
@@ -27,6 +37,29 @@
     }
 }
 
+.mr-10 {
+    margin-right: 10px;
+}
+.ml-10 {
+    margin-left: 10px;
+}
+
+.content-w {
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+.mat-menu-panel {
+    min-width: 90px !important;
+    background-color: white;
+    border: 1px solid #BFCDD9;
+
+    .mat-menu-content {
+        color: #2F4659;
+    }
+}
+
+
 @keyframes buttonAnimate {
     0% {
         left: -50%;
@@ -41,3 +74,4 @@
         left: 120%;
     }
 }
+
