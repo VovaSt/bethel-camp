@@ -1,7 +1,13 @@
 <div class="wrapper ">
     <div class="content-w">
-        <div class="_text" data-aos="fade-in">
-            {{ "campPage.history" | translate }}
+        <div class="text-block" data-aos="fade-in">
+            <div class="_title">
+                {{ "header.campPlace" | translate }}
+            </div>
+
+            <div class="_text-medium">
+                {{ "campPage.history" | translate }}
+            </div>
         </div>
 
         <carousel [images]="images" [objectFit]="'cover'" [cellWidth]="'100%'" [dots]="true" [loop]="true">
@@ -12,7 +18,7 @@
 
 <div class="description-block">
     <div class="content-w">
-        <div class="_text" data-aos="fade-in">
+        <div class="_text-medium" data-aos="fade-in">
             {{ "campPage.buildingHistory" | translate }}
         </div>
     </div>

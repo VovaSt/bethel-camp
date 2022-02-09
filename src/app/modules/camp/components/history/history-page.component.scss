@@ -15,10 +15,15 @@
         align-items: center;
         overflow: hidden;
 
-        ._text {
+        .text-block {
+            display: flex;
+            flex-direction: column;
             padding: 0 50px;
-            text-align: center;
-            color: $blue-dark;
+
+            ._text-medium,
+            ._title {
+                color: $blue-dark;
+            }
         }
 
         carousel {
@@ -40,10 +45,11 @@
 .description-block {
     background-color: $gray-light;
 
-    .content-w ._text {
+    .content-w ._text-medium {
         text-align: center;
         padding: 50px;
         color: $blue-dark;
+        font-weight: 500;
     }
 }
 
@@ -68,7 +74,7 @@
         .content-w {
             flex-direction: column;
 
-            ._text {
+            .text-block {
                 padding: 30px;
             }
 
@@ -80,7 +86,7 @@
     }
 
     .description-block {
-        .content-w ._text {
+        .content-w ._text-medium {
             padding: 30px;
         }
     }

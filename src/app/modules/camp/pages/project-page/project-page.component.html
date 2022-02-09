@@ -16,7 +16,7 @@
         <carousel [images]="project.photos" [objectFit]="'cover'" [cellWidth]="'100%'" [dots]="true" [loop]="true">
         </carousel>
 
-        <div class="_text">
+        <div class="_text-medium">
             {{ project.description | translate }}
         </div>
     </div>
@@ -24,16 +24,16 @@
 
 <div class="request-wrapper">
     <div class="content-w">
-        <div class="_text">
+        <div class="_text-medium">
             {{ project.requestIntro | translate }}
         </div>
 
-        <div class="_text" *ngFor="let request of project.requests">
+        <div class="_text-medium" *ngFor="let request of project.requests">
             {{ request.money | currency:'USD':'symbol':'1.0-0' }} -
             {{ request.text | translate }}
         </div>
 
-        <div class="_text">
+        <div class="_text-medium">
             <b>
                 {{ "campPage.totalNeed" | translate }}:
                 {{ project.needMoney | currency:'USD':'symbol':'1.0-0' }}

@@ -30,14 +30,16 @@
                 color: $white;
             }
 
-            ._text {
+            ._text-medium {
                 color: $white;
+                margin: 0.3em 0;
             }
 
             .social {
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
+                margin: 20px 0 0.3em;
 
                 p {
                     white-space: nowrap;
@@ -84,7 +86,7 @@
                 zoom: 1.3;
             }
 
-            ._text {
+            ._text-medium {
                 color: $blue-dark;
                 margin: 0;
             }

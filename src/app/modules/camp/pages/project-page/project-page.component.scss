@@ -33,7 +33,7 @@
         align-items: center;
         overflow: hidden;
 
-        ._text {
+        ._text-medium {
             padding: 0 50px;
             text-align: center;
             color: $blue-dark;
@@ -65,7 +65,7 @@
         flex-direction: column;
         align-items: center;
 
-        ._text {
+        ._text-medium {
             text-align: center;
             color: $blue-dark;
         }
@@ -99,7 +99,7 @@
         .content-w {
             flex-direction: column;
 
-            ._text {
+            ._text-medium {
                 padding: 30px;
             }
 

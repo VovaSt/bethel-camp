@@ -18,11 +18,12 @@
     .info-block {
         margin-top: 20px;
 
-        .title-small {
-            color: $blue-dark;
+        ._title-small {
+            color: $blue-medium;
         }
 
-        ._text-small {
+        ._text-small,
+        ._text-medium {
             color: $blue-dark;
         }
 
