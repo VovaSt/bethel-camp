@@ -1,43 +1,57 @@
 <div class="top-block">
     <div class="content-w">
-        <div class="_page-subtitle">
+        <h2 class="_page-subtitle">
             {{ "campPage.establishment" | translate }}
             <b>«{{ "campPage.campName" | translate }}»</b>
-        </div>
+        </h2>
 
-        <div class="_page-title">
+        <h1 class="_page-title">
             {{ project.name | translate }}
-        </div>
+        </h1>
     </div>
 </div>
 
 <div class="description-wrapper">
     <div class="content-w">
+        <div class="text">
+            <div class="_title">
+                {{ project.name | translate }}
+            </div>
+
+            <div class="_text-medium">
+                {{ project.description | translate }}
+            </div>
+        </div>
+
         <carousel [images]="project.photos" [objectFit]="'cover'" [cellWidth]="'100%'" [dots]="true" [loop]="true">
         </carousel>
-
-        <div class="_text-medium">
-            {{ project.description | translate }}
-        </div>
     </div>
 </div>
 
 <div class="request-wrapper">
     <div class="content-w">
-        <div class="_text-medium">
+        <div class="request _text-medium">
             {{ project.requestIntro | translate }}
         </div>
 
-        <div class="_text-medium" *ngFor="let request of project.requests">
-            {{ request.money | currency:'USD':'symbol':'1.0-0' }} -
-            {{ request.text | translate }}
-        </div>
+        <div class="items">
+            <div class="item" *ngFor="let request of project.requests">
+                <div class="money _title">
+                    {{ request.money | currency:'USD':'symbol':'1.0-0' }}
+                </div>
+                <div class="_text-medium">
+                    {{ request.text | translate }}
+                </div>
+            </div>
 
-        <div class="_text-medium">
-            <b>
-                {{ "campPage.totalNeed" | translate }}:
-                {{ project.needMoney | currency:'USD':'symbol':'1.0-0' }}
-            </b>
+            <div class="item summary">
+                <div class="money _title">
+                    {{ project.needMoney | currency:'USD':'symbol':'1.0-0' }}
+                </div>
+                <div class="_text-medium">
+                    <b>{{ "campPage.totalNeed" | translate }}</b>
+                </div>
+            </div>
         </div>
 
         <button mat-flat-button color="accent" class="animated-button">

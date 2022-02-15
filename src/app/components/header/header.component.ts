@@ -101,6 +101,7 @@ export class HeaderComponent implements OnInit {
             const sectionId = link.id?.split('.')[0];
             const section = document.getElementById(sectionId);
             if (
+                section &&
                 section.offsetTop <= fromTop &&
                 section.offsetTop + section.offsetHeight > fromTop
             ) {
