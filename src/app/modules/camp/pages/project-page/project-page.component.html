@@ -13,7 +13,7 @@
 
 <div class="description-wrapper">
     <div class="content-w">
-        <div class="text">
+        <div class="text" data-aos="fade-in">
             <div class="_title">
                 {{ project.name | translate }}
             </div>
@@ -34,7 +34,7 @@
         </div>
 
         <div class="items">
-            <div class="item" *ngFor="let request of project.requests">
+            <div class="item" *ngFor="let request of project.requests" data-aos="fade-in">
                 <div class="money _title">
                     {{ request.money | currency:'USD':'symbol':'1.0-0' }}
                 </div>
@@ -43,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="item summary">
+            <div class="item summary" data-aos="fade-in">
                 <div class="money _title">
                     {{ project.needMoney | currency:'USD':'symbol':'1.0-0' }}
                 </div>
@@ -60,7 +60,7 @@
 <div class="verse-wrapper">
     <div class="content-w">
         <img src="/assets/images/camp/camp.svg" alt="camp">
-        <div class="text">
+        <div class="text" data-aos="fade-in">
             <div class="_title">
                 <div class="verse-text">
                     {{ "campPage.verse" | translate }}
