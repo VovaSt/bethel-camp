@@ -1,0 +1,31 @@
+:host {
+    display: flex;
+    width: 571px;
+
+    @media screen and (max-width: 1000px) {
+        width: 450px;
+    }
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+    }
+}
+
+carousel {
+    width: 100%;
+    height: auto !important;
+    aspect-ratio: 4/3;
+    z-index: 8;
+
+    ::ng-deep .carousel-dot {
+        box-shadow: 0px 0px 10px black;
+    }
+
+    ::ng-deep .carousel-arrow {
+        opacity: 0.75;
+
+        &.carousel-arrow-disabled {
+            opacity: 0.5;
+        }
+    }
+}

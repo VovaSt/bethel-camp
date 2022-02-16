@@ -45,20 +45,6 @@
                 color: $blue-dark;
             }
         }
-
-        carousel {
-            width: 700px;
-            height: 525px !important;
-            z-index: 8;
-
-            ::ng-deep .carousel-arrow {
-                opacity: 0.75;
-
-                &.carousel-arrow-disabled {
-                    opacity: 0.5;
-                }
-            }
-        }
     }
 }
 
@@ -116,18 +102,51 @@
             }
         }
 
-        button {
+        app-donate-button {
             margin-top: 20px;
-            font-size: 20px;
-            padding: 8px 30px;
+            color: $white;
         }
     }
 }
 
-@media screen and (max-width: 1200px) {
-    .description-wrapper .content-w carousel {
-        width: 500px;
-        height: 375px !important;
+.verse-wrapper {
+    padding: 30px;
+    background-color: $white;
+    max-width: 100%;
+
+    .content-w {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 272px;
+            height: 252px;
+            margin: 0 50px;
+        }
+
+        .text {
+            padding: 30px 50px;
+            color: $blue-medium;
+
+            .verse-text {
+                font-size: 0.8em;
+            }
+
+            .verse-place {
+                margin-top: 20px;
+                padding-left: 80px;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: calc(50% - 0.5px);
+                    border-top: 1px solid $blue-medium;
+                    width: 64px;
+                }
+            }
+        }
     }
 }
 
@@ -135,6 +154,16 @@
     .top-block {
         height: 400px;
         padding-top: 80px;
+    }
+
+    .verse-wrapper .content-w {
+        img {
+            margin: 0px 30px;
+        }
+
+        .text {
+            padding: 30px;
+        }
     }
 }
 
@@ -148,31 +177,23 @@
             .text {
                 padding: 30px;
             }
-
-            carousel {
-                width: 100%;
-                height: 500px !important;
-            }
         }
     }
 
     .request-wrapper {
         padding: 30px;
     }
-}
 
-@media screen and (max-width: 600px) {
-    .description-wrapper .content-w carousel {
-        height: 400px !important;
+    .verse-wrapper .content-w {
+        flex-direction: column;
 
-        ::ng-deep .carousel-arrow {
-            display: none;
+        img {
+            width: 172px;
+            height: 152px;
         }
-    }
-}
 
-@media screen and (max-width: 450px) {
-    .description-wrapper .content-w carousel {
-        height: 300px !important;
+        .text {
+            padding: 20px 0 0;
+        }
     }
 }

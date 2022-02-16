@@ -23,8 +23,7 @@
             </div>
         </div>
 
-        <carousel [images]="project.photos" [objectFit]="'cover'" [cellWidth]="'100%'" [dots]="true" [loop]="true">
-        </carousel>
+        <app-photo-carusel [images]="project.photos"></app-photo-carusel>
     </div>
 </div>
 
@@ -54,8 +53,22 @@
             </div>
         </div>
 
-        <button mat-flat-button color="accent" class="animated-button">
-            {{ "campPage.donate" | translate }}
-        </button>
+        <app-donate-button class="large"></app-donate-button>
+    </div>
+</div>
+
+<div class="verse-wrapper">
+    <div class="content-w">
+        <img src="/assets/images/camp/camp.svg" alt="camp">
+        <div class="text">
+            <div class="_title">
+                <div class="verse-text">
+                    {{ "campPage.verse" | translate }}
+                </div>
+            </div>
+            <div class="_text-medium verse-place">
+                {{ "campPage.versePlace" | translate }}
+            </div>
+        </div>
     </div>
 </div>

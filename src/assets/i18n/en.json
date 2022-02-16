@@ -33,6 +33,8 @@
         "details": "More details",
         "donate": "Donate",
         "totalNeed": "total",
+        "verse": "“And God is able to make all grace abound unto you; that ye, having always all sufficiency in everything, may abound unto every good work”",
+        "versePlace": "2 Corinthians 9:8",
         "projectsContent": {
             "tabernacle": {
                 "title": "Tabernacle Tent",
@@ -45,7 +47,7 @@
             },
             "diningBuilding": {
                 "title": "Dining building",
-                "description": "was left from the time of the former Soviet camp, had not been used for more than 15 years and required major repairs. Therefore, some internal work was done so that this room could be used for its intended purpose. However, there is still a lot of construction work to be done to bring the dining room to its proper condition.",
+                "description": "Was left from the time of the former Soviet camp, had not been used for more than 15 years and required major repairs. Therefore, some internal work was done so that this room could be used for its intended purpose. However, there is still a lot of construction work to be done to bring the dining room to its proper condition.",
                 "requestIntro": "For now, the most important steps to take are:",
                 "requests": {
                     "roof": "new roof covering",

@@ -33,8 +33,6 @@
         <button mat-flat-button color="primary" (click)="goToProject()">
             {{ "campPage.details" | translate }}
         </button>
-        <button mat-flat-button color="accent" class="animated-button">
-            {{ "campPage.donate" | translate }}
-        </button>
+        <app-donate-button></app-donate-button>
     </div>
 </div>
