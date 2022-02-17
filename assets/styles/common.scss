@@ -1,7 +1,7 @@
 @import "design-styles.scss";
 
-
-html, body {
+html,
+body {
     position: relative;
     min-height: 100vh;
     height: auto;
@@ -14,26 +14,6 @@ html, body {
 
     .mat-progress-bar-fill {
         transition: transform 500ms ease-out !important;
-    }
-}
-
-.animated-button {
-    overflow: hidden !important;
-
-    .mat-button-wrapper {
-        &::after {
-            background: #fff;
-            content: "";
-            height: 155px;
-            left: -75px;
-            opacity: 0.2;
-            position: absolute;
-            top: -50px;
-            transform: rotate(35deg);
-            width: 40px;
-            z-index: 0;
-            animation: 10s cubic-bezier(0.19, 1, 0.22, 1) 0.2s infinite running buttonAnimate;
-        }
     }
 }
 
@@ -52,13 +32,12 @@ html, body {
 .mat-menu-panel {
     min-width: 90px !important;
     background-color: white;
-    border: 1px solid #BFCDD9;
+    border: 1px solid #bfcdd9;
 
     .mat-menu-content {
-        color: #2F4659;
+        color: #2f4659;
     }
 }
-
 
 @keyframes buttonAnimate {
     0% {
@@ -74,4 +53,3 @@ html, body {
         left: 120%;
     }
 }
-
