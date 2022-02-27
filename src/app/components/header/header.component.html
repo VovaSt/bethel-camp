@@ -1,22 +1,24 @@
 <nav class="site-header" (scroll)="onscroll()" [ngClass]="navbarColor ? 'color' : 'noColor'">
     <div class="content">
         <ng-container *ngIf="!showBackArrow; else backArrow">
-            <div class="linkTrigger" #linksMenuTrigger="matMenuTrigger" [matMenuTriggerFor]="linksMenu">
-                <img class="linkTrigger__image" src="assets/images/all-pages.svg" alt="logo">
+            <div class="mobile-menu">
+                <div class="linkTrigger" #linksMenuTrigger="matMenuTrigger" [matMenuTriggerFor]="linksMenu">
+                    <img class="linkTrigger__image" src="assets/images/all-pages.svg" alt="logo">
+                </div>
+                <mat-menu #linksMenu="matMenu">
+                    <ng-container *ngFor="let link of headerLinks">
+                        <div class="text-dropdown" (click)="scrollTo(link.linkAction)">
+                            {{ "header." + link.context | translate }}
+                        </div>
+                    </ng-container>
+                </mat-menu>
             </div>
-            <mat-menu #linksMenu="matMenu">
-                <ng-container *ngFor="let link of headerLinks">
-                    <div class="text-dropdown" (click)="scrollTo(link.linkAction)">
-                        {{ "header." + link.context | translate }}
-                    </div>
-                </ng-container>
-            </mat-menu>
         </ng-container>
 
         <ng-template #backArrow>
-            <button class="back-btn linkTrigger" (click)="goBack()">
+            <a class="linkTrigger back-btn" (click)="goBack()">
                 <img src="assets/images/back-arrow.svg" alt="back">
-            </button>
+            </a>
         </ng-template>
 
         <div class="logo-container" routerLink="">

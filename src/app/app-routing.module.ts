@@ -5,21 +5,26 @@ const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'camp' // remove after main pages developing
-        // loadChildren: () => import('./modules/main/main.module').then(m => m.MainModule)
+        loadChildren: () => import('./modules/main/main.module').then((m) => m.MainModule),
+    },
+    {
+        path: 'about',
+        loadChildren: () => import('./modules/about/about.module').then((m) => m.AboutModule),
     },
     {
         path: 'camp',
-        loadChildren: () => import('./modules/camp/camp.module').then(m => m.CampModule)
+        loadChildren: () => import('./modules/camp/camp.module').then((m) => m.CampModule),
     },
     {
         path: '**',
-        redirectTo: ''
-    }
+        redirectTo: '',
+    },
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
-    exports: [RouterModule]
+    imports: [
+        RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
+    ],
+    exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

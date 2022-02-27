@@ -106,10 +106,14 @@
         .back-btn {
             background-color: transparent;
             border: none;
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            cursor: pointer;
 
             img {
-                width: 32px;
-                height: 32px;
+                width: 48px;
+                height: 48px;
             }
         }
     }
@@ -148,6 +152,12 @@
             cursor: pointer;
             transition: 0.2s linear;
         }
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .mobile-menu {
+        display: none;
     }
 }
 
@@ -262,6 +272,15 @@
                 cursor: pointer;
                 &__image {
                     width: 40px;
+                }
+            }
+
+            .back-btn {
+                margin-right: 0px;
+
+                img {
+                    width: 32px;
+                    height: 32px;
                 }
             }
         }
