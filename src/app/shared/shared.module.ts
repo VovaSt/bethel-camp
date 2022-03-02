@@ -8,17 +8,15 @@ import { MatMenuModule } from '@angular/material/menu';
 import { TranslateModule } from '@ngx-translate/core';
 import { PhotoCaruselComponent } from './components/photo-carusel/photo-carusel.component';
 import { DonateButtonComponent } from './components/donate-button/donate-button.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
-    declarations: [
-        PhotoCaruselComponent,
-        DonateButtonComponent
-    ],
+    declarations: [PhotoCaruselComponent, DonateButtonComponent],
     imports: [
         CommonModule,
         TranslateModule,
         IvyCarouselModule,
-        MatButtonModule
+        MatButtonModule,
     ],
     exports: [
         MatButtonToggleModule,
@@ -26,9 +24,10 @@ import { DonateButtonComponent } from './components/donate-button/donate-button.
         MatButtonModule,
         MatMenuModule,
         TranslateModule,
+        MatExpansionModule,
 
         PhotoCaruselComponent,
-        DonateButtonComponent
-    ]
+        DonateButtonComponent,
+    ],
 })
-export class SharedModule { }
+export class SharedModule {}

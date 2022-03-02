@@ -1,1 +1,47 @@
-<p>confession works!</p>
+<div class="bg-image">
+    <div class="text">
+        <h1 class="_page-title">{{ "confession.title" | translate }}</h1>
+    </div>
+</div>
+
+<div class="content gray">
+    <div class="content-w">
+        <p
+            class="_text-medium center"
+            innerHTML="{{ 'confession.mainConfession' | translate }}"
+        ></p>
+        <p class="_text-medium right">
+            <b>{{ "confession.mainConfessionDescription" | translate }}</b>
+        </p>
+    </div>
+</div>
+
+<div class="content white">
+    <div class="content-w">
+        <h3 class="_title block-title">
+            {{ "confession.doctrines" | translate }}
+        </h3>
+
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let key of topicKeys">
+                <mat-expansion-panel-header>
+                    <mat-panel-title class="_text-medium panel-title">
+                        {{ topics[key].subject + ".title" | translate }}
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <div class="_text-medium">
+                    <p
+                        *ngFor="
+                            let n of [].constructor(topics[key].pCount);
+                            let i = index
+                        "
+                        innerHTML="{{
+                            topics[key].subject + '.p' + (i + 1) | translate
+                        }}"
+                    ></p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</div>

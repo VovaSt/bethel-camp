@@ -16,47 +16,6 @@
         "phone": "Phone",
         "followUs": "Follow us"
     },
-    "campPage": {
-        "campName": "Bethel",
-        "aboutUs": "About us",
-        "establishment": "Center for spiritual and physical development",
-        "aboutUsText": "For many years, our center has been a place of God's work in the hearts of children, teenegers, and young adults. In addition to working with children from Christian families, there is also active work among orphans and children from nearby rural schools.",
-        "aboutUsText2": "Our goal is to help children know God personally, and to teach them how to communicate with Him. As well as spend time in fellowship and fun outdoor activities.",
-        "moreInfo": "More information about us:",
-        "yearsOfMinistry": "years of experience",
-        "numberOfCamps": "camps organized",
-        "numberOfChildren": "children reached",
-        "history": "For many years we have leased areas for our camps. Finally, in 2019 we were able to buy territory for our center - an old Soviet camp near the city of Zhytomyr. Praise God!",
-        "buildingHistory": "Since the camp was in poor condition, we began a general reconstruction. However, we need your financial support.",
-        "collected": "Collected",
-        "need": "Need",
-        "details": "More details",
-        "donate": "Donate",
-        "totalNeed": "total",
-        "verse": "“And God is able to make all grace abound unto you; that ye, having always all sufficiency in everything, may abound unto every good work”",
-        "versePlace": "2 Corinthians 9:8",
-        "projectsContent": {
-            "tabernacle": {
-                "title": "Tabernacle",
-                "description": "The centerpiece of every Christian camp is the room where services are held. Therefore, the construction of a meeting tent, for which we used the biblical name “Tabernacle”, was a priority in our plans. The Tabernacle is now partially built, and we have had the opportunity to hold various events there, including youth conferences and regional meetings for ministers.",
-                "requestIntro": "However, we need additional funds to complete the construction of the Tabernacle:",
-                "requests": {
-                    "tile": "paving slabs for tent floor",
-                    "tents": "awnings on walls from bad weather"
-                }
-            },
-            "diningBuilding": {
-                "title": "Dining hall",
-                "description": "The building was left over from the former Soviet camp, had not been used for over 15 years, and required major repairs. Therefore, some internal work was done so that this room could be used for its intended purpose. However, there are still many repairs that need to be done to bring the dining hall to its proper condition.",
-                "requestIntro": "For now, the most important steps to take are:",
-                "requests": {
-                    "roof": "new roof covering",
-                    "facade": "facade decoration",
-                    "kitchen": "kitchen renovation"
-                }
-            }
-        }
-    },
     "mainPage": {
         "message1": "Therefore, if anyone ",
         "textStrong1": "is in Christ,",
@@ -99,6 +58,47 @@
             "title": "Donation",
             "text": "",
             "link1": "donate"
+        }
+    },
+    "campPage": {
+        "campName": "Bethel",
+        "aboutUs": "About us",
+        "establishment": "Center for spiritual and physical development",
+        "aboutUsText": "For many years, our center has been a place of God's work in the hearts of children, teenegers, and young adults. In addition to working with children from Christian families, there is also active work among orphans and children from nearby rural schools.",
+        "aboutUsText2": "Our goal is to help children know God personally, and to teach them how to communicate with Him. As well as spend time in fellowship and fun outdoor activities.",
+        "moreInfo": "More information about us:",
+        "yearsOfMinistry": "years of experience",
+        "numberOfCamps": "camps organized",
+        "numberOfChildren": "children reached",
+        "history": "For many years we have leased areas for our camps. Finally, in 2019 we were able to buy territory for our center - an old Soviet camp near the city of Zhytomyr. Praise God!",
+        "buildingHistory": "Since the camp was in poor condition, we began a general reconstruction. However, we need your financial support.",
+        "collected": "Collected",
+        "need": "Need",
+        "details": "More details",
+        "donate": "Donate",
+        "totalNeed": "total",
+        "verse": "“And God is able to make all grace abound unto you; that ye, having always all sufficiency in everything, may abound unto every good work”",
+        "versePlace": "2 Corinthians 9:8",
+        "projectsContent": {
+            "tabernacle": {
+                "title": "Tabernacle",
+                "description": "The centerpiece of every Christian camp is the room where services are held. Therefore, the construction of a meeting tent, for which we used the biblical name “Tabernacle”, was a priority in our plans. The Tabernacle is now partially built, and we have had the opportunity to hold various events there, including youth conferences and regional meetings for ministers.",
+                "requestIntro": "However, we need additional funds to complete the construction of the Tabernacle:",
+                "requests": {
+                    "tile": "paving slabs for tent floor",
+                    "tents": "awnings on walls from bad weather"
+                }
+            },
+            "diningBuilding": {
+                "title": "Dining hall",
+                "description": "The building was left over from the former Soviet camp, had not been used for over 15 years, and required major repairs. Therefore, some internal work was done so that this room could be used for its intended purpose. However, there are still many repairs that need to be done to bring the dining hall to its proper condition.",
+                "requestIntro": "For now, the most important steps to take are:",
+                "requests": {
+                    "roof": "new roof covering",
+                    "facade": "facade decoration",
+                    "kitchen": "kitchen renovation"
+                }
+            }
         }
     }
 }
