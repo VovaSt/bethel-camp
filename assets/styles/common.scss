@@ -31,11 +31,29 @@ body {
 
 .mat-menu-panel {
     min-width: 90px !important;
-    background-color: white;
-    border: 1px solid #bfcdd9;
+    background-color: $white;
+    border: 1px solid $gray-light;
 
     .mat-menu-content {
-        color: #2f4659;
+        color: $blue-dark;
+    }
+}
+
+.mat-expansion-panel {
+    background-color: $white;
+    color: $blue-dark;
+
+    .mat-expansion-panel-header {
+        background-color: $white !important;
+    }
+
+    .mat-expansion-panel-header-title {
+        color: $blue-dark;
+    }
+
+    .mat-expansion-panel-header-description,
+    .mat-expansion-indicator::after {
+        color: $gray-light;
     }
 }
 
