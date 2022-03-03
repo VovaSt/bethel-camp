@@ -8,6 +8,10 @@ body {
     min-width: 320px;
 }
 
+a {
+    outline: none;
+}
+
 .mat-progress-bar {
     height: 10px !important;
     border-radius: 5px;
