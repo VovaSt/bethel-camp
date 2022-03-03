@@ -1,11 +1,23 @@
 <main class="main-wrapper">
     <div class="rectangle-image"></div>
     <div class="text-container">
-        <h1 class="_title">{{ "mainPage.aboutUs.title" | translate }}</h1>
-        <p class="_text-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim, dolor non interdum interdum, enim neque enim la maximus tellus, id consectetur mi quam quis nulla. Nam dignissim id nisl eget aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim, dolor non enim interdum interdum, enim neque. </p>
-        <a class="_link" routerLink="/about/confession">{{ "mainPage.aboutUs.link1" | translate }}</a>
-        <a class="_link" href="">{{ "mainPage.aboutUs.link2" | translate }}</a>
-        <a class="_link" href="">{{ "mainPage.aboutUs.link3" | translate }}</a>
-        <a class="_link" href="">{{ "mainPage.aboutUs.link4" | translate }}</a>
+        <h1 class="_title">
+            {{ "mainPage.aboutUs.title" | translate }}
+        </h1>
+        <p class="_text-medium">
+            {{ "mainPage.aboutUs.description" | translate }}
+        </p>
+        <a class="_link" routerLink="/about/confession">
+            {{ "mainPage.aboutUs.link1" | translate }}
+        </a>
+        <a class="_link" routerLink="/about/schedule">
+            {{ "mainPage.aboutUs.link2" | translate }}
+        </a>
+        <a class="_link" routerLink="/about/ministers">
+            {{ "mainPage.aboutUs.link3" | translate }}
+        </a>
+        <a class="_link" routerLink="/about/history-of-church">
+            {{ "mainPage.aboutUs.link4" | translate }}
+        </a>
     </div>
 </main>

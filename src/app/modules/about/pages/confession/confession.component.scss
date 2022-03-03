@@ -6,7 +6,7 @@
             rgba(30, 30, 30, 0.4),
             rgba(30, 30, 30, 0.4)
         ),
-        url("../../../../../assets/images/confession-bg.jpg");
+        url("https://camp-bethel.s3.amazonaws.com/backgrounds/confession-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,6 +39,12 @@
 
     @media screen and (max-width: 800px) {
         padding: 30px;
+    }
+
+    &.topics {
+        @media screen and (max-width: 450px) {
+            padding: 30px 15px;
+        }
     }
 
     &.gray {

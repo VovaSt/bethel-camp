@@ -16,15 +16,18 @@
     </div>
 </div>
 
-<div class="content white">
+<div class="content white topics">
     <div class="content-w">
         <h3 class="_title block-title">
             {{ "confession.doctrines" | translate }}
         </h3>
 
-        <mat-accordion>
+        <mat-accordion [multi]="true">
             <mat-expansion-panel *ngFor="let key of topicKeys">
-                <mat-expansion-panel-header>
+                <mat-expansion-panel-header
+                    collapsedHeight="70px"
+                    expandedHeight="80px"
+                >
                     <mat-panel-title class="_text-medium panel-title">
                         {{ topics[key].subject + ".title" | translate }}
                     </mat-panel-title>

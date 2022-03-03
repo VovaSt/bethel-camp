@@ -60,6 +60,11 @@
             "link1": "donate"
         }
     },
+    "confession": {
+        "title": "Confession",
+        "mainConfession": "I believe in God the Father almighty, maker of heaven and earth, and in Jesus Christ, his only Son, our Lord, who was conceived from the Holy Spirit and born of the Virgin Mary, who suffered under Pontius Pilate, was crucified, died, and was buried, descended into hell, rose again from the dead on the third day, ascended into heaven and is seated at the right hand of God the Father almighty, who will come again to judge the living and the dead. I believe in the Holy Spirit, the holy Christian Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and the life everlasting. Amen.",
+        "mainConfessionDescription": "Apostles' Creed"
+    },
     "campPage": {
         "campName": "Bethel",
         "aboutUs": "About us",
