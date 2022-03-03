@@ -6,7 +6,7 @@
             rgba(30, 30, 30, 0.4),
             rgba(30, 30, 30, 0.4)
         ),
-        url("https://camp-bethel.s3.amazonaws.com/backgrounds/confession-bg.jpg");
+        url("https://camp-bethel.s3.amazonaws.com/backgrounds/schedule-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,49 +34,15 @@
 
 .content {
     padding: 50px;
-    background-color: $white;
+    background-color: $gray-light;
     max-width: 100%;
+    min-height: 35vh;
 
     @media screen and (max-width: 800px) {
         padding: 30px;
     }
 
-    &.topics {
-        @media screen and (max-width: 450px) {
-            padding: 30px 15px;
-        }
-    }
-
-    &.gray {
-        background-color: $gray-medium;
-
-        ._text-medium {
-            color: $white;
-
-            &.center {
-                text-align: justify;
-            }
-
-            &.right {
-                text-align: right;
-            }
-        }
-    }
-
-    &.white {
-        background-color: $white;
-
-        ._text-medium,
-        ._title {
-            color: $blue-dark;
-        }
-    }
-
-    .block-title {
-        margin: 30px 15px;
-    }
-
-    ::ng-deep .mat-expanded .panel-title {
-        font-weight: bold;
+    ._text-medium {
+        color: $blue-dark;
     }
 }

@@ -3,10 +3,12 @@ import { NgModule } from "@angular/core";
 import { SharedModule } from "src/app/shared/shared.module";
 import { ConfessionRoutingModule } from "./about-routing.module";
 import { ConfessionComponent } from "./pages/confession/confession.component";
+import { ScheduleComponent } from './pages/schedule/schedule.component';
 
 @NgModule({
     declarations: [
-        ConfessionComponent
+        ConfessionComponent,
+        ScheduleComponent
     ],
     imports: [
         CommonModule,
