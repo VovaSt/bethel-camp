@@ -45,4 +45,44 @@
     ._text-medium {
         color: $blue-dark;
     }
+
+    .content-w {
+        
+        .block {
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .day {
+                text-transform: uppercase;
+                color: $blue-dark;
+                margin-top: 1.5em;
+                margin-bottom: 0;
+            }
+
+            .ministry {
+                color: $blue-dark;
+                margin-top: 0.5em;
+
+                .time {
+                    color: $brown;
+                }
+
+                .link {
+                    color: $blue-dark;
+                    display: block;
+                    width: max-content;
+                    cursor: pointer;
+
+
+                    &:hover {
+                        transform: scale(1.1)  translate(0px, 0px);
+                        transition: transform 0.2s linear;
+                    }
+                }
+            }
+        }
+    }
+
 }

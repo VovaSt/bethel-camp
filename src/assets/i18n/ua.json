@@ -412,7 +412,21 @@
         }
     },
     "schedule": {
-        "title": "Розклад служінь"
+        "title": "Розклад служінь",
+        "service": "Служіння",
+        "prayer": "Молитва",
+        "youthService": "Молодіжне служіння",
+        "teenegersService": "Підліткове служіння",
+        "bibleSchool": "Дитяча біблійна школа",
+        "homeGroups": "Домашні групи",
+        "detailsHere": "Детальніше тут",
+        "monday": "Понеділок",
+        "tuesday": "Вівторок",
+        "wednesday": "Середа",
+        "thursday": "Четвер",
+        "friday": "П'ятниця",
+        "saturday": "Субота",
+        "sunday": "Неділя"
     },
     "campPage": {
         "campName": "Вефіль",

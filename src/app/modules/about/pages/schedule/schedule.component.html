@@ -5,9 +5,49 @@
 </div>
 
 <div class="content">
-    <div class="content-w">
-        <p class="_text-medium">
-            Щонеділі 10:00
-        </p>
+    <div class="content-w _text-large">
+        <div class="block">
+            <h4 class="day">{{ "schedule.service" | translate }}</h4> 
+            <p class="ministry">
+                {{ "schedule.sunday" | translate }} <b class="time">10:00</b>
+            </p> 
+        </div>
+
+        <div class="block">
+            <h4 class="day">{{ "schedule.prayer" | translate }}</h4> 
+            <p class="ministry">
+                {{ "schedule.tuesday" | translate }} - {{ "schedule.friday" | translate }} <b class="time">9:00</b>
+            </p> 
+        </div>
+
+        <div class="block">
+            <h4 class="day">{{ "schedule.youthService" | translate }}</h4> 
+            <p class="ministry">
+                {{ "schedule.saturday" | translate }} <b class="time">19:00</b>
+            </p>
+        </div>
+
+        <div class="block">
+            <h4 class="day">{{ "schedule.teenegersService" | translate }}</h4> 
+            <p class="ministry">
+                {{ "schedule.saturday" | translate }} <b class="time">14:00</b>
+            </p>
+        </div>
+
+        <div class="block">
+            <h4 class="day">{{ "schedule.bibleSchool" | translate }}</h4> 
+            <p class="ministry">
+                {{ "schedule.saturday" | translate }} <b class="time">12:00</b>
+            </p>
+        </div>
+
+        <div class="block">
+            <h4 class="day">{{ "schedule.homeGroups" | translate }}</h4> 
+            <p class="ministry">
+                <a href="/home-groups" class="link">
+                    {{ "schedule.detailsHere" | translate }}
+                </a>
+            </p>
+        </div>
     </div>
 </div>
