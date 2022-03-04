@@ -56,6 +56,14 @@ $brown: #bf948a;
     line-height: 1.3;
 }
 
+._text-large {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    @include fontSize(22px, 28px, 480px, 1280px);
+    line-height: 1.3;
+}
+
 ._title-large {
     font-family: "Roboto";
     font-style: normal;
