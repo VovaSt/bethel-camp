@@ -15,6 +15,7 @@ export class ServantsComponent implements OnInit {
 
   servants = Servants;
   lang$: Observable<Language>;
+  languages = Language;
 
   constructor(
     private modulesManager: ModulesManagerService,

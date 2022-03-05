@@ -20,29 +20,42 @@
     }
 
     .info-container {
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
         .info-block {
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: flex-end;
+            padding: 10px 20px 40px;
+            flex: 1 1 25%;
+            min-width: 260px;
+            max-width: 340px;
+            text-align: center;
 
             .avatar {
-                height: 250px;
-                width: 250px;
+                height: 200px;
+                width: 200px;
                 border-radius: 50%;
-                border: 5px solid $gray-medium;
-                margin-bottom: 5px;
-            }
-
-            .surname {
-                font-weight: bold;
-                color: $blue-dark;
+                margin-bottom: 16px;
             }
 
             .name {
-
+                font-weight: bold;
                 color: $blue-dark;
+                white-space: nowrap;
+            }
+
+            .name-2 {
+                color: $blue-dark;
+                white-space: nowrap;
+            }
+
+            .position {
+                color: $gray-medium;
+                padding: 0 10px;
             }
         }
     }
