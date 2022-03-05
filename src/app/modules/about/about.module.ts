@@ -5,12 +5,14 @@ import { ConfessionRoutingModule } from "./about-routing.module";
 import { ConfessionComponent } from "./pages/confession/confession.component";
 import { ScheduleComponent } from './pages/schedule/schedule.component';
 import { ServantsComponent } from './pages/servants/servants.component';
+import { ChurchHistoryComponent } from './pages/church-history/church-history.component';
 
 @NgModule({
     declarations: [
         ConfessionComponent,
         ScheduleComponent,
-        ServantsComponent
+        ServantsComponent,
+        ChurchHistoryComponent
     ],
     imports: [
         CommonModule,
