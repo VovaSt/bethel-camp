@@ -1,0 +1,17 @@
+<div class="_sub-page-bg">
+    <div class="text">
+        <h1 class="_page-title">{{ "servants.title" | translate }}</h1>
+    </div>
+</div>
+
+<div class="content" *ngIf="lang$ | async as lang">
+    <div class="content-w info-container">
+        <div *ngFor="let servant of servants" class="info-block">
+            <img [src]="servant.avatar" alt="avatar" class="avatar">
+            <div class="surname _text-medium">{{ servant.surname[lang] }}</div>
+            <div class="name">{{ servant.name[lang] }}</div>
+            <div class="position">{{ servant.position[lang] }}</div>
+            <div class="phone">{{ servant.phone }}</div>
+        </div>
+    </div>
+</div>

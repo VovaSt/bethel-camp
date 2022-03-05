@@ -1,35 +1,12 @@
 @import "design-styles.scss";
 
-.bg-image {
-    background: linear-gradient(
+._sub-page-bg {
+    background-image: linear-gradient(
             0deg,
-            rgba(30, 30, 30, 0.4),
-            rgba(30, 30, 30, 0.4)
+            rgba(30, 30, 30, 0.3),
+            rgba(30, 30, 30, 0.3)
         ),
         url("https://camp-bethel.s3.amazonaws.com/backgrounds/confession-bg.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 65vh;
-    position: relative;
-
-    .text {
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        padding: 100px 10% 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-
-        ._page-title {
-            color: $white;
-            font-weight: bold;
-        }
-    }
 }
 
 .content {

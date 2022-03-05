@@ -13,8 +13,8 @@ main: [
     },
     {
         linkId: 'events_link',
-        linkAction: 'eventsCalandar',
-        context: 'eventsCalandar',
+        linkAction: 'eventsCalendar',
+        context: 'eventsCalendar',
     },
     {
         linkId: 'broadcasts_link',

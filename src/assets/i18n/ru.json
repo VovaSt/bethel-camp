@@ -1,7 +1,7 @@
 {
     "header": {
         "aboutChurch": "О церкви",
-        "eventsCalandar": "Календарь событий",
+        "eventsCalendar": "Календарь событий",
         "broadcasts": "Трансляции",
         "ministries": "Служения",
         "donation": "Пожертвования",
@@ -427,6 +427,9 @@
         "friday": "Пятниця",
         "saturday": "Суббота",
         "sunday": "Воскресенье"
+    },
+    "servants": {
+        "title": "Служители"
     },
     "campPage": {
         "campName": "Вефиль",

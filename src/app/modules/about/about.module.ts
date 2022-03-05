@@ -4,11 +4,13 @@ import { SharedModule } from "src/app/shared/shared.module";
 import { ConfessionRoutingModule } from "./about-routing.module";
 import { ConfessionComponent } from "./pages/confession/confession.component";
 import { ScheduleComponent } from './pages/schedule/schedule.component';
+import { ServantsComponent } from './pages/servants/servants.component';
 
 @NgModule({
     declarations: [
         ConfessionComponent,
-        ScheduleComponent
+        ScheduleComponent,
+        ServantsComponent
     ],
     imports: [
         CommonModule,

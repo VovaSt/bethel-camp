@@ -1,0 +1,49 @@
+@import "design-styles.scss";
+
+._sub-page-bg {
+    background-image: linear-gradient(
+            0deg,
+            rgba(30, 30, 30, 0.3),
+            rgba(30, 30, 30, 0.3)
+        ),
+        url("https://camp-bethel.s3.amazonaws.com/backgrounds/servants-bg.jpg");
+    background-position: top;
+}
+
+.content {
+    padding: 50px;
+    background-color: $white;
+    max-width: 100%;
+
+    @media screen and (max-width: 800px) {
+        padding: 30px;
+    }
+
+    .info-container {
+        display: grid;
+
+        .info-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .avatar {
+                height: 250px;
+                width: 250px;
+                border-radius: 50%;
+                border: 5px solid $gray-medium;
+                margin-bottom: 5px;
+            }
+
+            .surname {
+                font-weight: bold;
+                color: $blue-dark;
+            }
+
+            .name {
+
+                color: $blue-dark;
+            }
+        }
+    }
+}
