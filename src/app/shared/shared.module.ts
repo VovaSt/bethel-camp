@@ -9,9 +9,14 @@ import { TranslateModule } from '@ngx-translate/core';
 import { PhotoCaruselComponent } from './components/photo-carusel/photo-carusel.component';
 import { DonateButtonComponent } from './components/donate-button/donate-button.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { ImageLoaderDirective } from './directives/image-loader.directive';
 
 @NgModule({
-    declarations: [PhotoCaruselComponent, DonateButtonComponent],
+    declarations: [
+        PhotoCaruselComponent, 
+        DonateButtonComponent,
+        ImageLoaderDirective
+    ],
     imports: [
         CommonModule,
         TranslateModule,
@@ -28,6 +33,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 
         PhotoCaruselComponent,
         DonateButtonComponent,
+
+        ImageLoaderDirective
     ],
 })
 export class SharedModule {}

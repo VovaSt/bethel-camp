@@ -15,5 +15,4 @@ export class MainPageComponent implements OnInit {
     ngOnInit(): void {
         this.modulesManager.setActiveModule('main');
     }
-
 }
