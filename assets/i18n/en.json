@@ -1,8 +1,8 @@
 {
     "header": {
         "aboutChurch": "About the church",
-        "eventsCalandar": "Events Calandar",
-        "broadcasts": "broadcasts",
+        "eventsCalendar": "Events Calendar",
+        "broadcasts": "Broadcasts",
         "ministries": "Ministries",
         "donation": "Donation",
         "contacts": "Contacts",
@@ -428,6 +428,9 @@
         "saturday": "Saturday",
         "sunday": "Sunday"
     },
+    "servants": {
+        "title": "Servants"
+    },
     "campPage": {
         "campName": "Bethel",
         "aboutUs": "About us",
@@ -468,5 +471,6 @@
                 }
             }
         }
-    }
+    },
+    "pageUnderDevelopment": "Page under development"
 }
