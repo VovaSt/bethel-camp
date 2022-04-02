@@ -1,3 +1,7 @@
-<div class="wrapper" *ngIf="showLoader$ | async">
+<div class="hard-loader" *ngIf="showHardLoader$ | async">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+</div>
+
+<div class="light-loader" *ngIf="showLightLoader$ | async">
     <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
 </div>

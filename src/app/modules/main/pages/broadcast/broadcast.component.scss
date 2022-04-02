@@ -11,8 +11,12 @@
             ._title, a, p{
                 color: $blue-dark;
             }
-            a:hover {
-                color: $white;
+            a {
+                text-decoration: underline;
+            
+                &:hover {
+                    color: $white;
+                }
             }
         }
     }

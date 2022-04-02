@@ -1,4 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { tap } from 'rxjs/operators';
+import { LoaderService } from 'src/app/core/services/loader.service';
+import { YoutubeService } from 'src/app/core/services/youtube.service';
+import { VideoPopupComponent } from 'src/app/shared/components/video-popup/video-popup.component';
 
 @Component({
   selector: 'app-broadcast',
@@ -8,9 +13,25 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 })
 export class BroadcastComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private youtubeService: YoutubeService,
+    private loaderService: LoaderService,
+    private dialog: MatDialog
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  showLastBroadcast() {
+      this.loaderService.increaseLightLoaderCount();
+      this.youtubeService.getLastVideo()
+        .pipe(tap(() => this.loaderService.decreaseLightLoaderCount()))
+        .subscribe((data: any) => {
+          this.dialog.open(VideoPopupComponent, { 
+            data: data?.items[0],
+            maxWidth: '90vw',
+            width: '800px',
+            backdropClass: 'popup-backdrop'
+          });
+        });
   }
-
 }

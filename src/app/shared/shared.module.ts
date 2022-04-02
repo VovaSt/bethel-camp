@@ -10,11 +10,14 @@ import { PhotoCaruselComponent } from './components/photo-carusel/photo-carusel.
 import { DonateButtonComponent } from './components/donate-button/donate-button.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { ImageLoaderDirective } from './directives/image-loader.directive';
+import { MatDialogModule } from '@angular/material/dialog';
+import { VideoPopupComponent } from './components/video-popup/video-popup.component';
 
 @NgModule({
     declarations: [
         PhotoCaruselComponent, 
         DonateButtonComponent,
+        VideoPopupComponent,
         ImageLoaderDirective
     ],
     imports: [
@@ -22,6 +25,7 @@ import { ImageLoaderDirective } from './directives/image-loader.directive';
         TranslateModule,
         IvyCarouselModule,
         MatButtonModule,
+        MatDialogModule
     ],
     exports: [
         MatButtonToggleModule,
@@ -30,9 +34,11 @@ import { ImageLoaderDirective } from './directives/image-loader.directive';
         MatMenuModule,
         TranslateModule,
         MatExpansionModule,
+        MatDialogModule,
 
         PhotoCaruselComponent,
         DonateButtonComponent,
+        VideoPopupComponent,
 
         ImageLoaderDirective
     ],

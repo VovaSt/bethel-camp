@@ -1,0 +1,16 @@
+<div mat-dialog-title>
+    <h2 [innerHTML]="title"></h2>
+    <button mat-button mat-dialog-close>&#10006;</button>
+</div>
+
+<div mat-dialog-content *ngIf="videoUrl">
+    <div class="video-wrapper">
+        <iframe 
+            [src]="videoUrl"
+            frameborder="0" 
+            allowfullscreen
+        ></iframe>
+    </div>
+</div>
+
+

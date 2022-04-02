@@ -9,7 +9,7 @@ export class ImageLoaderDirective {
         private el: ElementRef,
         private loaderService: LoaderService
     ) {
-        this.loaderService.increaseLoaderCount();
+        this.loaderService.increaseHardLoaderCount();
     }
   
     ngAfterViewInit() {
@@ -18,7 +18,7 @@ export class ImageLoaderDirective {
         const url = bgStyle.split('url')[1];
         const src = url.replace('(','').replace(')','').replace(/\"/gi, "");
         img.src = src;
-        img.addEventListener('load', () => this.loaderService.decreaseLoaderCount());
-        img.addEventListener('error', () => this.loaderService.decreaseLoaderCount());
+        img.addEventListener('load', () => this.loaderService.decreaseHardLoaderCount());
+        img.addEventListener('error', () => this.loaderService.decreaseHardLoaderCount());
     }
 }

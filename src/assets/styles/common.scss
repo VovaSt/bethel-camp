@@ -61,6 +61,10 @@ a {
     }
 }
 
+.popup-backdrop {
+    background-color: rgba($color: $blue-light, $alpha: 0.5);
+}
+
 @keyframes buttonAnimate {
     0% {
         left: -50%;

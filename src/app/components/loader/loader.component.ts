@@ -10,10 +10,14 @@ import { LoaderService } from 'src/app/core/services/loader.service';
 })
 export class LoaderComponent {
 
-  showLoader$: Observable<boolean>;
+  showHardLoader$: Observable<boolean>;
+  showLightLoader$: Observable<boolean>;
 
   constructor(private loaderService: LoaderService) { 
-      this.showLoader$ = this.loaderService.loaderCount$
+      this.showHardLoader$ = this.loaderService.hardLoaderCount$
+        .pipe(map(count => count > 0));
+
+      this.showLightLoader$ = this.loaderService.lightLoaderCount$
         .pipe(map(count => count > 0));
   }
 }
