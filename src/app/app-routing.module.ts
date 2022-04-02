@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PageUnderDevelopmentComponent } from './components/page-under-development/page-under-development.component';
 
 const routes: Routes = [
     {
@@ -14,6 +15,10 @@ const routes: Routes = [
     {
         path: 'camp',
         loadChildren: () => import('./modules/camp/camp.module').then((m) => m.CampModule),
+    },
+    {
+        path: 'page-under-development',
+        component: PageUnderDevelopmentComponent
     },
     {
         path: '**',

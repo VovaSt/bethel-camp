@@ -13,10 +13,13 @@ export class LanguageService {
     public setDefaultLang() {
         const browserLang = this.translateService.getBrowserLang();
         const available = Object.values(Language).find(i => browserLang as Language == i);
-        const lang = available ? browserLang as Language : Language.ua;
+        let lang = available ? browserLang as Language : Language.ua;
+        
+        if (lang === Language.ru) {
+            lang = Language.ua;
+        } // Хай росіяни вчать українську
 
         this.setLanguage(lang);
-
     }
 
     public setLanguage(language: Language) {

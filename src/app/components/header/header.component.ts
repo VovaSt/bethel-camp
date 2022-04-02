@@ -121,6 +121,8 @@ export class HeaderComponent implements OnInit {
             this.router.navigate(['camp']);
         } else if (this.router.url.includes('about')) {
             this.router.navigate(['/']);
+        } else if (this.router.url.includes('page-under-development')) {
+            this.router.navigate(['/']);
         }
     }
 }

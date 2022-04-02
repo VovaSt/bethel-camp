@@ -13,6 +13,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LanguageService } from './core/services/language.service';
 import { LoaderComponent } from './components/loader/loader.component';
+import { PageUnderDevelopmentComponent } from './components/page-under-development/page-under-development.component';
 
 export function httpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -23,7 +24,8 @@ export function httpLoaderFactory(http: HttpClient) {
         AppComponent,
         HeaderComponent,
         FooterComponent,
-        LoaderComponent
+        LoaderComponent,
+        PageUnderDevelopmentComponent
     ],
     imports: [
         BrowserModule,
