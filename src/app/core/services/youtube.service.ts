@@ -7,8 +7,8 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class YoutubeService {
-    private apiKey = environment.youtube.APIKey;
-    private channelId = environment.youtube.channelId;
+    private apiKey = environment.google.APIKey;
+    private channelId = environment.google.youtubeChannelId;
 
     constructor(public http: HttpClient) { }
 

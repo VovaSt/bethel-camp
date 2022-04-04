@@ -49,6 +49,10 @@
                     color: white;
                     white-space: nowrap;
                 }
+
+                a.address {
+                    white-space: inherit;
+                }
             }
         }
 

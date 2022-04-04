@@ -1,6 +1,5 @@
 export const Servants = [
     {
-        avatar: '/assets/images/Avatar.jpg',
         name: {
             ua: "Стахов",
             ru: "Стахов",
