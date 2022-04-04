@@ -28,7 +28,7 @@ export class BroadcastComponent implements OnInit {
         .subscribe((data: any) => {
           this.dialog.open(VideoPopupComponent, { 
             data: data?.items[0],
-            maxWidth: '90vw',
+            maxWidth: '94vw',
             width: '800px',
             backdropClass: 'popup-backdrop'
           });

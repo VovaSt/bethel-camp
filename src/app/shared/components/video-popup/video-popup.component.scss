@@ -2,18 +2,14 @@
 
 .mat-dialog-title {
     display: flex;
-    flex-wrap: nowrap;
-
-    h2 {
-        margin: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
+    justify-content: flex-end;
+    align-items: center;
+    margin: -10px -10px 10px;
 
     button {
         padding: 0;
         min-width: 36px;
+        height: 36px;
         font-size: 24px;
         margin-left: 30px;
         background-color: $brown;
@@ -21,7 +17,7 @@
 }
 
 .mat-dialog-content {
-    margin: 0px -24px -24px ;
+    margin: 0px -24px;
     max-height: 85vh;
     padding: 0;
 
@@ -40,5 +36,13 @@
             width: 100%;
             height: 100%;
         }
+    }
+}
+
+.mat-dialog-action {
+    margin: 20px 0 -10px;
+
+    ._title-small {
+        color: $white;
     }
 }
