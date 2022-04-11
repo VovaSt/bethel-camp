@@ -88,6 +88,10 @@
         font-size: 2.4vh;
         color: $blue-dark;
 
+        &.little {
+            font-size: 2.2vh;
+        }
+
         p {
             margin: 5px 0;
         }
@@ -151,4 +155,25 @@
 }
 .last {
     transform: rotate(90deg) translateZ(-0.2px) scale(1.1) translateX(25vh) translateY(-4vh);
+}
+
+@media screen and (max-width: 800px) {
+    .horizontal-scroll-wrapper {
+        padding-top: 10rem; 
+        padding-right: 60px;
+    }
+
+    .block-wrapper {
+        .image .image-label { 
+            opacity: 1 !important;
+        }
+    
+        .text {
+            font-size: 2.3vh;
+
+            &.little {
+                font-size: 2.1vh;
+            }
+        }
+    }
 }

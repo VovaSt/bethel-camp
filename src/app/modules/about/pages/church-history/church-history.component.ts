@@ -15,4 +15,12 @@ export class ChurchHistoryComponent implements OnInit {
       this.modulesManager.setActiveModule(null);
   }
 
+  photoUrl(i: string) {
+    return `https://camp-bethel.s3.amazonaws.com/church-history/${i}.jpg`;
+  } 
+
+  photoLabel(i: string) {
+    return `churchHistory.${i}.photoLabel`;
+  } 
+
 }
