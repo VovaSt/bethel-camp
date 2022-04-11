@@ -31,7 +31,7 @@
     transform-style: preserve-3d;
     padding-bottom: 10rem;
     padding-top: 5rem;
-    padding-right: 110px;
+    padding-right: 100px;
 }
 
 
@@ -169,10 +169,10 @@
         }
     
         .text {
-            font-size: 2.3vh;
+            font-size: 2.3vh !important;
 
             &.little {
-                font-size: 2.1vh;
+                font-size: 2.1vh !important;
             }
         }
     }
