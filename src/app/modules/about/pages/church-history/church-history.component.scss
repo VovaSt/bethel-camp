@@ -34,6 +34,9 @@
     padding-right: 100px;
 }
 
+.page-title {
+    display: none;
+}
 
 .block-wrapper {
     transform: rotate(90deg);
@@ -118,9 +121,7 @@
             height: auto;
         }
     }
-    
 }
-
 
 .slower {
     transform: rotate(90deg) translateZ(-0.2px) scale(1.1) translateX(0%) translateY(-5vh);
@@ -158,21 +159,57 @@
 }
 
 @media screen and (max-width: 800px) {
-    .horizontal-scroll-wrapper {
-        padding-top: 10rem; 
-        padding-right: 60px;
-    }
+    .wrapper {
+        height: fit-content;
 
-    .block-wrapper {
-        .image .image-label { 
-            opacity: 1 !important;
-        }
-    
-        .text {
-            font-size: 2.3vh !important;
+        .horizontal-scroll-wrapper {
+            padding: 70px 0 0;
+            transform: unset;
+            width: 100vw;
+            height: fit-content;
+            padding-bottom: 20px;
 
-            &.little {
-                font-size: 2.1vh !important;
+            .page-title {
+                display: initial;
+                color: $white;
+                margin: 20px;
+                text-align: center;
+            }
+
+            .block-wrapper {
+                transform: unset !important;
+                width: 100% !important;
+                min-height: unset;
+                margin-bottom: 0px !important;
+                flex-direction: column-reverse;
+                border-radius: 0px;
+                box-shadow: none;
+                background: unset;
+
+                .image {
+                    height: auto;
+                    width: 100%;
+                    margin-top: 15px;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    .image-label { 
+                        opacity: 1 !important;
+                        position: relative;
+                        color: $white;
+                        background: unset;
+                        font-size: 16px;
+                    }
+                }
+            
+                .text {
+                    font-size: 18px !important;
+                    width: 100% !important;
+                    padding: 0px 20px;
+                    color: $white;
+                }
             }
         }
     }

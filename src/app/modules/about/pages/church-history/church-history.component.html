@@ -1,5 +1,7 @@
 <div class="wrapper">
     <div class="horizontal-scroll-wrapper">
+        <h2 class="page-title">{{ 'churchHistory.pageTitle' | translate }}</h2>
+
         <div class="block-wrapper slower">
             <ng-container *ngTemplateOutlet="photo; context:{index: 1}"></ng-container>
             
@@ -104,7 +106,7 @@
             </div>
         </div>
 
-        <div class="block-wrapper faster-down" style="margin-bottom: 30vh;">
+        <div class="block-wrapper faster-down">
             <ng-container *ngTemplateOutlet="photo; context:{index: 13}"></ng-container>
 
             <div class="text" style="width: 36vh">
@@ -112,15 +114,18 @@
             </div>
         </div>
 
-        <div class="block-wrapper slower last" style="width: 20vh">
-            <div class="text">Далі буде...</div>
+        <div class="block-wrapper slower last">
+            <div class="text">
+                <p innerHTML="{{ 'churchHistory.14.text1' | translate }}"></p> 
+                <p>Далі буде...</p>
+            </div>
         </div>
     </div>
 </div>
 
 <ng-template #photo let-index="index">
     <div class="image">
-        <img [src]="photoUrl(index)" alt="{{ photoLabel(index) | translate }}">
+        <img [src]="photoUrl(index)" alt="{{ photoLabel(index) | translate }}" appImageLoader>
         <div class="image-label">
             {{ photoLabel(index) | translate }}
         </div>
