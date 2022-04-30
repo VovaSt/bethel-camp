@@ -18,5 +18,9 @@
         width: 78%;
         color: $white;
         max-width: 1300px;
+
+        strong {
+            white-space: nowrap;
+        }
     }
 }

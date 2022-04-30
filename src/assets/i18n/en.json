@@ -34,18 +34,18 @@
         },
         "events": {
             "title": "Church Events",
-            "text": "",
+            "description": "Why does the church exist? There are many answers to this question, and one of them is written in the Bible: «We are his workmanship, created in Christ Jesus for good works, which God afore prepared» (Ephesians 2:10). Together with all the members of our church, we serve people with good works and hold various events and activities to show everyone the love with which God has loved each of us.",
             "link1": "go to the list of events"
         },
         "broadcasts": {
             "title": "Archive of Broadcast Services",
-            "text": "",
+            "description": "We will be happy to see each of you at our services every Sunday at 10:00, but if you don't have the opportunity - watch the broadcasts of the services. May the message of God's salvation and love be available to all who wish to hear it!",
             "link1": "last broadcast of the ministry",
             "link2": "go to archive"
         },
         "ministries": {
             "title": "Our Services",
-            "text": "",
+            "description": "The Church of the Nativity has many areas of service, the purpose of which is to reach people of different ages and social groups. No matter who you are, if you want to know more about God and serve Him, you can do it with us.",
             "linkText": "View",
             "link1": "home groups",
             "link2": "Youth",
@@ -56,7 +56,7 @@
         },
         "donation": {
             "title": "Donation",
-            "text": "",
+            "description": "If you have a desire to support our church and ministries, you can do so by following the link. May God's peace and love reign in your life!",
             "link1": "donate"
         }
     },
