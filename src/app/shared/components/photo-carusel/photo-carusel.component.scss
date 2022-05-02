@@ -23,9 +23,16 @@ carousel {
 
     ::ng-deep .carousel-arrow {
         opacity: 0.75;
+        display: none;
 
         &.carousel-arrow-disabled {
             opacity: 0.5;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        &:hover::ng-deep .carousel-arrow {
+            display: initial;
         }
     }
 }

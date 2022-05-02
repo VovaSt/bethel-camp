@@ -11,6 +11,8 @@ export class ChurchHistoryComponent implements OnInit {
 
   constructor(private modulesManager: ModulesManagerService) {}
 
+  years = [ '1920', '1930', '1940', '1950' ];
+
   ngOnInit(): void {
       this.modulesManager.setActiveModule(null);
   }
