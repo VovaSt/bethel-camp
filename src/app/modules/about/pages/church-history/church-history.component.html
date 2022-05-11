@@ -1,5 +1,5 @@
 <div class="wrapper">
-    <div class="horizontal-scroll-wrapper">
+    <div #historyContainer class="horizontal-scroll-wrapper">
         <h2 class="page-title">{{ 'churchHistory.pageTitle' | translate }}</h2>
 
         <div class="block-wrapper slower" id="1920">
@@ -120,6 +120,14 @@
                 <p>Далі буде...</p>
             </div>
         </div>
+    </div>
+
+    <div class="years-block">
+        <ng-container *ngFor="let year of years">
+            <div class="year" [class.current]="currentYear === year" (click)="scrollTo(year)">
+                {{ year }}
+            </div>
+        </ng-container>
     </div>
 </div>
 
