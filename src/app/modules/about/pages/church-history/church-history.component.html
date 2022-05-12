@@ -106,7 +106,7 @@
             </div>
         </div>
 
-        <div class="block-wrapper faster-down">
+        <div class="block-wrapper faster">
             <ng-container *ngTemplateOutlet="photo; context:{index: 13}"></ng-container>
 
             <div class="text" style="width: 36vh">
@@ -114,15 +114,133 @@
             </div>
         </div>
 
-        <div class="block-wrapper slower last" id="1950">
-            <div class="text">
+        <div class="block-wrapper slower2" id="1950">
+            <div class="text" style="width: 64vh">
                 <p innerHTML="{{ 'churchHistory.14.text1' | translate }}"></p> 
-                <p>Далі буде...</p>
+                <p innerHTML="{{ 'churchHistory.14.text2' | translate }}"></p> 
+            </div>
+        </div>
+
+        <div class="block-wrapper faster1 vertical">
+            <ng-container *ngTemplateOutlet="photo; context:{index: 15}"></ng-container>
+
+            <div class="text">
+                <p innerHTML="{{ 'churchHistory.15.text1' | translate }}"></p> 
+            </div>
+        </div>
+
+        <div class="block-wrapper slower vertical" id="1960">
+            <ng-container *ngTemplateOutlet="photo; context:{index: 16}"></ng-container>
+
+            <div class="text">
+                <p innerHTML="{{ 'churchHistory.16.text1' | translate }}"></p> 
+            </div>
+        </div>
+
+        <div class="block-wrapper faster1">
+            <ng-container *ngTemplateOutlet="photo; context:{index: 17}"></ng-container>
+
+            <div class="text" style="width: 40vh">
+                <p innerHTML="{{ 'churchHistory.17.text1' | translate }}"></p> 
+            </div>
+        </div>
+
+        <div class="block-wrapper slower-down" id="1970">
+            <ng-container *ngTemplateOutlet="photo; context:{index: 18}"></ng-container>
+
+            <div class="text">
+                <p innerHTML="{{ 'churchHistory.18.text1' | translate }}"></p> 
+            </div>
+        </div>,
+
+        <div class="block-wrapper faster-down">
+            <div class="text">
+                <p innerHTML="{{ 'churchHistory.19.text1' | translate }}"></p> 
+                <p innerHTML="{{ 'churchHistory.19.text2' | translate }}"></p> 
+            </div>
+        </div>
+
+        <div class="block-wrapper slower2">
+            <div class="text">
+                <p innerHTML="{{ 'churchHistory.20.text1' | translate }}"></p> 
+                <p innerHTML="{{ 'churchHistory.20.text2' | translate }}"></p> 
+            </div>
+        </div>
+
+        <div class="block-wrapper faster">
+            <div class="text">
+                <p innerHTML="{{ 'churchHistory.21.text1' | translate }}"></p> 
+            </div>
+        </div>
+
+        <div class="block-wrapper slower1 vertical" id="1980">
+            <ng-container *ngTemplateOutlet="photo; context:{index: 22}"></ng-container>
+
+            <div class="text">
+                <p innerHTML="{{ 'churchHistory.22.text1' | translate }}"></p> 
+            </div>
+        </div>
+
+        <div class="block-wrapper faster">
+            <ng-container *ngTemplateOutlet="photo; context:{index: 23}"></ng-container>
+
+            <div class="text">
+                <p innerHTML="{{ 'churchHistory.23.text1' | translate }}"></p> 
+            </div>
+        </div>
+
+        <div class="block-wrapper slower vertical">
+            <ng-container *ngTemplateOutlet="photo; context:{index: 24}"></ng-container>
+
+            <div class="text">
+                <p innerHTML="{{ 'churchHistory.24.text1' | translate }}"></p> 
+            </div>
+        </div>
+
+        <div class="block-wrapper faster1 vertical" id="1990">
+            <ng-container *ngTemplateOutlet="photo; context:{index: 25}"></ng-container>
+
+            <div class="text">
+                <p innerHTML="{{ 'churchHistory.25.text1' | translate }}"></p> 
+            </div>
+        </div>
+
+        <div class="block-wrapper slower vertical">
+            <ng-container *ngTemplateOutlet="photo; context:{index: 26}"></ng-container>
+
+            <div class="text">
+                <p innerHTML="{{ 'churchHistory.26.text1' | translate }}"></p> 
+            </div>
+        </div>
+
+        <div class="block-wrapper fastest vertical">
+            <ng-container *ngTemplateOutlet="photo; context:{index: 27}"></ng-container>
+
+            <div class="text">
+                <p innerHTML="{{ 'churchHistory.27.text1' | translate }}"></p> 
+                <p innerHTML="{{ 'churchHistory.27.text2' | translate }}"></p> 
+            </div>
+        </div>
+
+        <div class="block-wrapper slower1">
+            <ng-container *ngTemplateOutlet="photo; context:{index: 28}"></ng-container>
+
+            <div class="text">
+                <p innerHTML="{{ 'churchHistory.28.text1' | translate }}"></p> 
+            </div>
+        </div>
+
+        <div class="block-wrapper faster">
+            <ng-container *ngTemplateOutlet="photo; context:{index: 29}"></ng-container>
+
+            <div class="text">
+                <p innerHTML="{{ 'churchHistory.29.text1' | translate }}"></p> 
+                <p innerHTML="{{ 'churchHistory.29.text2' | translate }}"></p> 
             </div>
         </div>
     </div>
 
-    <div class="years-block">
+    <div class="years-block" #yearsContainer>
         <ng-container *ngFor="let year of years">
             <div class="year" [class.current]="currentYear === year" (click)="scrollTo(year)">
                 {{ year }}

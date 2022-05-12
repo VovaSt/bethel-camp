@@ -46,8 +46,7 @@
     justify-content: center;
     min-height: 65vh;
     transform-origin: 50% 50%;
-    transform: rotate(90deg) translateZ(0.1px) scale(0.9) translateX(0px)
-        translateY(-3vh);
+    transform: rotate(90deg) translateZ(0.1px) scale(0.9) translateX(0px) translateY(-3vh);
     transition: 1s;
     border-radius: 20px;
     overflow: hidden;
@@ -109,11 +108,10 @@
         .image {
             height: auto;
             width: 100%;
-            border-radius: 20px 20px 0 0;
-            overflow: hidden;
             
             img {
                 width: 100%;
+                border-radius: 20px 20px 0 0;
             }
 
             .image-label { 
@@ -175,7 +173,7 @@
     z-index: 1;
 }
 .faster1 {
-    transform: rotate(90deg) translateZ(0.05px) scale(0.8) translateX(0%) translateY(5vh);
+    transform: rotate(90deg) translateZ(0.10px) scale(0.8) translateX(0%) translateY(4vh);
     z-index: 1;
 }
 .fastest {
@@ -235,6 +233,10 @@
 
                 &.vertical .image {
                     max-width: unset;
+
+                    img {
+                        border-radius: 0px;
+                    }
                 }
             
                 .text {
@@ -256,6 +258,7 @@
             background: $gray-medium;
             padding: 8px 20px;
             border-top: 1px solid $white;
+            z-index: 10;
 
             .year {
                 font-size: 22px;

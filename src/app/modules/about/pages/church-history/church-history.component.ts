@@ -1,6 +1,6 @@
 import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { fromEvent, Subscription } from 'rxjs';
-import { filter, throttleTime } from 'rxjs/operators';
+import { debounceTime, filter } from 'rxjs/operators';
 import { LoaderService } from 'src/app/core/services/loader.service';
 import { ModulesManagerService } from 'src/app/core/services/module-manager.service';
 
@@ -18,6 +18,7 @@ export class ChurchHistoryComponent implements OnInit, AfterViewInit, OnDestroy 
     scrollContainer;
 
     @ViewChild('historyContainer') historyContainer: ElementRef;
+    @ViewChild('yearsContainer') yearsContainer: ElementRef;
 
     isDesktop = window.innerWidth > 800;
     subscription: Subscription[] = [];
@@ -61,7 +62,7 @@ export class ChurchHistoryComponent implements OnInit, AfterViewInit, OnDestroy 
       this.setYearsPosition();
 
       fromEvent(this.scrollContainer, 'scroll')
-          .pipe(throttleTime(200))
+          .pipe(debounceTime(100))
           .subscribe(() => {
               const scrollTop = this.isDesktop ? 
                   this.historyContainer.nativeElement.scrollTop : window.scrollY;
@@ -71,14 +72,16 @@ export class ChurchHistoryComponent implements OnInit, AfterViewInit, OnDestroy 
 
     private setYearsPosition() {
         this.years.forEach(year => {
-            const elementRect = document.getElementById(year)?.getBoundingClientRect();
-            if (elementRect) {
+            const element = document.getElementById(year);
+            if (element) {
                 let position;
                 if (this.isDesktop) {
+                    const scale = element.getBoundingClientRect().width / element.offsetWidth;
                     const w = this.scrollContainer.clientHeight;
-                    position = elementRect.left > w / 2 ? elementRect.left + w / 3 : 0;
+                    position = element.offsetTop - (w - w * scale / 1.4);
+                    position = position > 0 ? position : 0;
                 } else {
-                    position = elementRect.top > 200 ? elementRect.top - 70 : 0;
+                    position = element.offsetTop > 200 ? element.offsetTop - 70 : 0;
                 }
                 this.yearsPosition[year] = position;
             }
@@ -86,7 +89,7 @@ export class ChurchHistoryComponent implements OnInit, AfterViewInit, OnDestroy 
     }
 
     private onScroll(scrollTop: number) {
-        const fromTop = scrollTop + window.innerWidth / 2;
+        const fromTop = scrollTop + 100;
         let diff, currYear;
 
         Object.entries(this.yearsPosition).forEach(data => {
@@ -102,6 +105,7 @@ export class ChurchHistoryComponent implements OnInit, AfterViewInit, OnDestroy 
         
         if (this.currentYear !== currYear) {
             this.currentYear = currYear;
+            this.scrollYearsBlock();
             this.cdr.detectChanges();
         }
     }
@@ -109,6 +113,17 @@ export class ChurchHistoryComponent implements OnInit, AfterViewInit, OnDestroy 
     private hideFooter(hide: boolean) {
         const displayValue = hide ? 'none' : 'initial';
         document.getElementsByTagName('footer')[0].style.display = displayValue;
+    }
+
+    private scrollYearsBlock() {
+        const yearWidth = 69.5;
+        const yearPos = yearWidth * this.years.indexOf(this.currentYear);
+        const gap = window.innerWidth / 2 - 54; 
+        const scroll = yearPos - gap;
+        this.yearsContainer.nativeElement.scrollTo({
+            left: scroll > 0 ? scroll : 0, 
+            behavior: 'smooth'
+        });
     }
 
     ngOnDestroy(): void {
