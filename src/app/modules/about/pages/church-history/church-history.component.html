@@ -16,7 +16,7 @@
         <div class="block-wrapper faster" style="margin-bottom: 10vh;">
             <ng-container *ngTemplateOutlet="photo; context:{index: 2}"></ng-container>
 
-            <div class="text" style="width: 40vh">
+            <div class="text" style="width: 42vh">
                 <p innerHTML="{{ 'churchHistory.2.text1' | translate }}"></p>
                 <p innerHTML="{{ 'churchHistory.2.text2' | translate }}"></p>
             </div>
@@ -180,7 +180,7 @@
             </div>
         </div>
 
-        <div class="block-wrapper faster">
+        <div class="block-wrapper faster vertical">
             <ng-container *ngTemplateOutlet="photo; context:{index: 23}"></ng-container>
 
             <div class="text">
@@ -220,7 +220,7 @@
             </div>
         </div>
 
-        <div class="block-wrapper slower1">
+        <div class="block-wrapper slower1 vertical" style="margin-bottom: 30vh">
             <ng-container *ngTemplateOutlet="photo; context:{index: 28}"></ng-container>
 
             <div class="text">
@@ -228,10 +228,10 @@
             </div>
         </div>
 
-        <div class="block-wrapper faster">
+        <div class="block-wrapper faster" style="margin-bottom: 40vh">
             <ng-container *ngTemplateOutlet="photo; context:{index: 29}"></ng-container>
 
-            <div class="text">
+            <div class="text" style="width: 40vh">
                 <p innerHTML="{{ 'churchHistory.29.text1' | translate }}"></p> 
                 <p innerHTML="{{ 'churchHistory.29.text2' | translate }}"></p> 
             </div>
@@ -240,8 +240,9 @@
         <div class="block-wrapper slower" id="2000">
             <ng-container *ngTemplateOutlet="photo; context:{index: 30}"></ng-container>
 
-            <div class="text">
-                <p innerHTML="{{ 'churchHistory.30.text1' | translate }}"></p> 
+            <div class="text" style="width: 50vh">
+                <p innerHTML="{{ 'churchHistory.30.text1' | translate }}"></p>
+                <p innerHTML="{{ 'churchHistory.30.text2' | translate }}"></p> 
             </div>
         </div>
 
@@ -253,15 +254,16 @@
             </div>
         </div>
 
-        <div class="block-wrapper slower2">
+        <div class="block-wrapper slower vertical" id="2010">
             <ng-container *ngTemplateOutlet="photo; context:{index: 32}"></ng-container>
 
             <div class="text">
                 <p innerHTML="{{ 'churchHistory.32.text1' | translate }}"></p> 
+                <p innerHTML="{{ 'churchHistory.32.text2' | translate }}"></p> 
             </div>
         </div>
 
-        <div class="block-wrapper faster1" id="2010">
+        <div class="block-wrapper faster vertical">
             <ng-container *ngTemplateOutlet="photo; context:{index: 33}"></ng-container>
 
             <div class="text">
@@ -269,7 +271,7 @@
             </div>
         </div>
 
-        <div class="block-wrapper slower">
+        <div class="block-wrapper slower2">
             <ng-container *ngTemplateOutlet="photo; context:{index: 34}"></ng-container>
 
             <div class="text">
@@ -278,26 +280,17 @@
             </div>
         </div>
 
-        <div class="block-wrapper faster">
+        <div class="block-wrapper fastest" id="2020">
             <ng-container *ngTemplateOutlet="photo; context:{index: 35}"></ng-container>
 
-            <div class="text">
-                <p innerHTML="{{ 'churchHistory.35.text1' | translate }}"></p> 
-                <p innerHTML="{{ 'churchHistory.35.text2' | translate }}"></p> 
-            </div>
-        </div>
-
-        <div class="block-wrapper slower2" id="2020">
-            <ng-container *ngTemplateOutlet="photo; context:{index: 36}"></ng-container>
-
             <div class="text" style="width: 42vh">
-                <p innerHTML="{{ 'churchHistory.36.text1' | translate }}"></p>  
+                <p innerHTML="{{ 'churchHistory.35.text1' | translate }}"></p>  
             </div>
         </div>
 
-        <div class="block-wrapper fastest">
+        <div class="block-wrapper last">
             <div class="text last-verse">
-                <p innerHTML="{{ 'churchHistory.37.text1' | translate }}"></p>  
+                <p innerHTML="{{ 'churchHistory.36.text1' | translate }}"></p>  
             </div>
         </div>
     </div>
