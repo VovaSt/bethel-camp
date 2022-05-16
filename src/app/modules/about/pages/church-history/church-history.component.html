@@ -2,7 +2,7 @@
     <div #historyContainer class="horizontal-scroll-wrapper">
         <h2 class="page-title">{{ 'churchHistory.pageTitle' | translate }}</h2>
 
-        <div class="block-wrapper slower" id="1920">
+        <div class="block-wrapper slower" id="1920" style="margin-bottom: 30vh;">
             <ng-container *ngTemplateOutlet="photo; context:{index: 1}"></ng-container>
             
             <div class="text" style="width: 50vh">
@@ -271,7 +271,7 @@
             </div>
         </div>
 
-        <div class="block-wrapper slower2">
+        <div class="block-wrapper slower2 vertical">
             <ng-container *ngTemplateOutlet="photo; context:{index: 34}"></ng-container>
 
             <div class="text">
