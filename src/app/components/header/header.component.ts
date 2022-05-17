@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit {
         if (window.innerWidth <= 1400) {
             this.navbarColor = window.scrollY > 50 ? true : false;
         } else {
-            this.navbarColor = window.scrollY > 200 ? true : false;
+            this.navbarColor = window.scrollY > 100 ? true : false;
         }
     }
 
