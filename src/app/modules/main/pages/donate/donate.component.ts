@@ -1,5 +1,7 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+
+import { DonateModalComponent } from './../../../../shared/components/donate-modal/donate-modal.component';
 
 @Component({
   selector: 'app-donate',
@@ -7,13 +9,11 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['../about-us/about-us.component.scss', './donate.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DonateComponent implements OnInit {
+export class DonateComponent {
 
-  privatUrl = environment.private24Url;
+  constructor(public dialog: MatDialog) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  donate() {
+    this.dialog.open(DonateModalComponent);
   }
-
 }

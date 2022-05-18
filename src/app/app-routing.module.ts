@@ -17,6 +17,10 @@ const routes: Routes = [
         loadChildren: () => import('./modules/camp/camp.module').then((m) => m.CampModule),
     },
     {
+        path: 'events',
+        loadChildren: () => import('./modules/church-events/church-events.module').then((m) => m.ChurchEventsModule),
+    },
+    {
         path: 'page-under-development',
         component: PageUnderDevelopmentComponent
     },

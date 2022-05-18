@@ -431,6 +431,9 @@
     "servants": {
         "title": "Servants"
     },
+    "events": {
+        "title": "Church Events"
+    },
     "churchHistory": {
         "pageTitle": "Історія церкви «Різдва Христового»",
         "1": {
@@ -539,5 +542,8 @@
             }
         }
     },
-    "pageUnderDevelopment": "Page under development"
+    "pageUnderDevelopment": "Page under development",
+    "donate": {
+        "title": "Support us"
+    }
 }

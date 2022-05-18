@@ -65,6 +65,27 @@ a {
     background-color: rgba($color: $blue-light, $alpha: 0.5);
 }
 
+.mat-stepper-horizontal, .mat-stepper-vertical {
+    background-color: unset;
+    .mat-stepper-vertical-line::before {
+        background: #BFCDD9;
+    }
+
+
+    .mat-step-header {
+        .mat-step-label {
+            color: #6093BF
+        }
+        .mat-step-icon {
+            background: #95ACBF;
+        }
+        .mat-step-icon-selected {
+            background: #2F4659;
+        }
+    }
+}
+
+
 @keyframes buttonAnimate {
     0% {
         left: -50%;

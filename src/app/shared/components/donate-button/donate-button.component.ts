@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { MatDialog } from '@angular/material/dialog';
+
+import { environment } from './../../../../environments/environment';
+import { DonateModalComponent } from '../donate-modal/donate-modal.component';
 
 @Component({
     selector: 'app-donate-button',
@@ -10,12 +13,13 @@ export class DonateButtonComponent implements OnInit {
 
     privatUrl = environment.private24Url;
 
-    constructor() { }
+    constructor(public dialog: MatDialog) {}
 
     ngOnInit(): void { }
 
     donate() {
-        window.open(this.privatUrl, "_blank");
+        // window.open(this.privatUrl, "_blank");
+        this.dialog.open(DonateModalComponent);
     }
 
 }

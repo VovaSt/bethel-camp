@@ -12,13 +12,15 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { ImageLoaderDirective } from './directives/image-loader.directive';
 import { MatDialogModule } from '@angular/material/dialog';
 import { VideoPopupComponent } from './components/video-popup/video-popup.component';
+import { DonateModalComponent } from './components/donate-modal/donate-modal.component';
 
 @NgModule({
     declarations: [
         PhotoCaruselComponent, 
         DonateButtonComponent,
         VideoPopupComponent,
-        ImageLoaderDirective
+        ImageLoaderDirective,
+        DonateModalComponent
     ],
     imports: [
         CommonModule,

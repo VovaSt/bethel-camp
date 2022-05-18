@@ -1,0 +1,40 @@
+
+a {
+    color: unset;
+    text-decoration: unset;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px 20px;
+    cursor: pointer;
+    &:hover {
+        outline: 2px solid #BFCDD9;
+        border-bottom-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+    .text {
+        max-width: 380px;
+    }
+    .logo {
+        width: 100px;
+        height: 100px;
+        margin-right: 40px;
+    }
+    .pdf-logo {
+        width: 60px;
+        height: 60px;
+        margin-right: 60px;
+        margin-left: 20px;
+    }
+
+}
+
+.tc {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+

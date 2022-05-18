@@ -31,9 +31,9 @@ export class HeaderComponent implements OnInit {
 
     @HostListener('window:scroll', ['$event']) onscroll() {
         if (window.innerWidth <= 1400) {
-            this.navbarColor = window.scrollY > 50 ? true : false;
+            this.navbarColor = window.scrollY > 30 ? true : false;
         } else {
-            this.navbarColor = window.scrollY > 200 ? true : false;
+            this.navbarColor = window.scrollY > 150 ? true : false;
         }
     }
 
