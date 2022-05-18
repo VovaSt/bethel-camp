@@ -65,6 +65,10 @@
             .text-container {
                 padding-left: 47px;
                 padding-right: 30px;
+
+                a:hover {
+                    transform: none;
+                }
             }
         }
 
@@ -87,9 +91,6 @@
             }
             .text-container {
                 margin-top: 40px;
-                a:hover {
-                    transform: none;
-                }
             }
 
         }
