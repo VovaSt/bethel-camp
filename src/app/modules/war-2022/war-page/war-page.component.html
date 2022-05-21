@@ -1,0 +1,41 @@
+<div class="_sub-page-bg" appImageLoader>
+    <div class="text">
+        <h1 class="_page-title">{{ "war2022.title" | translate }}</h1>
+    </div>
+</div>
+
+<div class="wrapper gm-color">
+    <div class="content-w ltr">
+        <app-photo-carusel [images]="refugeesShelterImages"></app-photo-carusel>
+
+        <div class="text-container">
+            <h2 class="_title">{{ "war2022.shelterTitle" | translate }}</h2>
+            <p class="_text-medium">{{ "war2022.shelterText1" | translate }}</p>
+            <p class="_text-medium">{{ "war2022.shelterText2" | translate }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper gl-color">
+    <div class="content-w rtl">
+        <app-photo-carusel [images]="helpFromAbroadImages"></app-photo-carusel>
+
+        <div class="text-container">
+            <h2 class="_title">{{ "war2022.helpFromAbroadTitle" | translate }}</h2>
+            <p class="_text-medium">{{ "war2022.helpFromAbroadText1" | translate }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper w-color">
+    <div class="content-w ltr">
+        <video controls>
+            <source [src]="video" type="video/mp4">
+        </video>
+
+        <div class="text-container">
+            <h2 class="_title">{{ "war2022.volunteerWorkTitle" | translate }}</h2>
+            <p class="_text-medium">{{ "war2022.volunteerWorkText1" | translate }}</p>
+        </div>
+    </div>
+</div>

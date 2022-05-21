@@ -1,0 +1,104 @@
+@import "design-styles.scss";
+
+._sub-page-bg {
+    background-image: linear-gradient(0deg, rgba(30, 30, 30, 0.4), rgba(30, 30, 30, 0.4)),
+        url("https://camp-bethel.s3.amazonaws.com/war-2022/bg.jpg");
+}
+
+.wrapper {
+    padding: 50px 0;
+
+    &.gm-color {
+        background-color: $gray-medium;
+
+        ._title {
+            color: $white;
+        }
+
+        ._text-medium {
+            color: $white;
+        }
+    }
+
+    &.gl-color {
+        background-color: $gray-light;
+
+        ._title {
+            color: $blue-dark;
+        }
+
+        ._text-medium {
+            color: $blue-dark;
+        }
+    }
+
+    &.w-color {
+        background-color: $white;
+
+        ._title {
+            color: $blue-dark;
+        }
+
+        ._text-medium {
+            color: $blue-dark;
+        }
+    }
+    
+
+    .content-w {
+        display: flex;
+        align-items: center;
+
+        &.ltr {
+            flex-direction: row;
+        }
+
+        &.rtl {
+            flex-direction: row-reverse;
+        }
+
+        app-photo-carusel {
+            ::ng-deep .carousel {
+                height: 75% !important;
+            }
+        }
+
+        video {
+            max-width: 50%;
+        }
+
+        .text-container {
+            flex: 1;
+            padding: 0 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 18px;
+            white-space: pre-line;
+
+            ._text-medium {
+                margin: 0.3em 0;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        padding: 0;
+
+        .content-w {
+            flex-direction: column-reverse !important;
+            align-items: center;
+
+            video {
+                max-width: 100vw;
+            }
+
+            .text-container {
+                padding: 30px;
+            }
+        }
+    }
+}

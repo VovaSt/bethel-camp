@@ -21,6 +21,10 @@ const routes: Routes = [
         loadChildren: () => import('./modules/church-events/church-events.module').then((m) => m.ChurchEventsModule),
     },
     {
+        path: 'war-2022',
+        loadChildren: () => import('./modules/war-2022/war.module').then((m) => m.WarModule),
+    },
+    {
         path: 'page-under-development',
         component: PageUnderDevelopmentComponent
     },
