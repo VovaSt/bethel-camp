@@ -23,7 +23,7 @@ export class WarPageComponent implements OnInit {
       { path: 'https://camp-bethel.s3.amazonaws.com/war-2022/help-from-abroad/5.jpg' }
     ];
 
-    video = 'https://camp-bethel.s3.amazonaws.com/war-2022/volunteers.mp4';
+    video = 'https://camp-bethel.s3.amazonaws.com/war-2022/volunteers.mp4#t=0.001';
 
     constructor(private modulesManager: ModulesManagerService) {}
 
