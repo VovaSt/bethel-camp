@@ -35,7 +35,7 @@
         "events": {
             "title": "Church Events",
             "description": "Why does the church exist? There are many answers to this question, and one of them is written in the Bible: «We are his workmanship, created in Christ Jesus for good works, which God afore prepared». That is why today, at a difficult time for our country, we are working with the <b>Star Of Hope</b> mission from Sweden and <b>Uplift Ukraine</b> mission from the United States to do good works for people affected by the war.",
-            "link1": "More about help"
+            "link1": "More about assistance"
         },
         "broadcasts": {
             "title": "Archive of Broadcast Services",
@@ -590,6 +590,17 @@
         "36": {
             "text1": "Той, Хто свідкує, говорить оце: Так, незабаром прийду! Амінь. Прийди, Господи Ісусе! (Об'явлення 22:20)"
         }
+    },
+    "war2022": {
+        "title": "Assistance to victims of russian aggression",
+        "shelterTitle": "The first days of the war",
+        "shelterText1": "The war, which began on the morning of February 24, 2022, came as a surprise to many. The offensive by russian troops caused a huge influx of refugees fleeing the war. Many of those people have lost their homes, property, and some of them lost their families, but fled, hoping to save at least their lives.",
+        "shelterText2": "In this difficult time, we all understood that it was our duty to serve these disadvantaged people. Our house of prayer has become a shelter. Beds have been arranged everywhere on the ground floor, under the balcony, and in the Sunday school classrooms. Members of our church took turns day and night to feed and help the refugees, who arrived in dozens every day, and on some nights there were more than a hundred.",
+        "helpFromAbroadTitle": "Humanitarian aid from abroad",
+        "helpFromAbroadText1": "The war shook not only Ukraine but the whole world. And our friends from Sweden, America, and the Netherlands were not indifferent to our disaster. We received many tons of humanitarian aid and food from them, which we distributed to the cities of Ukraine that were affected by the war.",
+        "volunteerWorkTitle": "Volunteer work",
+        "volunteerWorkText1": "Our volunteers often delivered this aid to Kyiv, Chernihiv, Kharkiv, Zhytomyr, Zaporizhzhia, and other regions, sometimes risking their lives. As it is the work of the church to shine in the darkness with the fire of God's love, to give hope and consolation to the needy, and to show people the way to God through our own lives and good deeds.",
+        "linksAboutHelp": "You can get more information about volunteering on our Facebook page, as well as by visiting the pages of the missions we work with:"
     },
     "campPage": {
         "campName": "Bethel",
