@@ -1,5 +1,6 @@
 <h3 class="_title tc">{{ "donate.title" | translate }}</h3>
-<a class="row" [href]="privatUrl" target="_blank">
+<div mat-dialog-close class="close-btn"><img src="assets/images/close.svg"></div>
+<!-- <a class="row" [href]="privatUrl" target="_blank">
     <img class="logo" src="assets/images/privat24.png">
     <div class="_text-medium text">{{"donate.private24" | translate}}</div>
 </a>
@@ -14,4 +15,41 @@
 <a class="row" target="_blank">
     <img class="logo" src="assets/images/uplift-logo.jpg">
     <div class="_text-medium text">{{"donate.uplift" | translate}}</div>
-</a>
+</a> -->
+
+<mat-tab-group mat-stretch-tabs>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            {{"donate.secondTab" | translate}}
+        </ng-template>
+        <div class="tab-container">
+            <a class="row" href="assets/pdf/details-for-payments-in-dollars.pdf" target="_blank" download="details-for-payments-in-dollars.pdf">
+                <img class="pdf-logo" src="assets/images/pdf-logo.png">
+                <div class="_text-medium text">{{"donate.dollarDetailsPdf" | translate}}</div>
+            </a>
+            <a class="row" href="assets/pdf/details-for-payments-in-euros.pdf" target="_blank" download="details-for-payments-in-euros.pdf">
+                <img class="pdf-logo" src="assets/images/pdf-logo.png">
+                <div class="_text-medium text">{{"donate.euroDetailsPdf" | translate}}</div>
+            </a>
+            <a class="row" target="_blank">
+                <img class="logo" src="assets/images/uplift-logo.jpg">
+                <div class="_text-medium text">{{"donate.uplift" | translate}}</div>
+            </a>
+        </div>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            {{"donate.firstTab" | translate}}
+        </ng-template>
+        <div class="tab-container">
+            <a class="row" [href]="privatUrl" target="_blank">
+                <img class="logo" src="assets/images/privat24.png">
+                <div class="_text-medium text">{{"donate.private24" | translate}}</div>
+                </a>
+            <a class="row" href="assets/pdf/details-for-payments-in-dollars.pdf" target="_blank" download="details-for-payments-in-dollars.pdf">
+                <img class="pdf-logo" src="assets/images/pdf-logo.png">
+                <div class="_text-medium text">{{"donate.dollarDetailsPdf" | translate}}</div>
+            </a>
+        </div>
+    </mat-tab>
+</mat-tab-group>

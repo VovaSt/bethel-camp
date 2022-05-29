@@ -643,5 +643,15 @@
             }
         }
     },
-    "pageUnderDevelopment": "Страница в стадии разработки"
+    "pageUnderDevelopment": "Страница в стадии разработки",
+    "donate": {
+        "title": "Поддержите нас",
+        "firstTab": "Перевод в пределах Украины",
+        "secondTab": "Перевод из-за границы",
+        "private24": "Перевод через Приват24",
+        "grivnaDetailsPdf": "Реквизиты для перевода в гривнах",
+        "dollarDetailsPdf": "Реквизиты для Swift перевода в долларах",
+        "euroDetailsPdf": "Реквизиты для Swift перевода в евро",
+        "uplift": "PayPal перевод на счет миссии Uplift Ukraine"
+    }
 }

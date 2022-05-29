@@ -13,10 +13,11 @@ import { ImageLoaderDirective } from './directives/image-loader.directive';
 import { MatDialogModule } from '@angular/material/dialog';
 import { VideoPopupComponent } from './components/video-popup/video-popup.component';
 import { DonateModalComponent } from './components/donate-modal/donate-modal.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
     declarations: [
-        PhotoCaruselComponent, 
+        PhotoCaruselComponent,
         DonateButtonComponent,
         VideoPopupComponent,
         ImageLoaderDirective,
@@ -27,7 +28,8 @@ import { DonateModalComponent } from './components/donate-modal/donate-modal.com
         TranslateModule,
         IvyCarouselModule,
         MatButtonModule,
-        MatDialogModule
+        MatDialogModule,
+        MatTabsModule
     ],
     exports: [
         MatButtonToggleModule,
