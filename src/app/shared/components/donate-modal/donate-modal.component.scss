@@ -1,3 +1,5 @@
+@import "design-styles.scss";
+
 .tab-container {
     padding: 20px;
     min-height: 350px;
@@ -63,24 +65,25 @@
     }
 }
 
-
-:host {
-    position: relative;
-    .tc {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    .close-btn {
-        cursor: pointer;
-        position: absolute;
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        top: -8px;
-        right: -16px;
-        text-align: center;
-        padding: 14px 0;
-    }
+.tc {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
+.mat-dialog-title {
+    position: relative;
+    align-items: center;
+
+    button {
+        position: absolute;
+        top: -16px;
+        right: -8px;
+        padding: 0;
+        min-width: 36px;
+        height: 36px;
+        font-size: 24px;
+        margin-left: 30px;
+        background-color: $brown;
+    }
+}
 

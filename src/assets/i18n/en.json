@@ -649,7 +649,7 @@
         "firstTab": "Money transfer inside Ukraine",
         "secondTab": "Money transfers from abroad",
         "private24": "Money transfer via Privat24",
-        "grivnaDetailsPdf": "Bank account info for money transfer in UAH",
+        "hryvniaDetailsPdf": "Bank account info for money transfer in UAH",
         "dollarDetailsPdf": "Bank account info for SWIFT in US dollars (USD)",
         "euroDetailsPdf": "Bank account info for SWIFT in euros (EUR)",
         "uplift": "PayPal account of partnership mission Uplift Ukraine"
