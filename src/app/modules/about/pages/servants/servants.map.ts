@@ -15,6 +15,7 @@ export const Servants = [
             ru: "старший пастор",
             en: "senior pastor" 
         },
+        avatar: 'https://camp-bethel.s3.amazonaws.com/servants/Stakhov.jpg'
     },
     {
         name: {
@@ -32,6 +33,7 @@ export const Servants = [
             ru: "пастор",
             en: "pastor" 
         },
+        avatar: 'https://camp-bethel.s3.amazonaws.com/servants/Hnilitsky.jpg'
     },
     {
         name: {
@@ -49,5 +51,6 @@ export const Servants = [
             ru: "пастор",
             en: "pastor" 
         },
+        avatar: 'https://camp-bethel.s3.amazonaws.com/servants/Korniychuk.jpg'
     }
 ]

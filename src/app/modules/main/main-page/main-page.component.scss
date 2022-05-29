@@ -18,5 +18,11 @@
         width: 78%;
         color: $white;
         max-width: 1300px;
+
+        @media screen and (min-width: 1200px) {
+            strong {
+                white-space: nowrap;
+            }
+        }
     }
 }
