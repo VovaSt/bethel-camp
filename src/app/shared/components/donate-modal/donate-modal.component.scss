@@ -130,7 +130,10 @@
         margin-top: -20px;
         margin-right: -12px;
         color: $white;
-        filter: brightness(10); // fix for ios
+
+        ::ng-deep .mat-button-wrapper {
+            filter: brightness(10); // fix for ios
+        }
     }
 }
 
