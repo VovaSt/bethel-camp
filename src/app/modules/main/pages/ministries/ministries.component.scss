@@ -33,7 +33,7 @@
     }
 }
 
-$imageIds: 'home-group', 'youth', 'kids-school', 'youth-choir', 'camp-service', 'social-services';
+$imageIds: 'camp-service', 'youth', 'kids-school', 'youth-choir', 'social-services', 'home-group';
 
 $bp-md: 600px;
 $bp-lg: 800px;
@@ -195,7 +195,7 @@ p.copy {
   background-color: #95ACBF4d;
   border: none;
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: lighten(#95ACBF85, 15%);
   }
 

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PageUnderDevelopmentComponent } from './components/page-under-development/page-under-development.component';
 
 const routes: Routes = [
     {
@@ -23,10 +22,6 @@ const routes: Routes = [
     {
         path: 'war-2022',
         loadChildren: () => import('./modules/war-2022/war.module').then((m) => m.WarModule),
-    },
-    {
-        path: 'page-under-development',
-        component: PageUnderDevelopmentComponent
     },
     {
         path: '**',

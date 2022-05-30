@@ -13,6 +13,6 @@ export class LandingComponent implements OnInit {
     ) { }
 
     ngOnInit(): void {
-        this.modulesManager.setActiveModule('camp');
+        this.modulesManager.setActiveModule(null);
     }
 }
