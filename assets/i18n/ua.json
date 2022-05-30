@@ -654,9 +654,10 @@
         "dollarDetailsPdf": "Реквізити для Swift переказу в доларах",
         "euroDetailsPdf": "Реквізити для Swift переказу в євро",
         "uplift": "PayPal переказ на рахунок місії Uplift Ukraine",
-        "company": "Компанія",
+        "receiver": "Одержувач",
         "currentAccount": "Розрахунковий рахунок",
         "USREOU": "ЄДРПОУ",
-        "serviceName": "Назва послуги"
+        "purpose": "Призначення",
+        "purposeText": "Благодійні пожертвування"
     }
 }   
