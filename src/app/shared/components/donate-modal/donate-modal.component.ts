@@ -14,7 +14,6 @@ export class DonateModalComponent {
     organization = environment.bankAccount.organization;
     IBAN = environment.bankAccount.IBAN;
     USREOU = environment.bankAccount.USREOU;
-    serviceName = environment.bankAccount.serviceName;
 
     isAbroad = false;
 

@@ -8,8 +8,7 @@ export const environment = {
   bankAccount: {
     organization: "Церква Різдва Христового м.Бердичів",
     IBAN: "UA623052990000026004036401791",
-    USREOU: "13576641",
-    serviceName: "Благодійні пожертвування"
+    USREOU: "13576641"
   },
   google: {
     APIKey: "AIzaSyCDz22wkz0HH3CI3KR5RBPftIqmHRg-trI",

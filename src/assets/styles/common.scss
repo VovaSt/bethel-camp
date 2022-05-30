@@ -96,3 +96,10 @@ a {
         left: 120%;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .cdk-global-scrollblock {
+        position: static;
+        overflow-y: hidden !important;
+    }
+} // fix ios bug
