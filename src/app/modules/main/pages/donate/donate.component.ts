@@ -14,6 +14,6 @@ export class DonateComponent {
   constructor(public dialog: MatDialog) {}
 
   donate() {
-    this.dialog.open(DonateModalComponent);
+    this.dialog.open(DonateModalComponent, { maxWidth: '94vw'});
   }
 }

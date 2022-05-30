@@ -646,12 +646,16 @@
     "pageUnderDevelopment": "Сторінка в стадії розробки",
     "donate": {
         "title": "Підтримайте нас",
-        "firstTab": "Переказ в межах України",
-        "secondTab": "Переказ з-за кордону",
+        "ukraineTab": "По Україні",
+        "abroadTab": "З-за кордону",
         "private24": "Переказ через Приват24",
-        "hryvniaDetailsPdf": "Реквізити для переказу у гривнях",
+        "hryvniaDetails": "Реквізити для переказу у гривнях",
         "dollarDetailsPdf": "Реквізити для Swift переказу в доларах",
         "euroDetailsPdf": "Реквізити для Swift переказу в євро",
-        "uplift": "PayPal переказ на рахунок місії Uplift Ukraine"
+        "uplift": "PayPal переказ на рахунок місії Uplift Ukraine",
+        "company": "Компанія",
+        "currentAccount": "Розрахунковий рахунок",
+        "USREOU": "ЄДРПОУ",
+        "serviceName": "Назва послуги"
     }
-}
+}   
