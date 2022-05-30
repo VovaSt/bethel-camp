@@ -61,10 +61,6 @@ a {
     }
 }
 
-.popup-backdrop {
-    background-color: rgba($color: $blue-light, $alpha: 0.5);
-}
-
 .mat-stepper-horizontal, .mat-stepper-vertical {
     background-color: unset;
     .mat-stepper-vertical-line::before {

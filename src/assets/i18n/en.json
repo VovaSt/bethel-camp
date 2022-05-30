@@ -41,7 +41,8 @@
             "title": "Archive of Broadcast Services",
             "description": "We will be happy to see each of you at our services every Sunday at 10:00, but if you don't have the opportunity - watch the broadcasts of the services. May the message of God's salvation and love be available to all who wish to hear it!",
             "link1": "last broadcast of the ministry",
-            "link2": "go to archive"
+            "link2": "go to archive",
+            "modalWindowTitle": "Broadcast"
         },
         "ministries": {
             "title": "Our Services",
@@ -646,12 +647,16 @@
     "pageUnderDevelopment": "Page under development",
     "donate": {
         "title": "Support us",
-        "firstTab": "Money transfer inside Ukraine",
-        "secondTab": "Money transfers from abroad",
+        "ukraineTab": "Inside Ukraine",
+        "abroadTab": "From abroad",
         "private24": "Money transfer via Privat24",
-        "hryvniaDetailsPdf": "Bank account info for money transfer in UAH",
+        "hryvniaDetails": "Bank account info for money transfer in UAH",
         "dollarDetailsPdf": "Bank account info for SWIFT in US dollars (USD)",
         "euroDetailsPdf": "Bank account info for SWIFT in euros (EUR)",
-        "uplift": "PayPal account of partnership mission Uplift Ukraine"
+        "uplift": "PayPal account of partnership mission Uplift Ukraine",
+        "company": "Сompany",
+        "currentAccount": "Сurrent Account",
+        "USREOU": "USREOU",
+        "serviceName": "Service name"
     }
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { Language } from 'src/app/core/enums/language.enum';
+import { LanguageService } from 'src/app/core/services/language.service';
 import { environment } from './../../../../environments/environment';
 
 @Component({
@@ -10,7 +11,15 @@ import { environment } from './../../../../environments/environment';
 export class DonateModalComponent {
 
     privatUrl = environment.private24Url;
+    organization = environment.bankAccount.organization;
+    IBAN = environment.bankAccount.IBAN;
+    USREOU = environment.bankAccount.USREOU;
+    serviceName = environment.bankAccount.serviceName;
 
-    constructor() { }
+    isAbroad = false;
+
+    constructor(private languageService: LanguageService) {
+        this.isAbroad = this.languageService.getLanguage() !== Language.ua;
+    }
 
 }
