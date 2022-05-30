@@ -41,7 +41,8 @@
             "title": "Archive of Broadcast Services",
             "description": "We will be happy to see each of you at our services every Sunday at 10:00, but if you don't have the opportunity - watch the broadcasts of the services. May the message of God's salvation and love be available to all who wish to hear it!",
             "link1": "last broadcast of the ministry",
-            "link2": "go to archive"
+            "link2": "go to archive",
+            "modalWindowTitle": "Broadcast"
         },
         "ministries": {
             "title": "Our Services",

@@ -2,9 +2,18 @@
 
 .mat-dialog-title {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    margin: -10px -10px 10px;
+
+    .title {
+        padding-left: 10px;
+        margin: 0;
+        flex: 1;
+        font-size: 35px;
+    
+        @media screen and (max-width: 500px) {
+            font-size: 28px;
+        }
+    }
 
     button {
         padding: 0;
