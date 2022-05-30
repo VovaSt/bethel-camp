@@ -53,7 +53,8 @@
             "link3": "Sunday school",
             "link4": "Musical ministry",
             "link5": "Camp",
-            "link6": "Social service"
+            "link6": "Social service",
+            "underDevelopment": "Page under development"
         },
         "donation": {
             "title": "Donation",
@@ -644,7 +645,6 @@
             }
         }
     },
-    "pageUnderDevelopment": "Page under development",
     "donate": {
         "title": "Support us",
         "ukraineTab": "Inside Ukraine",
