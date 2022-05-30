@@ -29,7 +29,8 @@ export class BroadcastComponent implements OnInit {
           this.dialog.open(VideoPopupComponent, { 
             data: data?.items[0],
             maxWidth: '94vw',
-            width: '800px'
+            width: '800px',
+            autoFocus: false
           });
         });
   }

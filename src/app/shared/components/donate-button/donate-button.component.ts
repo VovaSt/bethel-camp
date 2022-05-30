@@ -13,7 +13,7 @@ export class DonateButtonComponent implements OnInit {
     ngOnInit(): void { }
 
     donate() {
-        this.dialog.open(DonateModalComponent, { maxWidth: '94vw'});
+        this.dialog.open(DonateModalComponent, { maxWidth: '94vw', autoFocus: false });
     }
 
 }

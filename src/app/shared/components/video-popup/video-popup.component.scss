@@ -21,6 +21,10 @@
         height: 36px;
         font-size: 24px;
         margin-left: 30px;
+        margin-top: -20px;
+        margin-right: -12px;
+        color: $white;
+        filter: brightness(10); // fix for ios
     }
 }
 
