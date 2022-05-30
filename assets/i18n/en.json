@@ -645,6 +645,17 @@
     },
     "pageUnderDevelopment": "Page under development",
     "donate": {
-        "title": "Support us"
+        "title": "Support us",
+        "ukraineTab": "Inside Ukraine",
+        "abroadTab": "From abroad",
+        "private24": "Money transfer via Privat24",
+        "hryvniaDetails": "Bank account info for money transfer in UAH",
+        "dollarDetailsPdf": "Bank account info for SWIFT in US dollars (USD)",
+        "euroDetailsPdf": "Bank account info for SWIFT in euros (EUR)",
+        "uplift": "PayPal account of partnership mission Uplift Ukraine",
+        "company": "Сompany",
+        "currentAccount": "Сurrent Account",
+        "USREOU": "USREOU",
+        "serviceName": "Service name"
     }
 }
