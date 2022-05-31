@@ -29,7 +29,7 @@
             "description": "The Church of the Nativity is a Christian community in Berdychiv (Ukraine), which belongs to the Pentecostal denomination and is a member of the United Church of Evangelical Christians.",
             "link1": "confession of faith",
             "link2": "Schedule of services",
-            "link3": "servants",
+            "link3": "Ministers",
             "link4": "Church History"
         },
         "events": {
@@ -58,12 +58,11 @@
         },
         "donation": {
             "title": "Donation",
-            "description": "If you have a desire to support our church and ministries, you can do so by following the link. May God's peace and love reign in your life!",
-            "link1": "donate"
+            "description": "If you have a desire to support our church and ministries, you can do so by following the link. May God's peace and love reign in your life!"
         }
     },
     "confession": {
-        "title": "Confession",
+        "title": "Confession of faith",
         "mainConfession": "I believe in God the Father almighty, maker of heaven and earth, and in Jesus Christ, his only Son, our Lord, who was conceived from the Holy Spirit and born of the Virgin Mary, who suffered under Pontius Pilate, was crucified, died, and was buried, descended into hell, rose again from the dead on the third day, ascended into heaven and is seated at the right hand of God the Father almighty, who will come again to judge the living and the dead. I believe in the Holy Spirit, the holy Christian Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and the life everlasting. Amen.",
         "mainConfessionDescription": "Apostles' Creed",
         "doctrines": "Основні тези нашого вчення:",
@@ -415,12 +414,12 @@
     },
     "schedule": {
         "title": "Schedule of services",
-        "service": "Service",
+        "service": "Church Service",
         "prayer": "Prayer",
-        "youthService": "Youth service",
-        "teenegersService": "Teenegers service",
-        "bibleSchool": "Children`s bible school",
-        "homeGroups": "Home groups",
+        "youthService": "Youth Service",
+        "teenegersService": "Teen Service",
+        "bibleSchool": "Kid`s Bible School",
+        "homeGroups": "Home Groups",
         "detailsHere": "Details here",
         "monday": "Monday",
         "tuesday": "Tuesday",
@@ -430,8 +429,8 @@
         "saturday": "Saturday",
         "sunday": "Sunday"
     },
-    "servants": {
-        "title": "Servants"
+    "ministers": {
+        "title": "Ministers"
     },
     "events": {
         "title": "Church Events"

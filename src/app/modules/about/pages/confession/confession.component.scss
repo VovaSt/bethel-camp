@@ -27,15 +27,12 @@
     &.gray {
         background-color: $gray-medium;
 
-        ._text-medium {
+        ._text-medium,
+        ._title {
             color: $white;
 
             &.center {
                 text-align: justify;
-            }
-
-            &.right {
-                text-align: right;
             }
         }
     }
@@ -50,7 +47,7 @@
     }
 
     .block-title {
-        margin: 30px 15px;
+        margin: 10px 15px 30px;
     }
 
     ::ng-deep .mat-expanded .panel-title {

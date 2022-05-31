@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ChurchHistoryComponent } from './pages/church-history/church-history.component';
 import { ConfessionComponent } from './pages/confession/confession.component';
 import { ScheduleComponent } from './pages/schedule/schedule.component';
-import { ServantsComponent } from './pages/servants/servants.component';
+import { MinistersComponent } from './pages/ministers/ministers.component';
 
 const routes: Routes = [
     {
@@ -15,8 +15,8 @@ const routes: Routes = [
         component: ScheduleComponent
     },
     {
-        path: 'servants',
-        component: ServantsComponent
+        path: 'ministers',
+        component: MinistersComponent
     },
     {
         path: 'history-of-church',
@@ -30,4 +30,4 @@ const routes: Routes = [
     exports: [RouterModule]
 })
 
-export class ConfessionRoutingModule { }
+export class AboutRoutingModule { }

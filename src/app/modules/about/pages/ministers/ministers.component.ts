@@ -3,17 +3,17 @@ import { Observable } from 'rxjs';
 import { Language } from 'src/app/core/enums/language.enum';
 import { LanguageService } from 'src/app/core/services/language.service';
 import { ModulesManagerService } from 'src/app/core/services/module-manager.service';
-import { Servants } from './servants.map';
+import { Ministers } from './ministers.map';
 
 @Component({
-  selector: 'app-servants',
-  templateUrl: './servants.component.html',
-  styleUrls: ['./servants.component.scss'],
+  selector: 'app-ministers',
+  templateUrl: './ministers.component.html',
+  styleUrls: ['./ministers.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ServantsComponent implements OnInit {
+export class MinistersComponent implements OnInit {
 
-  servants = Servants;
+  ministers = Ministers;
   lang$: Observable<Language>;
   languages = Language;
 

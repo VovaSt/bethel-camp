@@ -10,15 +10,15 @@
             url("https://camp-bethel.s3.amazonaws.com/backgrounds/header-backgroud.jpg");
         }
         .text-container {
-            ._title, a, p{
+            ._title, p{
                 color: $blue-medium;
             }
             p {
                 color: $blue-dark;
             }
-            a:hover {
-                color: $blue-dark;
-                transform: scale(1.1)  translate(10px, 0px);
+
+            app-donate-button {
+                color: $white;
             }
         }
 
@@ -38,7 +38,6 @@
             }
         }
 
-
         @media (max-width: 660px) {
             flex-direction: column;
             align-items: flex-end;
@@ -49,9 +48,5 @@
                 margin-top: 0px;
             }
         }
-
-
     }
-
-
 }

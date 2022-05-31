@@ -2,9 +2,8 @@
     <div class="text-container">
         <h1 class="_title">{{ "mainPage.donation.title" | translate }}</h1>
         <p class="_text-medium">{{ "mainPage.donation.description" | translate }}</p>
-        <a class="_link" rel="noopener" (click)="donate()">
-            {{ "mainPage.donation.link1" | translate }}
-        </a>
+
+        <app-donate-button class="large"></app-donate-button>
     </div>
     <div class="rectangle-image"></div>
 </main>

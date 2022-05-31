@@ -1,11 +1,10 @@
 <div class="wrapper">
     <div #historyContainer class="horizontal-scroll-wrapper">
-        <h2 class="page-title">{{ 'churchHistory.pageTitle' | translate }}</h2>
-
         <div class="block-wrapper slower" id="1920" style="margin-bottom: 30vh;">
             <ng-container *ngTemplateOutlet="photo; context:{index: 1}"></ng-container>
             
-            <div class="text" style="width: 50vh">
+            <div class="text" style="width: 56vh">
+                <h2 class="page-title _title">{{ 'churchHistory.pageTitle' | translate }}</h2>
                 <p innerHTML="{{ 'churchHistory.1.text1' | translate }}"></p>
                 <p innerHTML="{{ 'churchHistory.1.text2' | translate }}"></p>
                 <p innerHTML="{{ 'churchHistory.1.text3' | translate }}"></p>
@@ -66,7 +65,7 @@
         <div class="block-wrapper slower slower2 vertical">
             <ng-container *ngTemplateOutlet="photo; context:{index: 8}"></ng-container>
 
-            <div class="text little">
+            <div class="text">
                 <p innerHTML="{{ 'churchHistory.8.text1' | translate }}"></p> 
             </div>
         </div>

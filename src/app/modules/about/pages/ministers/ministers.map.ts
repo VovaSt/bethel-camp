@@ -1,4 +1,4 @@
-export const Servants = [
+export const Ministers = [
     {
         name: {
             ua: "Стахов",
@@ -13,7 +13,7 @@ export const Servants = [
         position: {
             ua: "старший пастор",
             ru: "старший пастор",
-            en: "senior pastor" 
+            en: "Senior Pastor" 
         },
         avatar: 'https://camp-bethel.s3.amazonaws.com/servants/Stakhov.jpg'
     },
@@ -31,7 +31,7 @@ export const Servants = [
         position: {
             ua: "пастор",
             ru: "пастор",
-            en: "pastor" 
+            en: "Pastor" 
         },
         avatar: 'https://camp-bethel.s3.amazonaws.com/servants/Hnilitsky.jpg'
     },
@@ -49,7 +49,7 @@ export const Servants = [
         position: {
             ua: "пастор",
             ru: "пастор",
-            en: "pastor" 
+            en: "Pastor" 
         },
         avatar: 'https://camp-bethel.s3.amazonaws.com/servants/Korniychuk.jpg'
     }
