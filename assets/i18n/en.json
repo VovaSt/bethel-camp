@@ -29,7 +29,7 @@
             "description": "The Church of the Nativity is a Christian community in Berdychiv (Ukraine), which belongs to the Pentecostal denomination and is a member of the United Church of Evangelical Christians.",
             "link1": "confession of faith",
             "link2": "Schedule of services",
-            "link3": "servants",
+            "link3": "Ministers",
             "link4": "Church History"
         },
         "events": {
@@ -58,12 +58,11 @@
         },
         "donation": {
             "title": "Donation",
-            "description": "If you have a desire to support our church and ministries, you can do so by following the link. May God's peace and love reign in your life!",
-            "link1": "donate"
+            "description": "If you have a desire to support our church and ministries, you can do so by following the link. May God's peace and love reign in your life!"
         }
     },
     "confession": {
-        "title": "Confession",
+        "title": "Confession of faith",
         "mainConfession": "I believe in God the Father almighty, maker of heaven and earth, and in Jesus Christ, his only Son, our Lord, who was conceived from the Holy Spirit and born of the Virgin Mary, who suffered under Pontius Pilate, was crucified, died, and was buried, descended into hell, rose again from the dead on the third day, ascended into heaven and is seated at the right hand of God the Father almighty, who will come again to judge the living and the dead. I believe in the Holy Spirit, the holy Christian Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and the life everlasting. Amen.",
         "mainConfessionDescription": "Apostles' Creed",
         "doctrines": "Основні тези нашого вчення:",
@@ -415,12 +414,12 @@
     },
     "schedule": {
         "title": "Schedule of services",
-        "service": "Service",
+        "service": "Church Service",
         "prayer": "Prayer",
-        "youthService": "Youth service",
-        "teenegersService": "Teenegers service",
-        "bibleSchool": "Children`s bible school",
-        "homeGroups": "Home groups",
+        "youthService": "Youth Service",
+        "teenegersService": "Teen Service",
+        "bibleSchool": "Kid`s Bible School",
+        "homeGroups": "Home Groups",
         "detailsHere": "Details here",
         "monday": "Monday",
         "tuesday": "Tuesday",
@@ -430,167 +429,167 @@
         "saturday": "Saturday",
         "sunday": "Sunday"
     },
-    "servants": {
-        "title": "Servants"
+    "ministers": {
+        "title": "Ministers"
     },
     "events": {
         "title": "Church Events"
     },
     "churchHistory": {
-        "pageTitle": "Історія церкви «Різдва Христового»",
+        "pageTitle": "History of the Church of the Nativity",
         "1": {
-            "photoLabel": "Іван Юхимович Воронаєв",
-            "text1": "Формування і розвиток Церкви Християн Євангельської віри в Україні бере свій початок одразу з декількох джерел. Одним з них була місіонерська діяльність Івана Юхимовича Воронаєва в 20-х роках.",
-            "text2": "Іван Юхимович, будучи емігрантом в США, спочатку був баптистом. Але після свого хрещення Святим Духом в 1919 році він організовує в Нью-Йорку першу окрему п'ятидесятницьку церкву.",
-            "text3": "На одному із зібрань, під час молитви, Воронаєв несподівано отримав Боже одкровення їхати в Росію та Україну і донести цим народам чудову звістку про хрещення Духом Святим.",
-            "text4": "У серпні 1921 року І.Є. Воронаєв, В.Р. Колтович та інші прибули до Одеси, де була дуже швидко організована перша п'ятидесятницька церква."
+            "photoLabel": "Ivan Voronaev",
+            "text1": "The formation and development of the Church of Christians of the Evangelical Faith in Ukraine originates from several sources. One of them is the missionary activity of Ivan Voronaev in the 1920s.",
+            "text2": "Ivan, who emigrated to the United States, was originally a Baptist. But after his baptism with the Holy Spirit in 1919, he organized the first separate Pentecostal church in New York.",
+            "text3": "During the prayer at one of the services, Voronayev suddenly received God's revelation to go to Russia and Ukraine and bring the wonderful news of the baptism of the Holy Spirit to these people.",
+            "text4": "In August 1921, I. Voronaev, V. Koltovich and others arrived in Odessa, where the first Pentecostal church was organized very quickly."
         },
         "2": {
-            "photoLabel": "Шкарбун Никифор",
-            "text1": "Євангельська звістка швидко розповсюджувалась по Україні і за її межами. Зокрема на території Житомирської області, в Бердичівському районі, на початку 20-х років в с. Бистрик почув цю звістку 20-річний юнак Шкарбун Никифор. Повіривши всім серцем, він почав проповідувати іншим, і вже в 1924 році в  с. Бистрик була група хрещених Святим Духом. Він же і керував цією групою.",
-            "text2": "У с. Іванківці в 20-х роках була група християн, хрещених Святим Духом. Тут відбувалося сильне пробудження. Духовне хрещення отримували навіть діти 7-8 років."
+            "photoLabel": "Nikifor Shkarbun",
+            "text1": "The Gospel news spread quickly throughout Ukraine and beyond. In particular, in the early 20's, in Berdychiv district of the Zhytomyr region, in the Bystryk village, a 20-year-old Nikifor Shkarbun heard this news. Believing with all his heart, he began to preach to others, and thus, a group of people was baptized with the Holy Spirit in the Bystryk village in 1924. He also was a leader of this group.",
+            "text2": "In the 1920s, in the Ivankivtsi village was a group of Christians baptized with the Holy Spirit. A strong awakening was in this village. Spiritual baptism was received even by 7-8 years old children."
         },
         "3": {
-            "photoLabel": "Плакат «Союза воинствующих безбожников»",
-            "text1": "У 1929 році ставлення радянської влади до християн різко погіршилося після прийняття сталінського «Положення про релігійні культи», яке проіснувало до 1989 року (60 років), і принесло репресії, ув'язнення, висилки і фізичне знищення тисяч християн. Настав час серйозних випробувань, коли вірність Господу потрібно було довести на ділі."
+            "photoLabel": "Poster of the «Union of Militant Atheists»",
+            "text1": "In 1929, the position of the Soviet government towards Christians sharply deteriorated after the adoption of Stalin's «Regulations on Religious Cults», which lasted until 1989 (60 years) and caused repression, imprisonment, deportation, and physical extermination of thousands of Christians. The time has come for severe trials, when faithfulness to the Lord had to be proven."
         },
         "4": {
-            "photoLabel": "Сім'я Кучерів",
-            "text1": "Першими п'ятидесятниками в Бердичеві стали сім’я Кучерів, які походили з Хмельницької області. Їх переїзд до Бердичева пов'язаний з арештом Пилипа — за віру в Бога його засудили на 5 років і конфіскували все майно. У результаті  цих подій п’ятеро дітей Пилипа та його дружини Ганни померли, залишилась в живих тільки донька Ліда. Решта дітей народилися пізніше.",
-            "text2": "Після відбуття терміну Пилипу заборонили повертатись в рідне село ближче ніж на 100 км. Постало питання - куди їхати? І на вокзалі Пилип з Ганною взмолились: «Господи, допоможи!». І допомога прийшла несподівано - їм зустрівся єврей з Бердичева, який почув про їхню долю і запропонував їхати з ним. Так сім'я Кучерів опинилася в Бердичеві."
+            "photoLabel": "The Kucher family",
+            "text1": "The first Pentecostals in Berdychiv were the Kucher family, who came from the Khmelnytsky region. Their move to Berdychiv was connected with Philip's arrest. He was sentenced to 5 years for faith in God and all his property was confiscated. As a result of these events, five of Philip’s and his wife’s, Anna, children died. Only one daughter, Lida, survived. The other children were born later.",
+            "text2": "After serving his sentence, Philip was forbidden to return to his native village closer than 100 km. The question arose - where to go? And at the station Philip and Anna prayed: «Lord, help!». And help came unexpectedly as they met a Jew from Berdychiv, who heard about their fate and offered to go with him. In this way, the Kucher family ended up in Berdychiv."
         },
         "5": {
-            "photoLabel": "Мельник Микола (пресвітер в с. Бистрик, 1936р.)",
-            "text1": "Спочатку сім'я оселилася в с. Бистрик, але незабаром у 1935 році переїхали до Бердичева, оселившись в районі цегельного заводу. Пилип як служитель обслуговував навколишні села Терехова, Бистрик. Незабаром з навколишніх сіл почали приїжджати віруючі, і в Бердичеві утворилася група п'ятидесятників.",
-            "text2": "Цей момент вважають початком існування церкви п'ятидесятників в Бердичеві."
+            "photoLabel": "Mykola Melnyk (presbyter in the village of Bystryk, 1936)",
+            "text1": "Initially, the family settled in the Bystryk village, but in 1935, they moved to Berdychiv, settling in the area of ​​the brick factory. Philip, as a Christian minister, served in the surrounding villages of Terekhovo, Bystrik. Soon, believers began to come from the surrounding villages and a group of Pentecostals was formed in Berdychiv.",
+            "text2": "This event is considered to be the beginning of the existence of the Pentecostal church in Berdychiv."
         },
         "6": {
-            "text1": "Одними з перших членів бердичівської церкви були Матвечук Олександр з дружиною Мотрею, які приїхали з села Тернівка у 1935 році. Їх будинок, який теж знаходився в районі цегельного заводу, став місцем ревних молитов і потужної сили Духа Святого. За свідченнями очевидців, сестра Мотря мала дар пророцтва, а Олександр - дар бачення. Віруючі збирались для молитов в їхньому будинку на 5 годин ранку, а потім йшли на роботу. Дуже багато людей отримало хрещення Духом Святим. Багато християн з інших місць приїжджали в будинок до Олександра, частіше вночі, побоюючись переслідувань."
+            "text1": "One of the first members of the Berdychiv church were Oleksandr Matvechuk and his wife, Motrya, who came from the village of Ternivka in 1935. Their house, which also was located near the brick factory, became a place of fervent prayers and the strong power of the Holy Spirit. According to eyewitnesses, sister Motrya had the gift of prophecy and Alexander had the gift of visions. Believers gathered for prayers in their home at 5 am and then went to work. Many people had been baptized with the Holy Spirit. Many Christians often were coming to Alexander's house at night, fearing persecution."
         },
         "7": {
-            "photoLabel": "Боцяни Петро Хомич і Парасковія Львівна",
-            "text1": "Велику роль в історії бердичівської церкви зіграла сім'я Боцяна Петра. У 1933 році Петра репресували, конфіскували будинок і все майно, а його дружину Параску з 4-ма маленькими дітьми, вигнали на вулицю і не дали навіть дітям одягу. Через погрози влади ніхто з односельців не наважився допомогти їм. Одна з дочок Ольга сильно застудилася, і згодом часто хворіла.",
-            "text2": "Однак Господь знайшов одного чоловіка, який не побоявся влади і зглянувся над сім’єю. Це був інвалід, їх односелець. Він прийняв їх до себе в будинок і обігрів. Згодом бідного інваліда викликали і після «бесіди» так побили, що він ледве доволочився додому."
+            "photoLabel": "Botsyan Petro and Paraskoviya",
+            "text1": "The family of Botsyan Peter played an important role in the history of the Berdychiv church. In 1933, Peter was repressed and his house, with all his property, was confiscated. His wife, Paraska, and their 4 young children were kicked out into the street, not even given clothes. None of the villagers dared to help them due to threats from the authorities. One of the daughters, Olga, caught a bad cold and often fell ill.",
+            "text2": "However, the Lord found a man who was not afraid of authority and took care of the family. He was a disabled fellow villager. He took them into his house and made them warm. The poor disabled fellow was later summoned and after a «conversation« was beaten so badly that he barely made it home."
         },
         "8": {
-            "photoLabel": "Родина Боцянів (1985 рік)",
-            "text1": "Незважаючи на переслідування, Параска молилась, щоб серця дітей не зачерствіли в горі, щоб несправедливість не зламала їхню віру. Бог бачив скорботу матері, і працював в серцях її дітей. Згодом син Іван став пресвітером бердичівської церкви, а через роки його справу продовжать його сини - Анатолій і Василь Боцян. Донька Ольга стане ревною молитовницею, а її сини - служителями. Наймолодша сестра Надія вийде заміж за Стахова Леоніда, який буде служителем і єпіскопом Житомирської області, а їхній син Петро Стахов стане місіонером і служителем нашої церкви."
+            "photoLabel": "Botsyan family (1985)",
+            "text1": "Despite the persecution, Paraska prayed that the children's hearts would not be hardened in grief and that injustice would not break their faith. The Lord saw the mother's grief and worked in the hearts of her children. Later on, her son, Ivan, became the presbyter of the Berdychiv church, and years later his sons, Anatoliy and Vasyl Botsyan, will continue his work. Her daughter, Olga, will become a zealous prayer leader, and her sons will become ministers. Her youngest daughter, Nadia, will marry Leonid Stakhov, who will be a minister and bishop of the Zhytomyr region, and their son, Peter Stakhov, will become a missionary and minister of our church."
         },
         "9": {
-            "photoLabel": "Радянський концтабір",
-            "text1": "Це буде пізніше, а поки що віруючі України перестали бути рівноправними громадянами, вони стали людьми другого сорту. Роки з 1932 по 1937 були оголошені «п'ятирічкою знищення релігії». Віруючих у масовому порядку засуджували на 20-25 років таборів. Непоодинокими були й розстріли. Частину випустили з таборів після смерті Сталіна, але деякі досиділи свої терміни. Багато хто не повернувся з таборів - загинули там, в їх числі - Іван Воронаєв."
+            "photoLabel": "Soviet concentration camp",
+            "text1": "It will be later, but now the believers in Ukraine have ceased to be equal to other citizens, they have become second-class people. The years of 1932 to 1937 were declared as the «Five Years of the Destruction of Religion». Believers were massively sentenced to 20-25 years in prison camps. The shootings were not uncommon. Some were released from the camps after Stalin's death but others served their whole terms of imprisonment. Many did not return from the camps - they died there, among them - Ivan Voronaev."
         },
         "10": {
-            "photoLabel": "Бондаренко Олександр після ув'язнення",
-            "text1": "Ось у такому репресивному середовищі зустріла Церква Христового в Україні Другу світову війну. Настав 1941 рік. Почалася загальна мобілізація на фронт всіх чоловіків призовного віку. За відмову брати зброю в руки і йти на фронт у Бердичівському районі засудили наших братів: <br>Бондаренко Олександр (хутір Олександрівка), <br>Боцян Петро (вдруге засуджений), <br>його син Боцян Іван (с. Малосілка), <br>Регет Яків (с. Гардішевка), <br>Паламарчук Андрій (с. Семенівка), <br>Шкарбун Анатолій (с. Бистрик), <br>Лінчук Володимир (с. Семенівки) <br>та інші."
+            "photoLabel": "Alexander Bondarenko after imprisonment",
+            "text1": "The Church of Christ in Ukraine met World War II in such a repressive environment. The year 1941 came. The total mobilization began for all the men of military age. In Berdychiv district, our brothers were convicted for refusing to take up arms and go to the front, among them were <br>Oleksandr Bondarenko (Oleksandrivka hamlet), <br>Petro Botsyan (his second conviction), <br>his son Ivan Botsyan (Malosilka village), <br>Yakiv Regeta (Gardyshivka village), <br>Andriy Palamarchuk (Semenivka village), <br>Anatoliy Shkarbun (Bystryk village), <br>Volodymyr Linchuk (Semenivka village) and others."
         },
         "11": {
-            "photoLabel": "Перший пастор бердичівської церкви Пасічник Сергій Дорофійович",
-            "text1": "Однак, незважаючи на переслідування, в цей час люди масово каялись і приходили до Бога в Бердичівському районі. Ще в 1928 році в с. Обухівка через сестру Ониську було пророче слово, що прийде ще масове пробудження, і під час війни це пророцтво збулося. Церква в Бердичеві росла, пресвітером на той час був Пасічник Сергій Дорофійович.",
-            "text2": "Серед тих, хто покаявся під час війни, був Богун Володимир Іванович. Після поранення він повернувся до Бердичева і став відвідувати Бердичівської церкву. Згодом він отримав від Бога дар пророцтва і користувався авторитетом серед віруючих."
+            "photoLabel": "The first pastor of the Berdychiv church is Serhiy Pasichnyk ",
+            "text1": "However, despite the persecution at that time, people were repenting en masse and came to God in the Berdychiv district. Back in 1928, in the Obukhivka village, sister Onyska had a prophetic word that another mass awakening would come and this prophecy became true during the war. The church in Berdychiv was growing and the presbyter at that time was Serhiy Pasichnyk.",
+            "text2": "Among those who repented during the war was Volodymyr Bohun. He returned to Berdychiv after being wounded and began attending Berdychiv Church. He later received the gift of prophecy from God and had authority among believers."
         },
         "12": {
-            "photoLabel": "Молодь 40-х років",
-            "text1": "Після закінчення війни, у 1945 році всім п'ятидесятницьким громадам пропонували реєстрацію і навіть примушували до неї. Однак умови її такі, що під забороною опиняються важливі сторони релігійного життя: виховання дітей, молодіжні та жіночі зібрання, проповідницька, місіонерська та благодійна діяльність, деякі релігійні обряди. Тому приблизно половина п'ятидесятників України відмовилися від реєстрації. Серед них була і громада п'ятидесятників у м Бердичеві.",
-            "text2": "Через відсутність реєстрації діяльність нашої церкви була тоді оголошена антиконституційною і незаконною. Зібрання розганяли, а віруючих штрафували. Там, де вбачалися такі порушення радянських законів, як ведення релігійної пропаганди, навчання дітей релігії, членів громад садили у в'язниці."
+            "photoLabel": "Youth of the 40s",
+            "text1": "After the war was over, in 1945, all Pentecostal communities were offered registration and, even, were forced to register. However, the conditions of registration banned such important aspects of religious life as the upbringing of children, youth and women's gatherings, preaching, missionary and charitable activities and some religious rites. Therefore, about half of Ukrainian Pentecostals refused to register. Among them was a community of Pentecostals in Berdychiv.",
+            "text2": "Due to the absence of registration, the activities of our church were declared as unconstitutional and illegal. Gatherings were dispersed and believers were fined. If violations of Soviet law, such as religious propaganda and the teaching of religion to children, were observed, members of the community were imprisoned."
         },
         "13": {
-            "photoLabel": "Боцян Іван Петрович з дружиною",
-            "text1": "У цих роках повернувся з в'язниці Боцян Іван Петрович і разом з батьками відвідував молитовний будинок по вул. Маложитомирскій, де проводилися спільні богослужіння баптистів і п'ятидесятників. Під час одного з служінь Дух Святий став наповнювати Івана - Господь хрестив Івана Петровича Духом Святим зі знаменням інших мов. Багатьох тоді Бог хрестив Духом Святим, в тому числі і рідних Івана."
+            "photoLabel": "Botsyan Ivan Petrovich with his wife",
+            "text1": "During these years, Ivan Botsyan returned from prison and, together with his parents, was visiting the prayer house on the Malozhitomirsky street, where joint services were held by Baptists and Pentecostals. During one of the services, the Holy Spirit began to fill Ivan and the Lord baptized Ivan with the Holy Spirit with the gift of tongues. Many were baptized by God with the Holy Spirit, including Ivan's family."
         },
         "14": {
-            "text1": "У 1956 році відбувся поділ церкви на дві групи. Більша частина людей, близько 100 чоловік, залишилася з Богуном Володимиром Івановичем, а невелика група – з Пасічником Сергієм Дорофійовичем. Саме з другій групі залишився і Боцян Іван. Відтоді в Бердичеві функціонують дві громади п’ятидесятників.",
-            "text2": "Потужна і безжальна державна радянська машина жорстоко переслідувала релігійних керівників. Незабаром ці переслідування атеїстичного режиму не витримав Пасічник Сергій Дорофійович, і попросив церкву, щоб його відпустили в реєстрований союз ЄХБ, де переслідували значно менше. Церква поважала свого доброго служителя і з розумінням відпустила його. Сергій Дорофійович перейшов у союз ЄХБ і там, в якості рядового члена пробув до 1978 року. Але вже в старості він повернувся в нашу церкву, де перебував до самої смерті."
+            "text1": "In 1956, the church was divided into two groups. Most of the people, about 100 of them, stayed with Volodymyr Bohun, and a small group stayed with Serhiy Pasichnyk. Ivan Botsyan remained in the second group. Since then, there have been two Pentecostal communities in Berdychiv.",
+            "text2": "A powerful and ruthless Soviet government brutally persecuted religious leaders. Soon, Serhiy Pasichnyk could not stand these persecutions of the atheist regime and asked the church to let him join the registered union of the ECB, where he was persecuted much less. The church respected their good servant and released him with understanding. Serhiy Pasichnyk joined the ECB Union and remained there as a member until 1978. But in his old age he returned to our church, where he remained until his death."
         },
         "15": {
-            "photoLabel": "Молодь 50-х років",
-            "text1": "Після Пасічника Сергія Дорофійовича, за одкровенням Духа Святого всі тяготи гнаної церкви взяв на себе Боцян Іван Петрович. Однак і його неодноразово викликали на «бесіди» в кабінети КДБ, і постійно погрожували: «Пожалій сім'ю, дітей - бо залишаться одні, ніхто їх не пошкодує. Реєструй громаду». Але церква продовжувала своє життя нелегально. Багатьох братів судили, та Господь оберігав від арешту Івана Петровича, хоча пізніше засудять його сина."
+            "photoLabel": "Youth of the 50s",
+            "text1": "After Serhiy Pasichnyk, by the revelation of the Holy Spirit, all the burdens of the persecuted church were taken over by Ivan Botsyan. However he was repeatedly summoned for «conversations» in the KGB offices and was constantly threatened: «Have pity on the family because the children will be left alone, no one will spare them, so register a community». But the church continued its life illegally. Many brothers were arrested, but the Lord protected Ivan Botsyan from getting arrested, although his son will be convicted later."
         },
         "16": {
-            "photoLabel": "Родинне дитяче служіння",
-            "text1": "У 60-70-х роках диявол намагався різними способами розігнати Церкву. Ставився сильний акцент на вихованні дітей в дусі комунізму. У школах був постійний прес і приниження віруючих дітей, вчителі налаштовували однокласників проти них, занижували оцінки і використовували інші методи психологічного тиску. Особливо діставалося дітям служителів. Проте існує безліч прикладів, як діти мужньо сповідували свою віру так само, як це робили їхні батьки."
+            "photoLabel": "Family children's Christian ministry",
+            "text1": "In the 1960s and 1970s, the devil tried to disperse the Church in various ways. There was a strong emphasis on raising children in the spirit of communism. There was constant pressure and humiliation of christian children in schools. Teachers turned their classmates against them, lowered their grades, and used other methods of psychological pressure. The children of the christian ministers were pressured even more. However, there are many examples of children, courageously professing their faith in the same way as their parents did."
         },
         "17": {
-            "photoLabel": "Брати під час проходження військової служби",
-            "text1": "Важким випробуванням був для молодих юнаків заклик до армії. Зазвичай, у військкоматах вже стояли позначки, що це «сектанти», тому брати, в основному, служили в будівельних військах. За відмову від приняття присяги вони терпіли приниження, глузування, іноді побиття. Але Господь заступався, оберігав, хоча і доводилося важко, і дехто за відмову від присяги отримав тюремний срок. Серед таких був і Боцян Анатолій, син Боцяна Івана Петровича, який у 1974 році з армії потрапив до в'язниці на 3 роки."
+            "photoLabel": "Brothers during military service",
+            "text1": "A difficult trial for young men was call to arms. Usually, the military registration and enlistment offices already had it marked that they were «sectarians», so the brothers mostly served in the construction troops. For refusing to take the oath, they suffered humiliation, ridicule, and, sometimes, were beaten up. But the Lord protected and took care of them even though it was a difficult time for them and some received prison terms for refusing to take the oath. Among them was Anatoliy Botsyan, the son of Ivan Botsyan, who was imprisoned for 3 years in 1974."
         },
         "18": {
-            "photoLabel": "Церква «Олевісте» в Таллінні, з якої почалося пробудження у 1977 році",
-            "text1": "Час від часу Бог по особливому відвідує свою Церкву через великі пробудження. Одним з них став так званий Талліннський рух, який народився в Естонії, і поширився по інших країнах. Церква в Бердичеві стала одним з осередків цього пробудження, і сюди протягом декількох років кожного тижня приїжджали сотні людей з усього Радянського Союзу, щоб отримати зцілення і хрещення Святим Духом."
+            "photoLabel": "Oleviste Church in Tallinn, from which the revival began in 1977",
+            "text1": "From time to time, God visits His Church in a special way through great awakenings. One of them was the so-called Tallinn movement, which was born in Estonia and spread to other countries. The church in Berdychiv became one of the centers of this revival, and for several years hundreds of people from all over the Soviet Union came here every week to receive healing and the baptism of the Holy Spirit."
         },
         "19": {
-            "text1": "Є багато свідчень про Божу роботу в Бердичеві через цей рух. Прикладом дії Святого Духа в Бердичівській церкви в ті часи є свідоцтво Павла Франчука. Він страждав від нестерпних болів у шлунку, печінці, нирках. Ніяке лікування не допомагало. Мало того, брат Павло переніс прогресуючий інсульт, який ще більше погіршував його і без того важке становище. Знеболювальні не допомогали, і від безперервних болів Павло не міг навіть на хвилину заснути і втрачав останні сили.",
-            "text2": "Лікарі викликали родичів Павла і заявили: «Павла ніщо і ніхто вже не зможе врятувати від неминучої швидкої смерті». Батьки Павла забрали свого тяжкохворого сина в Гнівань, і звернулися до всіх помісних церков з проханням помолитися в пості за зцілення їхнього сина. Це була остання надія врятувати життя Павла. Бердичівська церква молилася за зцілення Павла у триденному пості. На третій день прийшла телеграма з Гнівані, яка починалася словами: «Слава Богу!» І повідомляла, що брат Павло зцілений. А ввечері того ж дня на служіння до Бердичівської церкви завітав сам здоровий і неушкоджений Павло, з яким ми разом прославили Бога."
+            "text1": "There are a lot of testimonies of God's work in Berdychiv through this movement. The testimony of Paul Franchuk is an example of the power of the Holy Spirit in the Berdychiv Church at that time. He suffered from severe pain in the stomach, liver and kidneys. No medical treatment was helping. Moreover, Brother Paul survived a progressive stroke, which further worsened his already difficult situation. The painkillers did not help, and from the constant pain, Paul could not fall asleep even for a moment and was losing his last strength.",
+            "text2": "Doctors called Paul's relatives and said: «Nothing and no one can save Paul from imminent death». Paul's parents took their seriously ill son to Hnivan and appealed to all local churches to pray with fasting for their son's healing. This was the last hope to save Paul's life. The Berdychiv Church prayed for Paul's healing during the three-day fast. On the third day came a telegram from Gnivan, which began with the words: «Thank God!» And it reported that brother Paul was healed. And in the evening of the same day, the healthy and unharmed Paul visited the church in Berdychiv and we glorified God together."
         },
         "20": {
-            "text1": "Інший приклад стався одного осіннього вечора - до воріт будинку пресвітера Івана Петровича Боцяна під'їхало таксі, з якого пасажири дістали нерухомого підлітка. Вони розповіли, що цьому хлопчику, який впав з велосипеда і зламав собі хребет, лікарі нічим не можуть допомогти, і попросили помолитися про зцілення їхнього сина, хоча самі були ще невіруючими. Іван Петрович дозволив батькам постраждалого залишити їх сина на ліжку, а їх запросив на зібрання. Церква помолилася про зцілення хлопчика, і його мама поспішила до сина разом з дружиною Івана Петровича - Ганною Григорівною.",
-            "text2": "«Ми за тебе сьогодні молилися» - розповіла лежачому на ліжку хлопчикові Ганна Григорівна. «Я сподівалась, що ти вже зовсім здоровий» - розчаровано додала його мати. «Я вже три рази вставав і підходив до дверей!» - зізнався підліток. Мати залилася сльозами вдячності і від надлишку радісних почуттів впала на підлогу. На вокзал хлопчик відправився з мамою на власних ногах. Потім ми дізналися, що і він, і його батьки покаялися і вірно служать Господу."
+            "text1": "Another example happened one autumn evening, when a taxi drove up to the gates of the house of presbyter Ivan Botsyan. The passengers took an immobile teenager out of the car. They said that the boy had fallen off his bicycle and broke his spine. Doctors could not help him. Parents asked to pray for the healing of their son even though they were unbelievers. Ivan asked the boy’s parents to leave their son in bed and invited them to a church service. The church members prayed for the boy's healing and his mother with Ivan's wife, Anna, hurried back to the boy.",
+            "text2": "«We prayed for you today» – Anna told the boy who was lying on the bed. «I was hoping you are completely healthy now» – his mother added in disappointment. «I've got up three times and walked to the door!» – the teenager admitted. Mother burst into tears of gratitude and fell on the floor because of the overflow of joyful feelings. The boy went to the railway station with his mother on his own two feet. Then, we learned that he and his parents repented and served the Lord faithfully."
         },
         "21": {
-            "text1": "У місті Бердичеві такі потужні дії Духа Святого продовжувалися три з половиною роки. Одного разу на зібранні Дух Святий сказав: «Це служіння буде останнім». Всі засмутилися, почувши таке слово, але вони не знали, що органи влади готували план з припинення цього руху на наступну неділю. Але Господь дав їм замішання, і вони переплутали дні. І почали облаву не в неділю, а в суботу рано вранці. В домівки віруючих почала вриватися міліція і запитувати: «Де приїжджі?». А гості, які приїхали з вечора в п'ятницю, були зібрані в Івана Петровича в будинку. І наряди міліції їздили навколо будинку Івана Петровича, а до нього не заходили, ніби Ангел стояв біля калітки і не пускав їх. Від багатьох друзів почали прибігати діти і попереджувати про небезпеку. Бачивши через вікно, що міліція по всьому району ходить, Іван Петрович зрозумів, що служіння не дадуть провести. Здійснивши молитву з тими, хто був, він почав відпускати гостей групами по кілька людей. Його син Володимир пішов у бік вокзалу і всіх, кого зустрічав, просив повертатися додому. Те зібрання було останнім багатолюдним. Звістка про облави міліції у Бердичеві швидко облетіла Радянський Союз і люди стали менше їхати. Молитви ще тривали деякий час, але вже не такі велелюдні."
+            "text1": "Such a powerful work of the Holy Spirit lasted for three and a half years in Berdychiv. The Holy Spirit once said at a gathering, «This church service will be the last one». Everyone was upset to hear such words, but they did not know that the government authorities were preparing a plan to stop this movement next Sunday. But the Lord gave them confusion, and they mixed up the days. And they started the raid not on Sunday, but early on Saturday morning. The police began to break into the homes of believers and ask: «Where are the visitors?» The guests, who arrived on Friday evening, were at Ivan's Botsyan house. Police squads drove around Ivan's house but did not come inside, as if Angel was standing at the gate and did not let them in. Children of many friends came running to warn about the danger. Ivan saw through the window that the police were walking all over the district and realized that the service would not be allowed. He prayed with those who were with him and let the guests leave in groups of few people. His son, Volodymyr, came to the railway station and asked everybody, whom he met, to return home. That service was the last one with many attendees. News of police raids in Berdychiv quickly spread throughout the Soviet Union and less people started coming. Prayers continued for some time but were not so crowded."
         },
         "22": {
-            "photoLabel": "Служіння у палатці",
-            "text1": "В кінці 80-х років Радянський союз вже доживав свій вік, і переслідування церкви послабились. Так як зібрання по хатах вже не могли вмістити церкву, то, користуючись свободою від переслідувань, за ініціативою служителів Івана Петровича Боцяна, Леоніда Петровича Стахова, Миколи Захаровича Михальчука і його батька Захара Трохимовича, на присадибній ділянці Анатолія Івановича Боцяна був побудований тимчасовий брезентовий намет, де і проводились зібрання. Згодом був побудований ще один намет, більш просторий, який стояв на земельній ділянці Івана Петровича Боцяна."
+            "photoLabel": "Ministry in the tent",
+            "text1": "In the late 1980s, the Soviet Union was coming to an end and persecution of the church eased. The services were crowded and could not be held at peoples’ homes anymore. Therefore, ministers Ivan Botsyan, Leonid Stakhov, Nikolai Mikhalchuk and his father Zakhar took advantage of the freedom from persecutions and decided to build the temporary tarpaulin tent on the property of Anatoliy Botsyan, where the services were conducted. Later on, the other bigger tarpaulin tent was built on the property of Ivan Botsyan."
         },
         "23": {
-            "photoLabel": "Водне хрещення (1990 рік)",
-            "text1": "В останні роки існування Радянського союзу відбулися великі переміни для Бердичівської церкви. Люди, які страждали від духовного вакууму, що був створений комуністичною ідеологією, почали натовпами приходили на служіння в палатку. Церква почала швидко зростати за рахунок новонавернених."
+            "photoLabel": "Water baptism (1990)",
+            "text1": "Great changes took place in the Berdychiv Church during the last years of the Soviet Union's existence. People, who suffered from the spiritual vacuum that was created by communist ideology, began to come in crowds to the church service in the tent. The church began to grow rapidly because of the large number of converts."
         },
         "24": {
-            "photoLabel": "Сім'я Колесникових (17 дітей), які виїхали до США",
-            "text1": "Проте одночасно з цим відбувався й інший процес - багато братів і сестер, користуючись відкритою можливістю, поспішали емігрувати з «імперії зла», як називали СРСР цивілізовані країни. Виїхали за кордон майже всі наші хористи і багато членів церкви, в тому числі Микола Михальчук, який був на той час дияконом, Володимир Дуршпек, його зять, Павло Франчук, Регета Павло, Петро, ​​Іван, Бондаренко Іван, численна родина Колесникових і багато інших. Цей процес продовжився і після проголошення незалежності України. Але не дивлячись на це, церква все ж таки продовжувала зростати."
+            "photoLabel": "Kolesnikov’s family (17 children), who moved to USA",
+            "text1": "At the same time, there was another process – many brothers and sisters considered the opportunity of open borders and hurried to emigrate from the Soviet Union – the «empire of evil» as it was called by civilized countries. Almost all our choristers and many members of the church moved abroad, including Mykola Mykhalchuk, who was a deacon at the time, his son-in-law Volodymyr Durshpek, Paul Franchuk, brothers Pavlo, Petro and Ivan Regeta,  Ivan Bondarenko, a large Kolesnikov family and many others. The emigration process continued after the proclamation of Ukraine's independence. However, the church continued to grow."
         },
         "25": {
-            "photoLabel": "Стахов Петро, місіонер в Ханти-Мансійську",
-            "text1": "У липні 1991 року при нашій церкві була створена перша в Україні п'ятидесятницька християнська місія «Світанок», завданням якої була євангелізація зі створенням нових церков. З Бердичівської церкви виїхало багато місіонерів, в більшості до Росії. Серед них були Боцян Василь Іванович, Стахов Петро Леонідович, Нечитайло Володимир, Демець Леонід, Шкрабак Петро, Паламарчук Петро, Шкарбун Анатолій Нікіфорович та інші. В результаті їх роботи були створені нові церкви в Байконурі, Азбесті, Кам'янець-Уральську, Ханти-Мансійську та інших містах. Також у той час почалася євангелізація в тюрмах."
+            "photoLabel": "Peter Stakhov, missionary in Khanty-Mansiysk",
+            "text1": "The first Pentecostal Christian mission in Ukraine, called «Dawn», was established at our church in July 1991. The mission’s task was evangelization and formation of new churches. Many missionaries came from the Berdychiv Church and most of them went to Russia. Among them were Vasyl Botsyan, Petro Stakhov, Volodymyr Nechytaylo, Leonid Demets, Peter Shkrabak, Peter Palamarchuk, Anatoliy Shkarbun. As the result of their work, new churches were established in Baikonur, Asbestos, Kamyanets-Uralsk, Khanty-Mansiysk and other cities. Evangelization in prisons also started at that time."
         },
         "26": {
-            "photoLabel": "Закладення фундаменту дому молитви (1993 рік)",
-            "text1": "Церква швидко зростала, тому з 1993 році для зібрань довелося орендувати Будинок культури, кінотеатр і клуб заводу «Комсомолець». Тоді ж розпочалося будівництво великого дому молитви. За основу архітектурного проекту було взято проект нещодавно збудованого дому молитви в м. Рівне, розроблений інститутом «Рівноагропроект». Його доопрацюванням і прив’язкою до місцевості займався головний архітектор м. Бердичева, Коляда Олександр Степанович."
+            "photoLabel": "Laying the foundation of the house of prayer (1993)",
+            "text1": "The church grew rapidly, so since 1993 the House of Culture, the cinema and the club of the Komsomolets factory had to be rented for the church services. Therefore, the construction of a large house of prayer started. The architectural project was based on the project of a newly built house of prayer in Rivne, developed by the Rivneagroproekt Institute. Alex Kolyada, the main architect of Berdychiv, has refined the project with local need."
         },
         "27": {
-            "photoLabel": "Будівництво дому молитви",
-            "text1": "Єпископ Віктор Білих, який відвідав нашу церкву і оглянув фундамент, потішив нас словами: «Я ще не бачив жодного залишеного будівництва молитовного будинку. Хто починає будівництво, той і завершує». Помолився разом з нами і пожертвував на будівництво 100 доларів. З тих пір скарбничка будівництва з Божою допомогою постійно поповнювалася. У цьому будівництві нам дуже допомогли брати і сестри по вірі зі Швеції, з якими ми подружилися під час їх відвідин України."
+            "photoLabel": "House of Prayers’ construction",
+            "text1": "Bishop Victor Bilykh, who visited our church and inspected the foundation, comforted us with the words: «I have not seen any abandoned construction of a house of prayer yet. Who starts construction, finishes it». He prayed with us and donated $100 for the construction. With God's help, the treasury of construction had been constantly replenished since that time. Our brothers and sisters in God from Sweden, with whom we became friends during their previous visits to Ukraine, helped us a lot in this construction."
         },
         "28": {
-            "photoLabel": "Стахов Леонід Петрович і Боцян Іван Петрович",
-            "text1": "Незабаром Леонід Петрович Стахов був рукопокладений на єпіскопське служіння, а Бондаренко Леонід Олександрович і Боцян Анатолій Іванович – на пресвітерське служіння."
+            "photoLabel": "Leonid Stakhov and Ivan Botsyan",
+            "text1": "Shortly, Leonid Stakhov was ordained as the bishop. Leonid Bondarenko and Anatoliy Botsyan were ordained as presbyters."
         },
         "29": {
-            "photoLabel": "Урочисте відкриття дому молитви. Вірний друг нашої церкви Рубін Янсон зі Швеції співає гімн «Великий Бог» у супроводі церковного хора і оркестра.",
-            "text1": "В 1998 році зібрання почали проводити в цокольному приміщенні нового дому молитви. В той час церква нараховувала близько 350 членів.",
-            "text2": "28 листопада 1999 року відбулося святкове відкриття дому молитви церкви Християн Віри Євангельської, яка з того часу називається – церква «Різдва Христового». Дім молитви церкви «Різдва Христового» є архітектурною прикрасою міста Бердичева, і його двері відкриті для кожного, хто бажає мати спілкування з Богом і його дітьми."
+            "photoLabel": "Grand opening of the House of prayer. The faithful friend of our church Rubin Jansson from Sweden sings the hymn «How Great Thou Art» accompanied by the church choir and orchestra.",
+            "text1": "In 1998, the services started to be held on the ground floor of the new House of Prayer. There were about 350 church members at that time.",
+            "text2": "The grand opening of the House of Prayer occurred on 28 November 1999. Since that time, it has been named “Christ’s Birth Church”. The House of Prayer is the architectural adornment of Berdychiv and it’s opened for everybody, who would like to communicate with God and his children."
         },
         "30": {
-            "photoLabel": "Привітання єпископа Бондаренка Леоніда Олександровича після рукопокладення",
-            "text1": "Влітку 2003 року повернувся з місіонерства з міста Ханти-Мансійськ Стахов Петро Леонідович. Він був рукопокладений на пресвітера ще в 1997 році, тому він продовжив своє пасторське служіння і в Бердичеві. У цьому ж самому році разом з сім’єю емігрує до Америки його батько, Стахов Леонід Петрович.",
-            "text2": "У 2005 році рукоположили нового єпіскопа Житомирської області, служителя з Бердичева Бондаренка Леоніда Олександровича. Але незабаром він тяжко захворів, і через півроку його єпіскопства Бог забрав його до себе. Тому після нього згодом рукоположили на єпіскопа Боцяна Анатолія Івановича."
+            "photoLabel": "Congratulations of bishop Leonid Bondarenko after his ordination",
+            "text1": "In the summer of 2003, Peter Stakhov returned from his mission in Khanty-Mansiysk. He was ordained as presbyter in early 1997, so he continued his ministry as pastor in Berdychiv. His father Leonid Stakhov emigrated to the USA with his family in the same year.",
+            "text2": "In 2005, Leonid Bondarenko, the pastor from Berdychiv, was ordained as new bishop of the Zhytomyr region. However, he got a severe disease soon and after only 6 months of his service as bishop he left for God. Therefore, Anatoliy Botsyan was ordained as the bishop shortly."
         },
         "31": {
-            "photoLabel": "Молодіжний хор у Швеції",
-            "text1": "Велике значення для нашої церкви має дружба з церквою з міста Овергорнас (Швеція). Від початку незалежності України наші друзі зі Швеції постійно виявляють до нас братню любов і в радості, і в горі. За роки нашої дружби вони безліч разів відвідували Бердичів, допомагали гуманітарною допомогою, і служили нам багатьма іншими способами. Одним з яскравих моментів нашої дружби є поїздка молодіжного хору в Швецію в 2005 році, де також і ми мали можливість послужити для них."
+            "photoLabel": "Youth choir in Sweden",
+            "text1": "Friendship with the church of Overhornas city (Sweden) is very significant for our church. Since the independence of Ukraine, our friends from Sweden constantly show us their brotherly love both in joy and in sorrow. They visited Berdychiv numerous times, helped us with humanitarian aid and have been serving us in many other ways during the years of our friendship. One of the bright moments of our friendship was the youth choir trip to Sweden in 2005, where we also had the chance to serve them."
         },
         "32": {
-            "photoLabel": "День Подяки",
-            "text1": "У 2010-x роках наша церква нараховувала близько 700 членів, а також ще приблизно 300 членів в більше ніж 20 дочірніх церквах по селах, що робить її найбільшою п’ятидесятницькою церквою на Житомирщині. Очолювали церкву єпископ Житомирської області Боцян Анатолій Іванович, пресвітери Стахов Петро Леонідович, Бондаренко Павло Олександрович, Тимощук Іван Олександрович, Камінський Михайло Андрійович, а також близько 15 дияконів.",
-            "text2": "Багато служителів з нашої церкви працюють закордоном. Тільки в США трудяться більше 15 служителів – емігрантів з Бердичева, а також є наші служителі в Росії, Бельгії, Іспанії, Португалії."
+            "photoLabel": "Thanksgiving Day",
+            "text1": "In the 2010s, there were about 700 church members and approximately 300 members in more than 20 filial churches in the countryside. This made our church the biggest Pentecostal church in the Zhytomyr region. We were headed by the bishop of Zhytomyr region, Anatoliy Botsyan, presbyters Pavlo Bondarenko, Ivan Tymoshchuk, Mykhailo Kaminskyi and more than 15 other deacons.",
+            "text2": "Many bishops and presbyters from our Church serve abroad. More than 15 ministers – emigrants from Berdychiv – continue their work in the USA, as well as in Russia, Belgium, Spain and Portugal."
         },
         "33": {
-            "photoLabel": "Об'єднаний хор церков м. Бердичів, який був постійним учасником євангелізаційних концертів",
-            "text1": "Також сформувалась досить потужна мережа служінь всередині церкви, зокрема декілька хорів, естрадно-симфонічний оркестр, дитяче, підліткове і молодіжне служіння, дитячі і підліткові табори, уроки християнської етики в школах, благодійна столова, євангелізація в тюрмах і багато іншого. Також неодноразово разом з іншими церквами нашого міста проводилися різдвяні і пасхальні євангелізаційні концерти в домі культури та на головній площі міста."
+            "photoLabel": "The united choir of Berdychiv churches was regular participant of evangelization concerts ",
+            "text1": "Also, there were numerous ministries formed within a church: several choirs, symphony orchestra, ministries for children, teenagers and youth, summer camps for children and teenagers, christian ethics lessons at schools, charity cafeteria, evangelization in prisons and many others. Christmas and Easter concerts, evangelization concerts were conducted by our church in cooperation with other churches of Berdychiv at the main town square and in the House of culture."
         },
         "34": {
-            "photoLabel": "Молодіжне служіння в новозбудованому табірному наметі «Скінія»",
-            "text1": "Церква росла і розвивалась, тому в ці роки було рукопокладено близько десяти нових дияконів, а також два пресвітера - Гніліцького Бориса Вікторовича і Корнійчука Олександра Мифодієвича, які активно долучились до пасторської роботи в нашій церкві.",
-            "text2": "В 2019 році, дякуючи Богу, наша церква змогла придбати територію старого радянського табору недалеко від міста Житомир. На його основі почалося будівництво центра духовного та фізичного розвитку - місця для проведення християнських заходів на лоні природи."
+            "photoLabel": "Youth ministry in newly constructed camp tent «Tabernacle»",
+            "text1": "The church continued to grow and develop, and therefore these years approximately 10 new deacons were ordained as well as two presbyters – Borys Hnilitskyi and Oleksandr Korniichuk, who actively joined the pastors’ work.",
+            "text2": "In 2019, with God’s help our church was able to purchase the territory of a former soviet camp near Zhytomyr city. Construction of the center for spiritual and physical development began on the base of that camp. This center is planned to become the place for Christians’ events outside in nature."
         },
         "35": {
-            "photoLabel": "Розвантаження гуманітарної допомоги зі Швеції",
-            "text1": "Початок 2020-х років став важким для нашої церкви, як і для всієї країни - спочатку пандемія Covid-19, а потім і військове вторгнення Росії до України. Однак незважаючи на це, наша церква зосередилась на допомозі постраждалим, співпрацюючи зі шведськими, американськими, нідерландськими місіями. Зокрема було передано вантажівками багато тон продуктів для потреб людей з постраждалих від війни регіонів. Також під час гострої фази війни наш дім молитви неодноразово ставав прихистком для біженців."
+            "photoLabel": "Unloading of humanitarian aid from Sweden",
+            "text1": "Beginning of the 2020s was difficult for our church and the country overall due to the pandemic COVID-19 and, later, Russian military invasion of Ukraine. Despite this, our church concentrated on aid for people, in cooperation with missions from Sweden, the USA, and the Netherlands. Many tons of food were transported by trucks for the needs of people from invaded regions. The house of prayer had become the shelter for refugees numerous times during the most active stage of war."
         },
         "36": {
-            "text1": "Той, Хто свідкує, говорить оце: Так, незабаром прийду! Амінь. Прийди, Господи Ісусе! (Об'явлення 22:20)"
+            "text1": "He who testifieth these things saith, Yea: I come quickly. Amen: come, Lord Jesus. <br>(Revelation 22:20)"
         }
     },
     "war2022": {
