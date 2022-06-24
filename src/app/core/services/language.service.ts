@@ -11,15 +11,15 @@ export class LanguageService {
     constructor(private translateService: TranslateService) { }
 
     public setDefaultLang() {
-        const browserLang = this.translateService.getBrowserLang();
-        const available = Object.values(Language).find(i => browserLang as Language == i);
-        let lang = available ? browserLang as Language : Language.ua;
+        // const browserLang = this.translateService.getBrowserLang();
+        // const available = Object.values(Language).find(i => browserLang as Language == i);
+        // let lang = available ? browserLang as Language : Language.ua;
         
-        if (lang === Language.ru) {
-            lang = Language.ua;
-        } // Хай росіяни вчать українську
+        // if (lang === Language.ru) {
+        //     lang = Language.ua;
+        // } 
 
-        this.setLanguage(lang);
+        this.setLanguage(Language.ua);
     }
 
     public setLanguage(language: Language) {
