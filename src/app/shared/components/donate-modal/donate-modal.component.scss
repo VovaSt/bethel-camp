@@ -7,7 +7,12 @@
 
 .tab-container {
     padding: 20px;
-    min-height: 350px;
+    min-height: 450px;
+
+    @media screen and (max-width: 450px) {
+        min-height: unset;
+    }
+
     a {
         color: unset;
         text-decoration: unset;
@@ -64,16 +69,14 @@
         min-width: 100%;
 
         .detail-block {
-            font-size: 18px;
-            display: flex;
-            flex-wrap: wrap;
+            font-size: 20px;
 
             &:not(:first-child) {
                 margin-top: 10px;
             }
 
             .detail-label {
-                margin-right: 5px;
+                margin-bottom: 5px;
                 white-space: nowrap;
                 opacity: 0.8;
             }
@@ -84,6 +87,10 @@
 
             .detail-block {
                 font-size: 16px;
+
+                &:not(:first-child) {
+                    margin-top: 13px;
+                }
             }
         }
     }

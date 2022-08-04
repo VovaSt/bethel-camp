@@ -653,6 +653,7 @@
         "dollarDetailsPdf": "Bank account info for SWIFT in US dollars (USD)",
         "euroDetailsPdf": "Bank account info for SWIFT in euros (EUR)",
         "uplift": "PayPal account of partnership mission Uplift Ukraine",
+        "givebutter": "GiveButter account of partnership mission Uplift Ukraine",
         "receiver": "Receiver",
         "currentAccount": "Сurrent Account",
         "USREOU": "USREOU",
