@@ -13,6 +13,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LanguageService } from './core/services/language.service';
 import { LoaderComponent } from './components/loader/loader.component';
+import { registerLocaleData } from '@angular/common';
+import localeUk from '@angular/common/locales/uk';
 
 export function httpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -46,5 +48,6 @@ export class AppModule {
 
     constructor() {
         AOS.init();
+        registerLocaleData(localeUk, 'uk-UA');
     }
 }

@@ -1,22 +1,14 @@
-<!-- <mat-vertical-stepper>
-    <mat-step state="phone">
-        <ng-template matStepLabel>Step 1</ng-template>
-        <ng-template matStepContent>
-        <p>This content was rendered lazily</p>
-        <button mat-button matStepperNext>Next</button>
-        </ng-template>
-    </mat-step>
-    <mat-step>
-        <ng-template matStepLabel>Step 2</ng-template>
-        <ng-template matStepContent>
-            <p>This content was also rendered lazily</p>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
-        </ng-template>
-    </mat-step>
-    <mat-step>
-        <ng-template matStepLabel>Step 3</ng-template>
-        <p>This content was rendered eagerly</p>
-        <button mat-button matStepperPrevious>Back</button>
-    </mat-step>
-</mat-vertical-stepper> -->
+<div class="header">
+    <button class="month-btn" (click)="getPreviosMonth()">&#8678;</button>
+    <div class="title">{{ title }}</div>
+    <button class="month-btn" (click)="getNextMonth()">&#8680;</button>
+</div>
+
+<div class="body">
+    <div class="day" *ngFor="let day of monthDays">
+        <div class="label" [ngClass]="day.nameOfDay === 'нд' ? 'sunday' : ''">
+            <div class="number">{{ day.date | date:'d' }}</div>
+            <div class="name">{{ day.nameOfDay }}</div>
+        </div>
+    </div>
+</div>

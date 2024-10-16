@@ -1,0 +1,58 @@
+@import "design-styles.scss";
+
+$red: #E2717F;
+
+.header {
+    display: flex;
+    padding: 20px;
+    border: 1px solid $gray-light;
+    background-color: $gray-light;
+
+    .month-btn {
+        border: none;
+        background-color: transparent;
+        color: $blue-dark;
+        font-size: 2rem;
+        line-height: 1rem;
+        cursor: pointer;
+    }
+
+    .title {
+        flex: 1;
+        text-align: center;
+        color: $blue-dark;
+        font-weight: bolder;
+    }
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+
+    .day {
+        border: 1px solid $gray-light;
+        border-top: none;
+
+        .label {
+            width: 50px;
+            padding: 10px;
+            text-align: center;
+            font-weight: bolder;
+
+            .number {
+                color: $blue-dark;
+            }
+
+            .name {
+                color: $blue-medium;
+            }
+
+
+            &.sunday {
+                .name {
+                    color: $red;
+                }
+            }
+        }
+    }
+}
