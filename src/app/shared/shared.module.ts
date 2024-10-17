@@ -14,6 +14,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { VideoPopupComponent } from './components/video-popup/video-popup.component';
 import { DonateModalComponent } from './components/donate-modal/donate-modal.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { EventsFilterByTypePipe } from './pipes/events-filter-by-type.pipe';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import {MatTabsModule} from '@angular/material/tabs';
         DonateButtonComponent,
         VideoPopupComponent,
         ImageLoaderDirective,
-        DonateModalComponent
+        DonateModalComponent,
+        EventsFilterByTypePipe
     ],
     imports: [
         CommonModule,
@@ -44,7 +46,9 @@ import {MatTabsModule} from '@angular/material/tabs';
         DonateButtonComponent,
         VideoPopupComponent,
 
-        ImageLoaderDirective
+        ImageLoaderDirective,
+
+        EventsFilterByTypePipe
     ],
 })
 export class SharedModule {}

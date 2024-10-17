@@ -1,43 +1,102 @@
 @import "design-styles.scss";
 
 $red: #E2717F;
+$bg-gray: #f0f3f6;
 
 .header {
+    max-width: 1000px;
     display: flex;
-    padding: 20px;
+    align-items: center;
+    padding: 16px;
     border: 1px solid $gray-light;
     background-color: $gray-light;
+    border-radius: 5px;
+    margin: 10px auto 0;
+
+    .title {
+        text-align: center;
+        color: $blue-dark;
+        font-weight: bolder;
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
 
     .month-btn {
         border: none;
         background-color: transparent;
         color: $blue-dark;
-        font-size: 2rem;
-        line-height: 1rem;
         cursor: pointer;
+
+        img.reverse {
+            transform: rotate(180deg);
+        }
     }
 
-    .title {
-        flex: 1;
-        text-align: center;
+    .settings-btn {
+        border: none;
+        background-color: transparent;
         color: $blue-dark;
-        font-weight: bolder;
+        cursor: pointer;
+        margin-left: auto;
+
+        img {
+            transform: rotate(0deg);
+            transition: transform 0.3s;
+
+            &.rotated {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
+.toolbar {
+    max-width: 1000px;
+    display: flex;
+    border: 1px solid $gray-light;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin: 0 auto 10px;
+    position: relative;
+    top: -5px;
+    overflow: hidden;
+    height: 0px;
+    transition: height 300ms ease-out;
+
+    &.show {
+        height: 240px;
+    }
+
+    .left-column {
+        padding: 20px;
+
+        .type {
+            margin-bottom: 3px;
+        }
     }
 }
 
 .body {
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 
     .day {
+        display: flex;
+        align-items: center;
         border: 1px solid $gray-light;
         border-top: none;
+        padding: 10px;
+        min-height: 60px;
 
         .label {
             width: 50px;
-            padding: 10px;
+            margin-right: 10px;
             text-align: center;
             font-weight: bolder;
+            position: relative;
 
             .number {
                 color: $blue-dark;
@@ -46,11 +105,99 @@ $red: #E2717F;
             .name {
                 color: $blue-medium;
             }
+        }
 
+        &:first-child {
+            border-top: 1px solid $gray-light;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
 
-            &.sunday {
+        &:last-child {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        &[data-day='пн'] {
+            border-top: 1px solid $gray-light;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        &[data-day='нд'] {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            margin-bottom: 10px;
+
+            .label .name {
+                color: $red;
+            }
+        }
+
+        &[data-day='сб'],
+        &[data-day='нд'] {
+            background-color: $bg-gray;
+        }
+
+        &.today {
+            .label{
+                .number,
                 .name {
-                    color: $red;
+                    color: $white;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -7px;
+                    left: 0px;
+                    background: $blue-medium;
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    z-index: -1;
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            flex: 1;
+
+            .event {
+                padding: 8px 12px;
+                border-radius: 5px;
+                border: 1px solid $gray-light;
+                display: flex;
+                align-items: center;
+
+                .left-part {
+                    flex: 0 0 60px;
+                    padding-right: 12px;
+                    text-align: center;
+                }
+
+                .main-part {
+                    flex: 1;
+
+                    .name {
+                        font-weight: 500;
+                        margin-bottom: 3px;
+                    }
+
+                    .row {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 3px;
+
+                        img {
+                            margin-right: 5px;
+                            height: 20px;
+                        }
+                    }
                 }
             }
         }
