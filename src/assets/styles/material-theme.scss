@@ -246,6 +246,8 @@ $altTheme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
 .material-icons {
     font-size: 24px;
     font-family: "Material Icons", "Material Icons";
+    color: var(--primary-darker-color);
+
     .mat-badge-content {
         font-family: "Roboto";
     }
@@ -253,4 +255,8 @@ $altTheme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
 
 .mat-dialog-container {
     background: #95ACBF;
+}
+
+.mat-tooltip {
+    font-size: 14px !important;
 }

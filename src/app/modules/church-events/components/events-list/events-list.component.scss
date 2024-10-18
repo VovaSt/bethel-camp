@@ -4,54 +4,100 @@ $red: #E2717F;
 $bg-gray: #f0f3f6;
 
 .header {
-    max-width: 1000px;
+    max-width: 1024px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    row-gap: 16px;
     padding: 16px;
     border: 1px solid $gray-light;
     background-color: $gray-light;
     border-radius: 5px;
     margin: 10px auto 0;
 
-    .title {
-        text-align: center;
-        color: $blue-dark;
-        font-weight: bolder;
-        font-size: 1.1rem;
-        padding: 0 10px;
-    }
+    .week-controls {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        min-width: 360px;
 
-    .month-btn {
-        border: none;
-        background-color: transparent;
-        color: $blue-dark;
-        cursor: pointer;
+        .title {
+            text-align: center;
+            color: $blue-dark;
+            font-weight: bolder;
+            line-height: 1.5;
+            padding: 0 5px;
+        }
 
-        img.reverse {
-            transform: rotate(180deg);
+        .week-btn {
+            border: none;
+            background-color: transparent;
+            color: $blue-dark;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+            img.reverse {
+                transform: rotate(180deg);
+            }
         }
     }
 
-    .settings-btn {
-        border: none;
-        background-color: transparent;
-        color: $blue-dark;
-        cursor: pointer;
-        margin-left: auto;
+    .button-controls {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1;
 
-        img {
-            transform: rotate(0deg);
-            transition: transform 0.3s;
+        .settings-btn {
+            border: none;
+            background-color: transparent;
+            color: $blue-dark;
+            cursor: pointer;
+            margin-left: auto;
 
-            &.rotated {
-                transform: rotate(90deg);
+            .mat-icon {
+                transform: rotate(0deg);
+                transition: transform 0.3s;
+
+                &.rotated {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1025px) {
+        & {
+            margin: 0;
+            padding: 12px 8px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+
+            .button-controls {
+                padding: 0 6px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        & {
+            flex-direction: column-reverse;
+
+            .week-controls {
+                justify-content: center;
+                min-width: unset;
+            }
+
+            .button-controls {
+                align-self: flex-end;
             }
         }
     }
 }
 
 .toolbar {
-    max-width: 1000px;
+    max-width: 1024px;
     display: flex;
     border: 1px solid $gray-light;
     border-top: none;
@@ -78,7 +124,7 @@ $bg-gray: #f0f3f6;
 }
 
 .body {
-    max-width: 1000px;
+    max-width: 1024px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -104,6 +150,12 @@ $bg-gray: #f0f3f6;
 
             .name {
                 color: $blue-medium;
+            }
+
+            @media screen and (max-width: 400px) {
+                & {
+                    width: 40px;
+                }
             }
         }
 
@@ -157,6 +209,13 @@ $bg-gray: #f0f3f6;
                     width: 50px;
                     height: 50px;
                     z-index: -1;
+
+                    @media screen and (max-width: 400px) {
+                        & {
+                            top: -5px;
+                            left: -5px;
+                        }
+                    }
                 }
             }
         }
@@ -192,12 +251,11 @@ $bg-gray: #f0f3f6;
                         display: flex;
                         align-items: center;
                         margin-bottom: 3px;
-
-                        img {
-                            margin-right: 5px;
-                            height: 20px;
-                        }
                     }
+                }
+
+                .right-part {
+                    padding-left: 3px;
                 }
             }
         }

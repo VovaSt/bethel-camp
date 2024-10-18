@@ -15,6 +15,8 @@ import { VideoPopupComponent } from './components/video-popup/video-popup.compon
 import { DonateModalComponent } from './components/donate-modal/donate-modal.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { EventsFilterByTypePipe } from './pipes/events-filter-by-type.pipe';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
     declarations: [
@@ -41,6 +43,8 @@ import { EventsFilterByTypePipe } from './pipes/events-filter-by-type.pipe';
         TranslateModule,
         MatExpansionModule,
         MatDialogModule,
+        MatIconModule,
+        MatTooltipModule,
 
         PhotoCaruselComponent,
         DonateButtonComponent,

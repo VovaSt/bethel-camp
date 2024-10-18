@@ -9,9 +9,9 @@ import { CalendarService, calendarData } from 'src/app/core/services/calendar.se
   styleUrls: ['./events-list.component.scss']
 })
 export class EventsListComponent implements OnInit {
-    monthCounter: number = 0;
+    weekCounter: number = 0;
     title: string = "";
-    monthDays: any[] = [];
+    weekDays: any[] = [];
     today: string = "";
     data: Object = {};
     showSettings = false;
@@ -30,8 +30,8 @@ export class EventsListComponent implements OnInit {
     constructor(
         private calendarService: CalendarService
     ) {
-        this.title = this.calendarService.getMonthLabel();
-        this.monthDays = this.calendarService.getEachDayOfMonth();
+        this.title = this.calendarService.getWeekLabel();
+        this.weekDays = this.calendarService.getEachDayOfWeek();
         this.today = this.calendarService.formatDataId(new Date());
         this.data = calendarData;
     }
@@ -40,19 +40,19 @@ export class EventsListComponent implements OnInit {
 
     }
 
-    getPreviosMonth() {
-        this.monthCounter--;
+    getPreviosWeek() {
+        this.weekCounter--;
         this.updateData();
     }
 
-    getNextMonth() {
-        this.monthCounter++;
+    getNextWeek() {
+        this.weekCounter++;
         this.updateData();
     }
 
     updateData() {
-        this.title = this.calendarService.getMonthLabel(this.monthCounter);
-        this.monthDays = this.calendarService.getEachDayOfMonth(this.monthCounter);
+        this.title = this.calendarService.getWeekLabel(this.weekCounter);
+        this.weekDays = this.calendarService.getEachDayOfWeek(this.weekCounter);
     }
 
     getEventColor(event) {
