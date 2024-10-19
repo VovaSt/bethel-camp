@@ -1,0 +1,33 @@
+@import "design-styles.scss";
+
+.wrapper {
+    padding: 20px;
+
+    .title {
+        margin-bottom: 10px;
+    }
+
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+
+        .filter {
+            flex: 1 0 25%;
+            min-width: 200px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+
+            input {
+                width: 18px;
+                height: 18px;
+                margin-right: 8px;
+                cursor: pointer;
+            }
+        }
+
+        .all {
+            flex: 1 1 100%;
+        }
+    }
+}

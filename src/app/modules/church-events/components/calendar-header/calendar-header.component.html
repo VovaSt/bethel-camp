@@ -1,0 +1,28 @@
+<div class="header">
+    <div class="week-controls">
+        <button
+            class="week-btn"
+            (click)="getPreviosWeek()"
+        >
+            <img src="assets/images/arrow.svg" alt="Налаштування">
+        </button>
+
+        <div class="title" [innerHTML]="title"></div>
+
+        <button
+            class="week-btn"
+            (click)="getNextWeek()"
+        >
+            <img src="assets/images/arrow.svg" class="reverse" alt="Налаштування">
+        </button>
+    </div>
+
+    <div class="button-controls">
+        <button
+            class="settings-btn"
+            (click)="toggleToolbar()"
+        >
+            <mat-icon [class.rotated]="toolbarIsShown$ | async">settings</mat-icon>
+        </button>
+    </div>
+</div>

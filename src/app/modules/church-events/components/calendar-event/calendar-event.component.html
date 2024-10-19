@@ -1,0 +1,36 @@
+<div
+    class="event"
+    [ngStyle]="{'background-color': color}"
+>
+    <div class="left-part">
+        {{ event.start }} {{ event.finish }}
+    </div>
+    <div class="main-part">
+        <div class="name">{{ event.name }}</div>
+        <div *ngIf="event.place" class="row">
+            Місце:
+            {{ event.place }}
+        </div>
+        <div *ngIf="event.person" class="row">
+            Відповідальний:
+            {{ event.person }}
+        </div>
+        <div *ngIf="event.preachers?.length" class="row">
+            Проповідники:
+            {{ event.preachers.join(', ') }}
+        </div>
+        <div *ngIf="event.singers?.length" class="row">
+            Музичний гурт:
+            {{ event.singers.join(', ') }}
+        </div>
+    </div>
+    <div class="right-part">
+        <div *ngIf="event.cars?.length" class="row">
+            <mat-icon
+                matTooltip="{{event.cars.join(', ')}}"
+            >local_shipping</mat-icon>
+        </div>
+    </div>
+</div>
+
+

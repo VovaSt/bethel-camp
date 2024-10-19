@@ -1,0 +1,39 @@
+@import "design-styles.scss";
+
+.event {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid $gray-light;
+    display: flex;
+    align-items: center;
+
+    .left-part {
+        flex: 0 0 60px;
+        padding-right: 12px;
+        text-align: center;
+    }
+
+    .main-part {
+        flex: 1;
+
+        .name {
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3px;
+        }
+    }
+
+    .right-part {
+        padding-left: 3px;
+
+        mat-icon {
+            cursor: default;
+        }
+    }
+}
+

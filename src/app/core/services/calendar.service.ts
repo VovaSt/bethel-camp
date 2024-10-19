@@ -4,21 +4,46 @@ import eachDayOfInterval from 'date-fns/eachDayOfInterval';
 import startOfMonth from 'date-fns/startOfMonth';
 import lastDayOfMonth from 'date-fns/lastDayOfMonth';
 import format from 'date-fns/format';
-import { CalendarEventType } from '../enums/calendar.enum';
+import { CalendarEventColor, CalendarEventType } from '../enums/calendar.enum';
 import addWeeks from 'date-fns/addWeeks';
 import startOfWeek from 'date-fns/startOfWeek';
 import lastDayOfWeek from 'date-fns/lastDayOfWeek';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { filter, map } from 'rxjs/operators';
+import { CalendarCell, CalendarEventData, CalendarEvents, CalendarEventTypeCheckbox } from '../types/calendar.type';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CalendarService {
 
-    constructor(
+    private _toolbarIsShown$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+    public toolbarIsShown$: Observable<boolean> = this._toolbarIsShown$.asObservable();
 
-    ) {}
+    private _typeFilter$: BehaviorSubject<CalendarEventTypeCheckbox[]> =
+        new BehaviorSubject<CalendarEventTypeCheckbox[]>(typeFilters);
+    public typeFilter$: Observable<CalendarEventTypeCheckbox[]> =
+        this._typeFilter$.asObservable();
+    public allTypesAreShown$: Observable<boolean> = this._typeFilter$
+        .asObservable()
+        .pipe(map(value => value.every(item => item.show)));
+    public areTypesShownPartly$: Observable<boolean> = this._typeFilter$
+        .asObservable()
+        .pipe(map(value => !value.every(item => item.show) && !value.every(item => !item.show)));
 
-    getMonthLabel(monthCount: number = 0) {
+    private _eventsData$: BehaviorSubject<CalendarEvents> =
+        new BehaviorSubject<CalendarEvents>(calendarData);
+    public eventsData$: Observable<CalendarEvents> =
+        this._eventsData$.asObservable();
+
+    private _calendarCells$: BehaviorSubject<CalendarCell[]> =
+        new BehaviorSubject<CalendarCell[]>(this.getEachDayOfWeek())
+    public calendarCells$: Observable<CalendarCell[]> =
+        this._calendarCells$.asObservable();
+
+    constructor() {}
+
+    public getMonthLabel(monthCount: number = 0): string {
         const date: Date = addMonths(new Date(), monthCount);
         const formatter = new Intl.DateTimeFormat(
             "ua",
@@ -28,7 +53,7 @@ export class CalendarService {
         return label.charAt(0).toUpperCase() + label.slice(1);
     }
 
-    getWeekLabel(weekCount: number = 0) {
+    public getWeekLabel(weekCount: number = 0): string {
         const date: Date = addWeeks(new Date(), weekCount);
         const formatter = new Intl.DateTimeFormat(
             "ua",
@@ -43,7 +68,7 @@ export class CalendarService {
         `;
     }
 
-    getEachDayOfMonth(monthCount: number = 0) {
+    private getEachDayOfMonth(monthCount: number = 0): CalendarCell[] {
         const date: Date = addMonths(new Date(), monthCount);
         const formatter = new Intl.DateTimeFormat("ua", { weekday: "short" });
         const firstDay = startOfMonth(date);
@@ -57,7 +82,7 @@ export class CalendarService {
             }));
     }
 
-    getEachDayOfWeek(weekCount: number = 0) {
+    private getEachDayOfWeek(weekCount: number = 0): CalendarCell[] {
         const date: Date = addWeeks(new Date(), weekCount);
         const formatter = new Intl.DateTimeFormat("ua", { weekday: "short" });
         const firstDay = startOfWeek(date, { weekStartsOn: 1 });
@@ -71,14 +96,92 @@ export class CalendarService {
             }));
     }
 
-    formatDataId(date) {
+    public formatDataId(date): string {
         date = date || new Date();
         return format(date, 'dd-MM-yyyy');
     }
+
+    public toogleToolbar(): void {
+        this._toolbarIsShown$.next(!this._toolbarIsShown$.value);
+    }
+
+    public changeTypeFilter(type: CalendarEventType): void {
+        const oldValue = [...this._typeFilter$.value];
+        const index = oldValue.findIndex(item => item.type === type);
+        if (index >= 0) {
+            oldValue[index].show = !oldValue[index].show;
+            this._typeFilter$.next(oldValue);
+        }
+    }
+
+    public changeAllTypeFilters(): void {
+        const oldValue = [...this._typeFilter$.value];
+        const isEveryTypeShown = oldValue.every(item => item.show);
+        oldValue.map(item => {
+            item.show = !isEveryTypeShown;
+            return item;
+        });
+        this._typeFilter$.next(oldValue);
+    }
+
+    public changeWeek(weekCount: number = 0) {
+        const data = this.getEachDayOfWeek(weekCount);
+        this._calendarCells$.next(data);
+    }
 }
 
+export const typeFilters = [
+    {
+        label: "загальне служіння",
+        type: CalendarEventType.загальне_служіння,
+        color: CalendarEventColor[CalendarEventType.загальне_служіння],
+        show: true
+    },
+    {
+        label: "молитва",
+        type: CalendarEventType.молитва,
+        color: CalendarEventColor[CalendarEventType.молитва],
+        show: true
+    },
+    {
+        label: "домашня група",
+        type: CalendarEventType.домашня_група,
+        color: CalendarEventColor[CalendarEventType.домашня_група],
+        show: true
+    },
+    {
+        label: "недільна школа",
+        type: CalendarEventType.недільна_школа,
+        color: CalendarEventColor[CalendarEventType.недільна_школа],
+        show: true
+    },
+    {
+        label: "молодіжне",
+        type: CalendarEventType.молодіжне,
+        color: CalendarEventColor[CalendarEventType.молодіжне],
+        show: true
+    },
+    {
+        label: "євангелізація",
+        type: CalendarEventType.євангелізація,
+        color: CalendarEventColor[CalendarEventType.євангелізація],
+        show: true
+    },
+    {
+        label: "табір",
+        type: CalendarEventType.табір,
+        color: CalendarEventColor[CalendarEventType.табір],
+        show: true
+    },
+    {
+        label: "хор",
+        type: CalendarEventType.хор,
+        color: CalendarEventColor[CalendarEventType.хор],
+        show: true
+    }
+]
 
-export const calendarData = {
+export const calendarData: CalendarEvents = {
     "07-10-2024": [
         {
             name: "Загальноцерковна молитва",
