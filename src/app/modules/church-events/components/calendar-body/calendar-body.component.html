@@ -11,11 +11,14 @@
             <div class="name">{{ day.nameOfDay }}</div>
         </div>
 
-        <div class="content">
+        <div class="content" *ngIf="(data$ | async) as data">
             <ng-container
-                *ngFor="let event of (eventsData$ | async)[day.id]"
+                *ngFor="let event of data[day.id]"
             >
-                <app-calendar-event [event]="event"></app-calendar-event>
+                <app-calendar-event
+                    *ngIf="event.show"
+                    [event]="event"
+                ></app-calendar-event>
             </ng-container>
         </div>
     </div>

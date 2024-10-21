@@ -11,6 +11,7 @@ import { CalendarHeaderComponent } from './components/calendar-header/calendar-h
 import { CalendarToolbarComponent } from './components/calendar-toolbar/calendar-toolbar.component';
 import { EventTypeFilterComponent } from './components/calendar-toolbar/components/event-type-filter/event-type-filter.component';
 import { CalendarEventComponent } from './components/calendar-event/calendar-event.component';
+import { EventSearchComponent } from './components/calendar-toolbar/components/event-search/event-search.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CalendarEventComponent } from './components/calendar-event/calendar-eve
     CalendarHeaderComponent,
     CalendarToolbarComponent,
     EventTypeFilterComponent,
-    CalendarEventComponent
+    CalendarEventComponent,
+    EventSearchComponent
   ],
   imports: [
     CommonModule,

@@ -9,7 +9,7 @@ import addWeeks from 'date-fns/addWeeks';
 import startOfWeek from 'date-fns/startOfWeek';
 import lastDayOfWeek from 'date-fns/lastDayOfWeek';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { filter, map } from 'rxjs/operators';
+import { debounceTime, filter, map } from 'rxjs/operators';
 import { CalendarCell, CalendarEventData, CalendarEvents, CalendarEventTypeCheckbox } from '../types/calendar.type';
 
 @Injectable({
@@ -31,6 +31,9 @@ export class CalendarService {
         .asObservable()
         .pipe(map(value => !value.every(item => item.show) && !value.every(item => !item.show)));
 
+    private _searchValue$: BehaviorSubject<string> = new BehaviorSubject<string>("");
+    public searchValue$: Observable<string> = this._searchValue$.asObservable();
+
     private _eventsData$: BehaviorSubject<CalendarEvents> =
         new BehaviorSubject<CalendarEvents>(calendarData);
     public eventsData$: Observable<CalendarEvents> =
@@ -41,7 +44,7 @@ export class CalendarService {
     public calendarCells$: Observable<CalendarCell[]> =
         this._calendarCells$.asObservable();
 
-    constructor() {}
+    constructor() { }
 
     public getMonthLabel(monthCount: number = 0): string {
         const date: Date = addMonths(new Date(), monthCount);
@@ -124,9 +127,13 @@ export class CalendarService {
         this._typeFilter$.next(oldValue);
     }
 
-    public changeWeek(weekCount: number = 0) {
+    public changeWeek(weekCount: number = 0): void {
         const data = this.getEachDayOfWeek(weekCount);
         this._calendarCells$.next(data);
+    }
+
+    public setSearchValue(value: string): void {
+        this._searchValue$.next(value);
     }
 }
 

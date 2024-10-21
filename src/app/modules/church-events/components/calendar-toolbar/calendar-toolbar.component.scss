@@ -3,6 +3,7 @@
 .toolbar {
     max-width: 1024px;
     display: flex;
+    flex-direction: column;
     border: 1px solid $gray-light;
     border-top: none;
     border-bottom-left-radius: 5px;

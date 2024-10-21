@@ -16,6 +16,7 @@ import { DonateModalComponent } from './components/donate-modal/donate-modal.com
 import {MatTabsModule} from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
     declarations: [
@@ -43,6 +44,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
         MatDialogModule,
         MatIconModule,
         MatTooltipModule,
+        MatInputModule,
 
         PhotoCaruselComponent,
         DonateButtonComponent,
