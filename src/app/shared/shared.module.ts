@@ -17,6 +17,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
     declarations: [
@@ -32,7 +35,8 @@ import { MatInputModule } from '@angular/material/input';
         IvyCarouselModule,
         MatButtonModule,
         MatDialogModule,
-        MatTabsModule
+        MatTabsModule,
+
     ],
     exports: [
         MatButtonToggleModule,
@@ -45,6 +49,9 @@ import { MatInputModule } from '@angular/material/input';
         MatIconModule,
         MatTooltipModule,
         MatInputModule,
+        MatSelectModule,
+        MatDatepickerModule,
+        MatFormFieldModule,
 
         PhotoCaruselComponent,
         DonateButtonComponent,

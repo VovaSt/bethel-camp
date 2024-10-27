@@ -1,6 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
 import { CalendarService } from 'src/app/core/services/calendar.service';
+import { EventFormDialogComponent } from '../../forms/event-form-dialog/event-form-dialog.component';
 
 
 @Component({
@@ -15,7 +17,8 @@ export class CalendarHeaderComponent implements OnInit {
     toolbarIsShown$: Observable<boolean>;
 
     constructor(
-        private calendarService: CalendarService
+        private calendarService: CalendarService,
+        private dialog: MatDialog
     ) {
         this.title = this.calendarService.getWeekLabel();
         this.toolbarIsShown$ = this.calendarService.toolbarIsShown$;
@@ -42,5 +45,14 @@ export class CalendarHeaderComponent implements OnInit {
 
     toggleToolbar() {
         this.calendarService.toogleToolbar();
+    }
+
+    addEvent() {
+        this.dialog.open(EventFormDialogComponent, {
+            data: null,
+            maxWidth: '94vw',
+            width: '600px',
+            autoFocus: false
+          });
     }
 }

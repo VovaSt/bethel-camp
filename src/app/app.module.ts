@@ -15,6 +15,20 @@ import { LanguageService } from './core/services/language.service';
 import { LoaderComponent } from './components/loader/loader.component';
 import { registerLocaleData } from '@angular/common';
 import localeUk from '@angular/common/locales/uk';
+import { MomentDateAdapter } from '@angular/material-moment-adapter';
+import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
+
+const MY_DATE_FORMAT = {
+    parse: {
+      dateInput: 'DD-MM-YYYY',
+    },
+    display: {
+      dateInput: 'DD MMMM YYYY',
+      monthYearLabel: 'YYYY',
+      dateA11yLabel: 'LL',
+      monthYearA11yLabel: 'YYYY'
+    }
+};
 
 export function httpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -39,15 +53,27 @@ export function httpLoaderFactory(http: HttpClient) {
                 useFactory: httpLoaderFactory,
                 deps: [HttpClient]
             }
-        })
+        }),
     ],
-    providers: [LanguageService],
+    providers: [
+        LanguageService,
+        {
+            provide: DateAdapter,
+            useClass: MomentDateAdapter,
+            deps: [MAT_DATE_LOCALE]
+        },
+        {
+            provide: MAT_DATE_FORMATS,
+            useValue: MY_DATE_FORMAT
+        }
+    ],
     bootstrap: [AppComponent],
 })
 export class AppModule {
 
-    constructor() {
+    constructor(private dateAdapter: DateAdapter<Date>) {
         AOS.init();
         registerLocaleData(localeUk, 'uk-UA');
+        this.dateAdapter.setLocale('uk-UA');
     }
 }

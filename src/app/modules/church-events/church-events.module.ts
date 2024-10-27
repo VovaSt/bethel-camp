@@ -12,6 +12,9 @@ import { CalendarToolbarComponent } from './components/calendar-toolbar/calendar
 import { EventTypeFilterComponent } from './components/calendar-toolbar/components/event-type-filter/event-type-filter.component';
 import { CalendarEventComponent } from './components/calendar-event/calendar-event.component';
 import { EventSearchComponent } from './components/calendar-toolbar/components/event-search/event-search.component';
+import { EventFormDialogComponent } from './forms/event-form-dialog/event-form-dialog.component';
+import { EventFormComponent } from './forms/event-form/event-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,14 +25,17 @@ import { EventSearchComponent } from './components/calendar-toolbar/components/e
     CalendarToolbarComponent,
     EventTypeFilterComponent,
     CalendarEventComponent,
-    EventSearchComponent
+    EventSearchComponent,
+    EventFormDialogComponent,
+    EventFormComponent
   ],
   imports: [
     CommonModule,
     ChurchEventsRoutingModule,
     SharedModule,
     MatStepperModule,
-    CdkStepperModule
+    CdkStepperModule,
+    ReactiveFormsModule
   ]
 })
 export class ChurchEventsModule { }

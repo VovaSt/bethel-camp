@@ -19,7 +19,14 @@
 
     <div class="button-controls">
         <button
-            class="settings-btn"
+            class="control-btn"
+            (click)="addEvent()"
+        >
+            <mat-icon [ngStyle]="{'font-weight': 'bold'}">add</mat-icon>
+        </button>
+
+        <button
+            class="control-btn"
             (click)="toggleToolbar()"
         >
             <mat-icon [class.rotated]="toolbarIsShown$ | async">settings</mat-icon>

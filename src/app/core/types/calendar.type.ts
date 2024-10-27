@@ -16,7 +16,8 @@ export class CalendarEventData {
     person?: string;
     preachers?: string[];
     singers?: string[];
-    cars?: string[]
+    cars?: string[];
+    date?: string;
 }
 
 export class CalendarEvents {

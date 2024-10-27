@@ -46,12 +46,11 @@
         justify-content: flex-end;
         flex: 1;
 
-        .settings-btn {
+        .control-btn {
             border: none;
             background-color: transparent;
             color: $blue-dark;
             cursor: pointer;
-            margin-left: auto;
 
             .mat-icon {
                 transform: rotate(0deg);

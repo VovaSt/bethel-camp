@@ -263,7 +263,9 @@ $altTheme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
     font-size: 14px !important;
 }
 
-.mat-form-field .mat-form-field-label {
+.mat-form-field,
+.mat-form-field .mat-form-field-label,
+.mat-form-field .mat-error {
     letter-spacing: normal;
 }
 
@@ -271,6 +273,28 @@ $altTheme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
     background-color: $blue-dark;
 }
 
-.mat-form-field-appearance-legacy .mat-form-field-label {
+.mat-form-field-appearance-legacy .mat-form-field-label,
+.mat-form-field.mat-focused .mat-form-field-label {
+    color: $blue-dark;
+}
+
+.mat-select-panel {
+    background: $white;
+
+    .mat-option {
+        color: $blue-dark;
+
+        &.mat-selected:not(.mat-option-multiple) {
+            background: #bfcdd944;
+            font-weight: bolder;
+        }
+    }
+}
+
+.mat-select-value {
+    color: $blue-dark;
+}
+
+.mat-datepicker-toggle {
     color: $blue-dark;
 }
