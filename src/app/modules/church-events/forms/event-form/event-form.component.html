@@ -33,7 +33,7 @@
     </mat-form-field>
 
     <mat-button-toggle-group
-        class="form-group small-40"
+        class="form-group small frequency"
         name="frequency"
         formControlName="frequency"
     >
@@ -43,7 +43,7 @@
 
     <mat-form-field
         *ngIf="eventForm.get('frequency').value === 'once'"
-        class="form-group small-60"
+        class="form-group small"
     >
         <mat-label>Дата</mat-label>
         <input
@@ -62,7 +62,7 @@
 
     <mat-button-toggle-group
         *ngIf="eventForm.get('frequency').value === 'regular'"
-        class="form-group small-60"
+        class="form-group small days"
         name="days"
         [multiple]="true"
         formControlName="days"
@@ -76,7 +76,7 @@
         <mat-button-toggle value="6">нд</mat-button-toggle>
     </mat-button-toggle-group>
 
-    <mat-form-field class="form-group small-50">
+    <mat-form-field class="form-group small">
         <mat-label>Початок</mat-label>
         <input
             matInput
@@ -90,7 +90,7 @@
         </mat-error>
     </mat-form-field>
 
-    <mat-form-field class="form-group small-50">
+    <mat-form-field class="form-group small">
         <mat-label>Кінець</mat-label>
         <input
             matInput
@@ -111,9 +111,9 @@
             aria-label="Number"
             matInput
             formControlName="place"
-            [matAutocomplete]="auto"
+            [matAutocomplete]="autoPlaces"
         >
-        <mat-autocomplete #auto="matAutocomplete">
+        <mat-autocomplete #autoPlaces="matAutocomplete">
           <mat-option *ngFor="let place of filteredPlaces$ | async" [value]="place">
             {{place}}
           </mat-option>
@@ -122,4 +122,49 @@
             Потрібно вказати місце події
         </mat-error>
     </mat-form-field>
+
+    <mat-form-field class="form-group">
+        <mat-label>Відповідальний</mat-label>
+        <input
+            matInput
+            type="text"
+            id="person"
+            name="person"
+            formControlName="person"
+            autocomplete="off"
+        >
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+        <mat-label>Проповідники</mat-label>
+        <mat-chip-list #chipList>
+            <mat-chip
+                *ngFor="let preacher of eventForm.get('preachers').value"
+                [selectable]="true"
+                [removable]="true"
+                (removed)="removePreacher(preacher)"
+            >
+                {{preacher}}
+                <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+            <input
+                placeholder="Додати проповідника..."
+                #preacherInput
+                [formControl]="preachersInputCtrl"
+                [matAutocomplete]="autoPreachers"
+                [matChipInputFor]="chipList"
+                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                (matChipInputTokenEnd)="addPreacher($event)"
+            >
+        </mat-chip-list>
+        <mat-autocomplete
+            #autoPreachers="matAutocomplete"
+            (optionSelected)="selectedPreacher($event)"
+        >
+            <mat-option *ngFor="let preacher of filteredPreachers$ | async" [value]="preacher">
+                {{preacher}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+
 </form>

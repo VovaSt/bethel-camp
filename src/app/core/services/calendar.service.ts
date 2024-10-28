@@ -138,6 +138,10 @@ export class CalendarService {
     public getPlaces(): string[] {
         return JSON.parse(localStorage.getItem("places")) || [];
     }
+
+    public getPreachers(): string[] {
+        return JSON.parse(localStorage.getItem("preachers")) || [];
+    }
 }
 
 export const typeFilters = [

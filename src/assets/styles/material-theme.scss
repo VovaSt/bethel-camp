@@ -288,6 +288,10 @@ $altTheme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
             background: #bfcdd944;
             font-weight: bolder;
         }
+
+        &:hover {
+            background: #bfcdd944;
+        }
     }
 }
 
@@ -317,9 +321,23 @@ $altTheme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
 
     .mat-option {
         color: $blue-dark;
+
+        &.mat-selected:not(.mat-active):not(:hover):not(.mat-option-disabled) {
+            background-color: $white;
+            color: $blue-dark;
+        }
+
+        &:hover {
+            background: #bfcdd944;
+        }
     }
 }
 
 .mat-calendar {
     background-color: $blue-dark;
+}
+
+.mat-chip.mat-standard-chip {
+    background-color: $blue-medium;
+    font-size: 16px;
 }

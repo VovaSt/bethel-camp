@@ -9,16 +9,8 @@ form {
         width: 100%;
 
         @media screen and (min-width: 600px) {
-            &.small-40 {
-                width: calc(40% - 10px);
-            }
-
-            &.small-50 {
+            &.small {
                 width: calc(50% - 10px);
-            }
-
-            &.small-60 {
-                width: calc(60% - 10px);
             }
         }
     }
@@ -26,5 +18,15 @@ form {
     mat-button-toggle-group {
         height: 50px;
         margin-bottom: 15px;
+    }
+
+    .frequency {
+        .mat-button-toggle {
+            width: 50%;
+        }
+    }
+
+    .days .mat-button-toggle ::ng-deep .mat-button-toggle-button .mat-button-toggle-label-content {
+        padding: 0 9.75px;
     }
 }
