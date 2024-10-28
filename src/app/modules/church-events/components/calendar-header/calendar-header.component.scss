@@ -24,6 +24,11 @@
             font-weight: bolder;
             line-height: 1.5;
             padding: 0 5px;
+            display: flex;
+
+            .divider {
+                padding: 0 5px;
+            }
         }
 
         .week-btn {
@@ -78,15 +83,21 @@
 
     @media screen and (max-width: 600px) {
         & {
-            flex-direction: column-reverse;
-
             .week-controls {
-                justify-content: center;
                 min-width: unset;
-            }
+                flex: 5;
 
-            .button-controls {
-                align-self: flex-end;
+                .week-btn {
+                    padding: 8px;
+                }
+
+                .title {
+                    flex-direction: column;
+
+                    .divider {
+                        display: none;
+                    }
+                }
             }
         }
     }

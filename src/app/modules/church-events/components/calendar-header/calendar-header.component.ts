@@ -13,7 +13,7 @@ import { EventFormDialogComponent } from '../../forms/event-form-dialog/event-fo
 })
 export class CalendarHeaderComponent implements OnInit {
     weekCounter: number = 0;
-    title: string = "";
+    title: string[] = [];
     toolbarIsShown$: Observable<boolean>;
 
     constructor(
@@ -53,6 +53,6 @@ export class CalendarHeaderComponent implements OnInit {
             maxWidth: '94vw',
             width: '600px',
             autoFocus: false
-          });
+        });
     }
 }

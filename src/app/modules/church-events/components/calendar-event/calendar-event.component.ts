@@ -13,6 +13,7 @@ import { CalendarEventData } from 'src/app/core/types/calendar.type';
 export class CalendarEventComponent implements OnInit {
     @Input() event: CalendarEventData;
     color: string;
+    expanded: boolean = false;
 
     constructor(
         private calendarService: CalendarService

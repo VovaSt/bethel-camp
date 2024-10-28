@@ -10,8 +10,16 @@
         <div *ngIf="event.place" class="row">
             Місце:
             {{ event.place }}
+            <mat-icon
+                class="car-icon"
+                *ngIf="event.cars?.length"
+                matTooltip="{{event.cars.join(', ')}}"
+            >local_shipping</mat-icon>
         </div>
-        <div *ngIf="event.person" class="row">
+        <div
+            *ngIf="event.person && expanded"
+            class="row"
+        >
             Відповідальний:
             {{ event.person }}
         </div>
@@ -25,12 +33,14 @@
         </div>
     </div>
     <div class="right-part">
-        <div *ngIf="event.cars?.length" class="row">
+        <div class="row">
             <mat-icon
-                matTooltip="{{event.cars.join(', ')}}"
-            >local_shipping</mat-icon>
+                *ngIf="event.person"
+                matTooltip="{{expanded ? 'менше' : 'більше'}} інформації"
+                [class.rotated]="expanded"
+                (click)="expanded = !expanded"
+            >keyboard_arrow_down</mat-icon>
         </div>
     </div>
 </div>
-
 

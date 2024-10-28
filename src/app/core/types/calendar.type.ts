@@ -18,6 +18,8 @@ export class CalendarEventData {
     singers?: string[];
     cars?: string[];
     date?: string;
+    frequency?: "once" | "regular";
+    days?: string[];
 }
 
 export class CalendarEvents {

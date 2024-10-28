@@ -32,7 +32,19 @@
         </mat-error>
     </mat-form-field>
 
-    <mat-form-field class="form-group">
+    <mat-button-toggle-group
+        class="form-group small-40"
+        name="frequency"
+        formControlName="frequency"
+    >
+        <mat-button-toggle value="once">разово</mat-button-toggle>
+        <mat-button-toggle value="regular">регулярно</mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <mat-form-field
+        *ngIf="eventForm.get('frequency').value === 'once'"
+        class="form-group small-60"
+    >
         <mat-label>Дата</mat-label>
         <input
             matInput
@@ -45,6 +57,69 @@
         <mat-datepicker #datePicker color="primary"></mat-datepicker>
         <mat-error *ngIf="eventForm?.get('date')?.invalid && eventForm?.get('date')?.touched">
             Потрібно вказати дату події
+        </mat-error>
+    </mat-form-field>
+
+    <mat-button-toggle-group
+        *ngIf="eventForm.get('frequency').value === 'regular'"
+        class="form-group small-60"
+        name="days"
+        [multiple]="true"
+        formControlName="days"
+    >
+        <mat-button-toggle value="0">пн</mat-button-toggle>
+        <mat-button-toggle value="1">вт</mat-button-toggle>
+        <mat-button-toggle value="2">ср</mat-button-toggle>
+        <mat-button-toggle value="3">чт</mat-button-toggle>
+        <mat-button-toggle value="4">пт</mat-button-toggle>
+        <mat-button-toggle value="5">сб</mat-button-toggle>
+        <mat-button-toggle value="6">нд</mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <mat-form-field class="form-group small-50">
+        <mat-label>Початок</mat-label>
+        <input
+            matInput
+            type="time"
+            id="start"
+            name="start"
+            formControlName="start"
+        >
+        <mat-error *ngIf="eventForm?.get('start')?.invalid && eventForm?.get('start')?.touched">
+            Потрібно вказати час початку події
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-group small-50">
+        <mat-label>Кінець</mat-label>
+        <input
+            matInput
+            type="time"
+            id="finish"
+            name="finish"
+            formControlName="finish"
+        >
+        <mat-error *ngIf="eventForm?.get('finish')?.invalid && eventForm?.get('finish')?.touched">
+            Потрібно вказати час кінця події
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+        <mat-label>Місце</mat-label>
+        <input type="text"
+            placeholder="Pick one"
+            aria-label="Number"
+            matInput
+            formControlName="place"
+            [matAutocomplete]="auto"
+        >
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let place of filteredPlaces$ | async" [value]="place">
+            {{place}}
+          </mat-option>
+        </mat-autocomplete>
+        <mat-error *ngIf="eventForm?.get('name')?.invalid && eventForm?.get('name')?.touched">
+            Потрібно вказати місце події
         </mat-error>
     </mat-form-field>
 </form>

@@ -7,7 +7,11 @@
             <img src="assets/images/arrow.svg" alt="Налаштування">
         </button>
 
-        <div class="title" [innerHTML]="title"></div>
+        <div class="title">
+            <div>{{title[0]}}</div>
+            <span class="divider">&#8211;</span>
+            <div>{{title[1]}}</div>
+        </div>
 
         <button
             class="week-btn"

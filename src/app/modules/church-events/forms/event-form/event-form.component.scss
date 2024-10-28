@@ -1,7 +1,30 @@
 @import "design-styles.scss";
 
 form {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+
     .form-group {
         width: 100%;
+
+        @media screen and (min-width: 600px) {
+            &.small-40 {
+                width: calc(40% - 10px);
+            }
+
+            &.small-50 {
+                width: calc(50% - 10px);
+            }
+
+            &.small-60 {
+                width: calc(60% - 10px);
+            }
+        }
+    }
+
+    mat-button-toggle-group {
+        height: 50px;
+        margin-bottom: 15px;
     }
 }

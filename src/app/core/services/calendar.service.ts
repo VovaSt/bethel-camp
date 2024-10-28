@@ -56,7 +56,7 @@ export class CalendarService {
         return label.charAt(0).toUpperCase() + label.slice(1);
     }
 
-    public getWeekLabel(weekCount: number = 0): string {
+    public getWeekLabel(weekCount: number = 0): string[] {
         const date: Date = addWeeks(new Date(), weekCount);
         const formatter = new Intl.DateTimeFormat(
             "ua",
@@ -64,11 +64,10 @@ export class CalendarService {
         );
         const firstDay = startOfWeek(date, { weekStartsOn: 1 });
         const lastDay = lastDayOfWeek(date, { weekStartsOn: 1 });
-        return `
-            ${formatter.format(firstDay)}
-            &#8211;
-            ${formatter.format(lastDay)}
-        `;
+        return [
+            formatter.format(firstDay),
+            formatter.format(lastDay)
+        ];
     }
 
     private getEachDayOfMonth(monthCount: number = 0): CalendarCell[] {
@@ -134,6 +133,10 @@ export class CalendarService {
 
     public setSearchValue(value: string): void {
         this._searchValue$.next(value);
+    }
+
+    public getPlaces(): string[] {
+        return JSON.parse(localStorage.getItem("places")) || [];
     }
 }
 

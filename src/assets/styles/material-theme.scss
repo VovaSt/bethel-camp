@@ -298,3 +298,28 @@ $altTheme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
 .mat-datepicker-toggle {
     color: $blue-dark;
 }
+
+.mat-button-toggle-appearance-standard {
+    background-color: $gray-light;
+
+    &.mat-button-toggle-checked {
+        background-color: $blue-medium;
+    }
+}
+
+.mat-input-element[type=time]::after {
+    display: none;
+}
+
+.mat-autocomplete-panel {
+    background-color: $white;
+    color: $blue-dark;
+
+    .mat-option {
+        color: $blue-dark;
+    }
+}
+
+.mat-calendar {
+    background-color: $blue-dark;
+}
