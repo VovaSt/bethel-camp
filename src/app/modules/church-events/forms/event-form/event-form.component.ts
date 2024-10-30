@@ -5,7 +5,13 @@ import { map, startWith } from 'rxjs/operators';
 import { CalendarService, typeFilters } from 'src/app/core/services/calendar.service';
 import { CalendarEventData } from 'src/app/core/types/calendar.type';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
-import { addPreacherHandler, filterPlaces, filterPreachers, removePreacherHandler, selectedPreacherHandler } from './utils';
+import {
+    addItemToChipsHandler,
+    filterItemsForChips,
+    filterPlaces,
+    removeItemFromChipsHandler,
+    selectedItemInChipsHandler
+} from './utils';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 
@@ -20,6 +26,7 @@ export class EventFormComponent implements OnInit {
     eventForm: FormGroup;
 
     types: Object[] = [...typeFilters];
+    separatorKeysCodes: number[] = [ENTER, COMMA];
 
     places: string[];
     filteredPlaces$: Observable<string[]>;
@@ -27,9 +34,18 @@ export class EventFormComponent implements OnInit {
     preachers: string[];
     preachersInputCtrl = new FormControl();
     filteredPreachers$: Observable<string[]>;
-    separatorKeysCodes: number[] = [ENTER, COMMA];
+
+    singers: string[];
+    singersInputCtrl = new FormControl();
+    filteredSingers$: Observable<string[]>;
+
+    cars: string[];
+    carsInputCtrl = new FormControl();
+    filteredCars$: Observable<string[]>;
 
     @ViewChild('preacherInput') preacherInput: ElementRef<HTMLInputElement>;
+    @ViewChild('singerInput') singerInput: ElementRef<HTMLInputElement>;
+    @ViewChild('carInput') carInput: ElementRef<HTMLInputElement>;
 
     constructor(
         private formBuilder: FormBuilder,
@@ -54,6 +70,8 @@ export class EventFormComponent implements OnInit {
 
         this.places = this.calendarService.getPlaces();
         this.preachers = this.calendarService.getPreachers();
+        this.singers = this.calendarService.getSingers();
+        this.cars = this.calendarService.getCars();
 
         this.filteredPlaces$ = this.eventForm.get("place").valueChanges.pipe(
             startWith(''),
@@ -62,20 +80,58 @@ export class EventFormComponent implements OnInit {
 
         this.filteredPreachers$ = this.preachersInputCtrl.valueChanges.pipe(
             startWith(''),
-            map(preacher => filterPreachers(preacher, this.preachers, this.eventForm))
+            map(item => filterItemsForChips(item, this.preachers, this.eventForm, "preachers"))
+        );
+
+        this.filteredSingers$ = this.singersInputCtrl.valueChanges.pipe(
+            startWith(''),
+            map(item => filterItemsForChips(item, this.singers, this.eventForm, "singers"))
+        );
+
+        this.filteredCars$ = this.carsInputCtrl.valueChanges.pipe(
+            startWith(''),
+            map(item => filterItemsForChips(item, this.cars, this.eventForm, "cars"))
         );
     }
 
-    addPreacher(event: MatChipInputEvent): void {
-        addPreacherHandler(event, this.eventForm, this.preachersInputCtrl);
+    private getVarsByProperty(property) {
+        let inputCtrl;
+        let input;
+
+        switch (property) {
+            case "preachers":
+                inputCtrl = this.preachersInputCtrl;
+                input = this.preacherInput;
+                break;
+            case "singers":
+                inputCtrl = this.singersInputCtrl;
+                input = this.singerInput;
+                break;
+            case "cars":
+                inputCtrl = this.carsInputCtrl;
+                input = this.carInput;
+                break;
+            default:
+                break;
+        }
+
+        if (inputCtrl && input) return { inputCtrl, input };
+        return null;
     }
 
-    selectedPreacher(event: MatAutocompleteSelectedEvent): void {
-        selectedPreacherHandler(event, this.eventForm, this.preacherInput, this.preachersInputCtrl);
+    addItemToChips(event: MatChipInputEvent, property: string): void {
+        const vars = this.getVarsByProperty(property);
+        addItemToChipsHandler(event, this.eventForm, vars.inputCtrl, property);
     }
 
-    removePreacher(preacher: string) {
-        removePreacherHandler(preacher, this.eventForm);
+    selectedItemInChips(event: MatAutocompleteSelectedEvent, property: string): void {
+        const vars = this.getVarsByProperty(property);
+        selectedItemInChipsHandler(event, this.eventForm, vars.input, vars.inputCtrl, property);
+    }
+
+    removeItemFromChips(preacher: string, property: string) {
+        const vars = this.getVarsByProperty(property);
+        removeItemFromChipsHandler(preacher, this.eventForm, vars.inputCtrl, property);
     }
 
     onSubmitForm() {

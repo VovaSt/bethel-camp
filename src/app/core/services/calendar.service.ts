@@ -142,6 +142,14 @@ export class CalendarService {
     public getPreachers(): string[] {
         return JSON.parse(localStorage.getItem("preachers")) || [];
     }
+
+    public getSingers(): string[] {
+        return JSON.parse(localStorage.getItem("singers")) || [];
+    }
+
+    public getCars(): string[] {
+        return JSON.parse(localStorage.getItem("cars")) || [];
+    }
 }
 
 export const typeFilters = [

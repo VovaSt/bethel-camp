@@ -1,4 +1,5 @@
-import { FormGroup } from "@angular/forms";
+import { ElementRef } from "@angular/core";
+import { FormControl, FormGroup } from "@angular/forms";
 import { MatAutocompleteSelectedEvent } from "@angular/material/autocomplete";
 import { MatChipInputEvent } from "@angular/material/chips";
 
@@ -7,25 +8,31 @@ export const filterPlaces = (value, places) => {
     return places.filter(p => p.toLowerCase().includes(filterValue));
 }
 
-export const filterPreachers = (value: string, preachers: string[], form: FormGroup) => {
-    const preachersList = [...preachers].filter(preacher => {
-        return !form.get("preachers").value.includes(preacher);
+export const filterItemsForChips = (
+    value: string,
+    list: string[],
+    form: FormGroup,
+    property: string
+) => {
+    const filteredList = [...list].filter(preacher => {
+        return !form.get(property).value.includes(preacher);
     });
-    if (!value) return preachersList.slice();
+    if (!value) return filteredList.slice();
     const filterValue = value.toLowerCase();
-    return preachersList.filter(p => p.toLowerCase().includes(filterValue));
+    return filteredList.filter(p => p.toLowerCase().includes(filterValue));
 }
 
-export const addPreacherHandler = (
+export const addItemToChipsHandler = (
     event: MatChipInputEvent,
     form: FormGroup,
-    preachersInputCtrl
+    inputCtrl: FormControl,
+    property: string
 ) => {
     const input = event.input;
     const value = event.value;
 
     if ((value || '').trim()) {
-        const control = form.get("preachers");
+        const control = form.get(property);
         const oldValue = [...control.value];
         control.setValue([...oldValue, value]);
     }
@@ -34,29 +41,33 @@ export const addPreacherHandler = (
       input.value = '';
     }
 
-    preachersInputCtrl.setValue(null);
+    inputCtrl.setValue(null);
 }
 
-export const selectedPreacherHandler = (
+export const selectedItemInChipsHandler = (
     event: MatAutocompleteSelectedEvent,
     form: FormGroup,
-    preachersInput,
-    preachersInputCtrl
+    input: ElementRef<HTMLInputElement>,
+    inputCtrl: FormControl,
+    property: string
 ) => {
-    const oldValue = [...form.get("preachers").value];
-    form.get("preachers").setValue([...oldValue, event.option.viewValue]);
-    preachersInput.nativeElement.value = '';
-    preachersInputCtrl.setValue(null);
+    const oldValue = [...form.get(property).value];
+    form.get(property).setValue([...oldValue, event.option.viewValue]);
+    input.nativeElement.value = '';
+    inputCtrl.setValue(null);
 }
 
-export const removePreacherHandler = (
+export const removeItemFromChipsHandler = (
     preacher: string,
-    form: FormGroup
+    form: FormGroup,
+    inputCtrl: FormControl,
+    property: string
 ) => {
-    const oldValue = [...form.get("preachers").value];
+    const oldValue = [...form.get(property).value];
     const index = oldValue.indexOf(preacher);
     if (index >= 0) {
         oldValue.splice(index, 1);
     }
-    form.get("preachers").setValue([...oldValue]);
+    form.get(property).setValue([...oldValue]);
+    inputCtrl.setValue(inputCtrl.value);
 }
