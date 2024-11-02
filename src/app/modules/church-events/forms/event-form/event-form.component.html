@@ -135,109 +135,27 @@
         >
     </mat-form-field>
 
-    <mat-form-field class="form-group">
-        <mat-label>Проповідники</mat-label>
-        <mat-chip-list #preacherList>
-            <mat-chip
-                *ngFor="let preacher of eventForm.get('preachers').value"
-                [selectable]="true"
-                [removable]="true"
-                (removed)="removeItemFromChips(preacher, 'preachers')"
-            >
-                {{preacher}}
-                <mat-icon matChipRemove>cancel</mat-icon>
-            </mat-chip>
-            <input
-                placeholder="Додати проповідника..."
-                #preacherInput
-                [formControl]="preachersInputCtrl"
-                [matAutocomplete]="autoPreachers"
-                [matChipInputFor]="preacherList"
-                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                (matChipInputTokenEnd)="addItemToChips($event, 'preachers')"
-            >
-        </mat-chip-list>
-        <mat-autocomplete
-            #autoPreachers="matAutocomplete"
-            (optionSelected)="selectedItemInChips($event, 'preachers')"
-        >
-            <mat-option
-                *ngFor="let preacher of filteredPreachers$ | async"
-                [value]="preacher"
-            >
-                {{preacher}}
-            </mat-option>
-        </mat-autocomplete>
-    </mat-form-field>
+    <app-chips-input
+        title="Проповідники"
+        placeholder="Додати проповідника..."
+        [form]="eventForm"
+        [list]="preachers"
+        propertyName="preachers"
+    ></app-chips-input>
 
-    <mat-form-field class="form-group">
-        <mat-label>Музичні гурти</mat-label>
-        <mat-chip-list #singersList>
-            <mat-chip
-                *ngFor="let singer of eventForm.get('singers').value"
-                [selectable]="true"
-                [removable]="true"
-                (removed)="removeItemFromChips(singer, 'singers')"
-            >
-                {{singer}}
-                <mat-icon matChipRemove>cancel</mat-icon>
-            </mat-chip>
-            <input
-                placeholder="Додати музичний гурт..."
-                #singerInput
-                [formControl]="singersInputCtrl"
-                [matAutocomplete]="autoSingers"
-                [matChipInputFor]="singersList"
-                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                (matChipInputTokenEnd)="addItemToChips($event, 'singers')"
-            >
-        </mat-chip-list>
-        <mat-autocomplete
-            #autoSingers="matAutocomplete"
-            (optionSelected)="selectedItemInChips($event, 'singers')"
-        >
-            <mat-option
-                *ngFor="let singer of filteredSingers$ | async"
-                [value]="singer"
-            >
-                {{singer}}
-            </mat-option>
-        </mat-autocomplete>
-    </mat-form-field>
+    <app-chips-input
+        title="Музичні гурти"
+        placeholder="Додати музичний гурт..."
+        [form]="eventForm"
+        [list]="singers"
+        propertyName="singers"
+    ></app-chips-input>
 
-    <mat-form-field class="form-group">
-        <mat-label>Задіяні церковні автомобілі</mat-label>
-        <mat-chip-list #carsList>
-            <mat-chip
-                *ngFor="let car of eventForm.get('cars').value"
-                [selectable]="true"
-                [removable]="true"
-                (removed)="removeItemFromChips(car, 'cars')"
-            >
-                {{car}}
-                <mat-icon matChipRemove>cancel</mat-icon>
-            </mat-chip>
-            <input
-                placeholder="Додати автомобіль..."
-                #carInput
-                [formControl]="carsInputCtrl"
-                [matAutocomplete]="autoCars"
-                [matChipInputFor]="carsList"
-                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                (matChipInputTokenEnd)="addItemToChips($event, 'cars')"
-            >
-        </mat-chip-list>
-        <mat-autocomplete
-            #autoCars="matAutocomplete"
-            (optionSelected)="selectedItemInChips($event, 'cars')"
-        >
-            <mat-option
-                *ngFor="let car of filteredCars$ | async"
-                [value]="car"
-            >
-                {{car}}
-            </mat-option>
-        </mat-autocomplete>
-    </mat-form-field>
-
+    <app-chips-input
+        title="Задіяні церковні автомобілі"
+        placeholder="Додати автомобіль..."
+        [form]="eventForm"
+        [list]="cars"
+        propertyName="cars"
+    ></app-chips-input>
 </form>

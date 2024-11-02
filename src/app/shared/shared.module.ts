@@ -22,6 +22,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatChipsModule } from '@angular/material/chips';
+import { ChipsInputComponent } from './components/chips-input/chips-input.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -29,7 +31,8 @@ import { MatChipsModule } from '@angular/material/chips';
         DonateButtonComponent,
         VideoPopupComponent,
         ImageLoaderDirective,
-        DonateModalComponent
+        DonateModalComponent,
+        ChipsInputComponent
     ],
     imports: [
         CommonModule,
@@ -37,8 +40,13 @@ import { MatChipsModule } from '@angular/material/chips';
         IvyCarouselModule,
         MatButtonModule,
         MatDialogModule,
+        MatIconModule,
         MatTabsModule,
-
+        MatInputModule,
+        MatFormFieldModule,
+        MatAutocompleteModule,
+        MatChipsModule,
+        ReactiveFormsModule
     ],
     exports: [
         MatButtonToggleModule,
@@ -60,6 +68,7 @@ import { MatChipsModule } from '@angular/material/chips';
         PhotoCaruselComponent,
         DonateButtonComponent,
         VideoPopupComponent,
+        ChipsInputComponent,
 
         ImageLoaderDirective
     ],
