@@ -9,8 +9,8 @@ import addWeeks from 'date-fns/addWeeks';
 import startOfWeek from 'date-fns/startOfWeek';
 import lastDayOfWeek from 'date-fns/lastDayOfWeek';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { debounceTime, filter, map } from 'rxjs/operators';
-import { CalendarCell, CalendarEventData, CalendarEvents, CalendarEventTypeCheckbox } from '../types/calendar.type';
+import { map } from 'rxjs/operators';
+import { CalendarCell, CalendarEvents, CalendarEventTypeCheckbox } from '../types/calendar.type';
 
 @Injectable({
   providedIn: 'root'
@@ -196,11 +196,17 @@ export const typeFilters = [
         show: true
     },
     {
-        label: "хор",
-        type: CalendarEventType.хор,
-        color: CalendarEventColor[CalendarEventType.хор],
+        label: "музичне служіння",
+        type: CalendarEventType.музичне_служіння,
+        color: CalendarEventColor[CalendarEventType.музичне_служіння],
         show: true
-    }
+    },
+    {
+        label: "інше",
+        type: CalendarEventType.інше,
+        color: CalendarEventColor[CalendarEventType.інше],
+        show: true
+    },
 ]
 
 export const calendarData: CalendarEvents = {
@@ -216,7 +222,7 @@ export const calendarData: CalendarEvents = {
             name: "Репетиція старшого хору",
             start: "17:30",
             finish: "19:00",
-            type: CalendarEventType.хор,
+            type: CalendarEventType.музичне_служіння,
             place: "Хорова кімната",
             person: "Грабовський Юрій, Каленська Олена"
         },
@@ -307,7 +313,7 @@ export const calendarData: CalendarEvents = {
             name: "Репетиція молодіжного хору",
             start: "19:00",
             finish: "21:00",
-            type: CalendarEventType.хор,
+            type: CalendarEventType.музичне_служіння,
             place: "Хорова кімната",
             person: "Редич Ніна"
         },
@@ -432,7 +438,7 @@ export const calendarData: CalendarEvents = {
             name: "Репетиція старшого хору",
             start: "17:30",
             finish: "19:00",
-            type: CalendarEventType.хор,
+            type: CalendarEventType.музичне_служіння,
             place: "Хорова кімната",
             person: "Грабовський Юрій, Каленська Олена"
         },
@@ -523,7 +529,7 @@ export const calendarData: CalendarEvents = {
             name: "Репетиція молодіжного хору",
             start: "19:00",
             finish: "21:00",
-            type: CalendarEventType.хор,
+            type: CalendarEventType.музичне_служіння,
             place: "Хорова кімната",
             person: "Редич Ніна"
         },
@@ -628,6 +634,14 @@ export const calendarData: CalendarEvents = {
             place: "село Никонівка",
             person: "Панасюк Володимир",
             cars: ["VW Caravella"]
+        },
+        {
+            name: "Якась подія",
+            start: "19:00",
+            finish: "21:00",
+            type: CalendarEventType.інше,
+            place: "балкон",
+            person: "Стахов Володимир",
         }
     ]
 }

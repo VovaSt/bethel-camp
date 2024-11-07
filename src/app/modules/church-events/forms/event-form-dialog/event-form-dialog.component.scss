@@ -52,5 +52,10 @@
         ::ng-deep .mat-button-wrapper {
             font-size: 1rem;
         }
+
+        ::ng-deep .mat-flat-button.mat-primary.mat-button-disabled {
+            background-color: $gray-light;
+            color: $white;
+        }
     }
 }

@@ -1,5 +1,8 @@
-<form [formGroup]="eventForm" (ngSubmit)="onSubmitForm()">
-
+<form
+    [formGroup]="eventForm"
+    (ngSubmit)="onSubmitForm()"
+    *ngIf="typePermissions$ | async as permissions"
+>
     <mat-form-field class="form-group">
         <mat-label>Тип</mat-label>
         <mat-select
@@ -17,7 +20,7 @@
         </mat-error>
     </mat-form-field>
 
-    <mat-form-field class="form-group">
+    <mat-form-field class="form-group" *ngIf="permissions['name']">
         <mat-label>Назва</mat-label>
         <input
             matInput
@@ -36,13 +39,14 @@
         class="form-group small frequency"
         name="frequency"
         formControlName="frequency"
+        *ngIf="permissions['frequency']"
     >
         <mat-button-toggle value="once">разово</mat-button-toggle>
         <mat-button-toggle value="regular">регулярно</mat-button-toggle>
     </mat-button-toggle-group>
 
     <mat-form-field
-        *ngIf="eventForm.get('frequency').value === 'once'"
+        *ngIf="eventForm.get('frequency').value === 'once' && permissions['date']"
         class="form-group small"
     >
         <mat-label>Дата</mat-label>
@@ -52,6 +56,7 @@
             id="date"
             name="date"
             formControlName="date"
+            autocomplete="off"
         >
         <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
         <mat-datepicker #datePicker color="primary"></mat-datepicker>
@@ -61,7 +66,7 @@
     </mat-form-field>
 
     <mat-button-toggle-group
-        *ngIf="eventForm.get('frequency').value === 'regular'"
+        *ngIf="eventForm.get('frequency').value === 'regular' && permissions['days']"
         class="form-group small days"
         name="days"
         [multiple]="true"
@@ -76,7 +81,7 @@
         <mat-button-toggle value="6">нд</mat-button-toggle>
     </mat-button-toggle-group>
 
-    <mat-form-field class="form-group small">
+    <mat-form-field class="form-group small" *ngIf="permissions['start']">
         <mat-label>Початок</mat-label>
         <input
             matInput
@@ -90,7 +95,7 @@
         </mat-error>
     </mat-form-field>
 
-    <mat-form-field class="form-group small">
+    <mat-form-field class="form-group small" *ngIf="permissions['finish']">
         <mat-label>Кінець</mat-label>
         <input
             matInput
@@ -104,7 +109,7 @@
         </mat-error>
     </mat-form-field>
 
-    <mat-form-field class="form-group">
+    <mat-form-field class="form-group" *ngIf="permissions['place']">
         <mat-label>Місце</mat-label>
         <input type="text"
             placeholder="Pick one"
@@ -123,7 +128,7 @@
         </mat-error>
     </mat-form-field>
 
-    <mat-form-field class="form-group">
+    <mat-form-field class="form-group" *ngIf="permissions['person']">
         <mat-label>Відповідальний</mat-label>
         <input
             matInput
@@ -136,6 +141,7 @@
     </mat-form-field>
 
     <app-chips-input
+        *ngIf="permissions['preachers']"
         title="Проповідники"
         placeholder="Додати проповідника..."
         [form]="eventForm"
@@ -144,6 +150,7 @@
     ></app-chips-input>
 
     <app-chips-input
+        *ngIf="permissions['singers']"
         title="Музичні гурти"
         placeholder="Додати музичний гурт..."
         [form]="eventForm"
@@ -152,6 +159,7 @@
     ></app-chips-input>
 
     <app-chips-input
+        *ngIf="permissions['cars']"
         title="Задіяні церковні автомобілі"
         placeholder="Додати автомобіль..."
         [form]="eventForm"

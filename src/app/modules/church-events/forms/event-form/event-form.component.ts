@@ -1,17 +1,17 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { CalendarService, typeFilters } from 'src/app/core/services/calendar.service';
 import { CalendarEventData } from 'src/app/core/types/calendar.type';
-import {
-    filterPlaces,
-} from './utils';
+import { filterPlaces, typePermissions } from './utils';
+import { CalendarEventType } from 'src/app/core/enums/calendar.enum';
 
 @Component({
   selector: 'app-event-form',
   templateUrl: './event-form.component.html',
-  styleUrls: ['./event-form.component.scss']
+  styleUrls: ['./event-form.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EventFormComponent implements OnInit {
     @Input() data: CalendarEventData | null;
@@ -20,9 +20,10 @@ export class EventFormComponent implements OnInit {
 
     types: Object[] = [...typeFilters];
 
+    typePermissions$: Observable<any>;
+
     places: string[];
     filteredPlaces$: Observable<string[]>;
-
     preachers: string[];
     singers: string[];
     cars: string[];
@@ -43,8 +44,8 @@ export class EventFormComponent implements OnInit {
             preachers: [(this.data?.preachers || [])],
             singers: [(this.data?.singers || [])],
             cars: [(this.data?.cars || [])],
-            frequency: [(this.data?.frequency || "once"), Validators.required],
-            date: [(this.data?.date || undefined), Validators.required],
+            frequency: [(this.data?.frequency || "once")],
+            date: [(this.data?.date || undefined)],
             days: [(this.data?.days || [])],
         });
 
@@ -57,9 +58,13 @@ export class EventFormComponent implements OnInit {
             startWith(''),
             map(value => filterPlaces(value, this.places))
         );
-    }
 
-    onSubmitForm() {
-
+        this.typePermissions$ = this.eventForm.get("type").valueChanges.pipe(
+            startWith(typePermissions()),
+            map(value => {
+                const type = CalendarEventType[value] ? value : undefined;
+                return typePermissions(type);
+            })
+        );
     }
 }

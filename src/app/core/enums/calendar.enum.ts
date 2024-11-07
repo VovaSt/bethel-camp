@@ -6,7 +6,8 @@ export enum CalendarEventType {
     молодіжне = "молодіжне",
     євангелізація = "євангелізація",
     табір = "табір",
-    хор = "хор"
+    музичне_служіння = "музичне_служіння",
+    інше = "інше"
 }
 
 export enum CalendarEventColor {
@@ -17,6 +18,7 @@ export enum CalendarEventColor {
     молодіжне = "#9bf6ff",
     євангелізація = "#a0c4ff",
     табір = "#bdb2ff",
-    хор = "#ffc6ff"
+    музичне_служіння = "#ffc6ff",
+    інше = "#cccccc"
 }
 
