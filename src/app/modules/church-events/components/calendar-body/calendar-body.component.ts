@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { BehaviorSubject, combineLatest, Observable, Subject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
 import { CalendarEventColor, CalendarEventType } from 'src/app/core/enums/calendar.enum';
+import { CalendarApiService } from 'src/app/core/services/calendar-api.service';
 import { CalendarService, calendarData } from 'src/app/core/services/calendar.service';
 import { CalendarCell, CalendarEvents, CalendarEventTypeCheckbox } from 'src/app/core/types/calendar.type';
 
@@ -21,16 +22,17 @@ export class CalendarBodyComponent implements OnInit {
     notifier = new Subject();
 
     constructor(
-        private calendarService: CalendarService
+        private calendarService: CalendarService,
+        private calendarApiService: CalendarApiService,
     ) {
     }
 
     ngOnInit(): void {
-        this.today = this.calendarService.formatDataId(new Date());
+        this.today = this.calendarService.formatDate(new Date());
         this.calendarCells$ = this.calendarService.calendarCells$;
 
         combineLatest([
-            this.calendarService.eventsData$,
+            this.calendarApiService.events$,
             this.calendarService.typeFilter$,
             this.calendarService.searchValue$
         ]).pipe(

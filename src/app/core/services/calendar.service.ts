@@ -70,6 +70,16 @@ export class CalendarService {
         ];
     }
 
+    public getWeekStartAndFinishTimes(weekCount: number = 0): any {
+        const date: Date = addWeeks(new Date(), weekCount);
+        const firstDay = startOfWeek(date, { weekStartsOn: 1 });
+        const lastDay = lastDayOfWeek(date, { weekStartsOn: 1 });
+        return {
+            startDate: firstDay.getTime(),
+            endDate: lastDay.getTime()
+        };
+    }
+
     private getEachDayOfMonth(monthCount: number = 0): CalendarCell[] {
         const date: Date = addMonths(new Date(), monthCount);
         const formatter = new Intl.DateTimeFormat("ua", { weekday: "short" });
@@ -78,7 +88,7 @@ export class CalendarService {
 
         return eachDayOfInterval({ start: firstDay, end: lastDay })
             .map((date) => ({
-                id: this.formatDataId(date),
+                id: this.formatDate(date),
                 date,
                 nameOfDay: formatter.format(date),
             }));
@@ -92,13 +102,13 @@ export class CalendarService {
 
         return eachDayOfInterval({ start: firstDay, end: lastDay })
             .map((date) => ({
-                id: this.formatDataId(date),
+                id: this.formatDate(date),
                 date,
                 nameOfDay: formatter.format(date),
             }));
     }
 
-    public formatDataId(date): string {
+    public formatDate(date): string {
         date = date || new Date();
         return format(date, 'dd-MM-yyyy');
     }

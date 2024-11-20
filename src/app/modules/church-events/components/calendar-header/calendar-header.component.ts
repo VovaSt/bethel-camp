@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
 import { CalendarService } from 'src/app/core/services/calendar.service';
 import { EventFormDialogComponent } from '../../forms/event-form-dialog/event-form-dialog.component';
+import { CalendarApiService } from 'src/app/core/services/calendar-api.service';
 
 
 @Component({
@@ -18,6 +19,7 @@ export class CalendarHeaderComponent implements OnInit {
 
     constructor(
         private calendarService: CalendarService,
+        private calendarApiService: CalendarApiService,
         private dialog: MatDialog
     ) {
         this.title = this.calendarService.getWeekLabel();
@@ -25,7 +27,7 @@ export class CalendarHeaderComponent implements OnInit {
     }
 
     ngOnInit(): void {
-
+        this.fetchData();
     }
 
     getPreviosWeek() {
@@ -54,5 +56,11 @@ export class CalendarHeaderComponent implements OnInit {
             width: '600px',
             autoFocus: false
         });
+    }
+
+    fetchData() {
+        const { startDate, endDate } =
+            this.calendarService.getWeekStartAndFinishTimes(this.weekCounter);
+        this.calendarApiService.fetchEvents(startDate, endDate);
     }
 }

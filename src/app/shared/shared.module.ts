@@ -24,6 +24,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatChipsModule } from '@angular/material/chips';
 import { ChipsInputComponent } from './components/chips-input/chips-input.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ErrorMessageComponent } from './components/error-message/error-message.component';
 
 @NgModule({
     declarations: [
@@ -32,7 +34,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         VideoPopupComponent,
         ImageLoaderDirective,
         DonateModalComponent,
-        ChipsInputComponent
+        ChipsInputComponent,
+        ErrorMessageComponent
     ],
     imports: [
         CommonModule,
@@ -64,11 +67,13 @@ import { ReactiveFormsModule } from '@angular/forms';
         MatFormFieldModule,
         MatAutocompleteModule,
         MatChipsModule,
+        MatSnackBarModule,
 
         PhotoCaruselComponent,
         DonateButtonComponent,
         VideoPopupComponent,
         ChipsInputComponent,
+        ErrorMessageComponent,
 
         ImageLoaderDirective
     ],

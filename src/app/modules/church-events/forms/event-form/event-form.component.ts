@@ -35,17 +35,17 @@ export class EventFormComponent implements OnInit {
 
     ngOnInit(): void {
         this.eventForm = this.formBuilder.group({
-            type: [(this.data?.type || ''), Validators.required],
-            name: [(this.data?.name || ''), Validators.required],
-            start: [(this.data?.start || ''), Validators.required],
-            finish: [(this.data?.finish || '')],
+            type: [(this.data?.type || CalendarEventType.загальне_служіння), Validators.required],
+            name: [(this.data?.name || 'Загальне служіння'), Validators.required],
+            start: [(this.data?.start || '10:00'), Validators.required],
+            finish: [(this.data?.finish || '12:00')],
             place: [(this.data?.place || '')],
             person: [(this.data?.person || '')],
-            preachers: [(this.data?.preachers || [])],
-            singers: [(this.data?.singers || [])],
+            preachers: [(this.data?.preachers || ["Стахов Петро", "Редич Діма"])],
+            singers: [(this.data?.singers || ["Молодіжний хор"])],
             cars: [(this.data?.cars || [])],
             frequency: [(this.data?.frequency || "once")],
-            date: [(this.data?.date || undefined)],
+            date: [(this.data?.date || new Date())],
             days: [(this.data?.days || [])],
         });
 
