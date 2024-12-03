@@ -72,11 +72,12 @@ export class CalendarService {
 
     public getWeekStartAndFinishTimes(weekCount: number = 0): any {
         const date: Date = addWeeks(new Date(), weekCount);
+        const date2: Date = addWeeks(new Date(), weekCount + 1);
         const firstDay = startOfWeek(date, { weekStartsOn: 1 });
-        const lastDay = lastDayOfWeek(date, { weekStartsOn: 1 });
+        const lastDay = startOfWeek(date2, { weekStartsOn: 1 });
         return {
             startDate: firstDay.getTime(),
-            endDate: lastDay.getTime()
+            endDate: lastDay.getTime() - 1
         };
     }
 

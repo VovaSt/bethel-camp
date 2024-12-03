@@ -72,6 +72,9 @@ export class CalendarApiService {
         if (data.statusCode >= 200 && data.statusCode < 300) {
           const newItem = JSON.parse(data.body).Items[0];
           const oldEvents = {...this._events$.value};
+          if (!oldEvents[newItem.date]) {
+            oldEvents[newItem.date] = [];
+          }
           oldEvents[newItem.date].push(newItem);
           this._events$.next(oldEvents);
           return true;
@@ -82,58 +85,6 @@ export class CalendarApiService {
       })
     );
   }
-
-//   public editPerson(person: Person): Observable<boolean> {
-//     this.isInnerLoading$.next(true);
-//     const request = {...person} as any;
-//     request.lastVisit = person.lastVisit || '';
-//     return this.http.put<any>(
-//       apiEndpoint,
-//       request,
-//       { headers: this.headers }
-//     ).pipe(
-//       catchError(() => of({ statusCode: 400 })),
-//       map((data) => {
-//         this.isInnerLoading$.next(false);
-//         if (data.statusCode >= 200 && data.statusCode < 300) {
-//           const visitors = this.visitors$.value;
-//           const index = visitors.findIndex(p => p.id === person.id);
-//           visitors[index] = person;
-//           this.visitors$.next(visitors);
-//           this.messageService.add({severity:'success', summary:'Збережено'});
-//           return true;
-//         } else {
-//           this.messageService.add({severity:'error', summary:'Помилка'});
-//           return false;
-//         }
-//       })
-//     );
-//   }
-
-//   public deletePerson(id: string): Observable<boolean>  {
-//     this.isInnerLoading$.next(true);
-//     return this.http.delete<any>(
-//       apiEndpoint,
-//       {
-//         headers: this.headers,
-//         body: { id }
-//       }
-//     ).pipe(
-//       catchError(() => of({ statusCode: 400 })),
-//       map((data) => {
-//         this.isInnerLoading$.next(false);
-//         if (data.statusCode >= 200 && data.statusCode < 300) {
-//           const visitors = this.visitors$.value.filter(v => v.id !== id);
-//           this.visitors$.next(visitors);
-//           this.messageService.add({severity:'success', summary:'Видалено'});
-//           return true;
-//         } else {
-//           this.messageService.add({severity:'error', summary:'Помилка'});
-//           return false;
-//         }
-//       })
-//     );
-//   }
 
   private showErrorMessage() {
     this.snackBar.openFromComponent(
